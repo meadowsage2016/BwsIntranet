@@ -5,4 +5,5 @@ package edu.matc.entity;
  * @author Susan Hundt
  */
 public class BwsBlog {
+    // This is a change.
 }
