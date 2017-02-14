@@ -121,6 +121,3 @@
 |	5/15/2017	|	Monday	|		|		|
 |	5/16/2017	|	Tuesday	|		|		|
 |	5/17/2017	|	Wednesday	|		|		|
-
-5/16/2017	Tuesday		
-5/17/2017	Wednesday		
