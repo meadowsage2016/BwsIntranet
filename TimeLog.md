@@ -1,0 +1,124 @@
+| Date  | Day  |   Time    |   Notes:   |
+|-----------------------------|------------------------------|---------------------|------------------------------------------------------------------|
+|Date		Day		Time		Notes
+|1/17/2017	|Tuesday		|	|					|
+|1/18/2017	|Wednesday	|	|					|
+|1/19/2017	|Thursday	|	|					|
+|1/20/2017	|Friday		|	|					|
+|1/21/2017	|Saturday		|	|					|
+|1/22/2017	|Sunday		|	|					|
+|1/23/2017	|Monday		|	|					|
+1/24/2017	|Tuesday		|	|					|
+1/25/2017	Wednesday		
+1/26/2017	Thursday		
+1/27/2017	Friday		
+1/28/2017	Saturday		
+1/29/2017	Sunday		
+1/30/2017	Monday		
+1/31/2017	Tuesday		
+2/01/2017	Wednesday		
+2/02/2017	Thursday		
+2/03/2017	Friday		
+2/04/2017	Saturday		
+2/05/2017	Sunday		
+2/06/2017	Monday		
+2/07/2017	Tuesday		
+2/08/2017	Wednesday		
+2/09/2017	Thursday		
+2/10/2017	Friday		
+2/11/2017	Saturday		
+2/12/2017	Sunday		
+2/13/2017	Monday		
+2/14/2017	Tuesday		
+2/15/2017	Wednesday		
+2/16/2017	Thursday		
+2/17/2017	Friday		
+2/18/2017	Saturday		
+2/19/2017	Sunday		
+2/20/2017	Monday		
+2/21/2017	Tuesday		
+2/22/2017	Wednesday		
+2/23/2017	Thursday		
+2/24/2017	Friday		
+2/25/2017	Saturday		
+2/26/2017	Sunday		
+2/27/2017	Monday		
+2/28/2017	Tuesday		
+3/01/2017	Wednesday		
+3/02/2017	Thursday		
+3/03/2017	Friday		
+3/04/2017	Saturday		
+3/05/2017	Sunday		
+3/06/2017	Monday		
+3/07/2017	Tuesday		
+3/08/2017	Wednesday		
+3/09/2017	Thursday		
+3/10/2017	Friday		
+3/11/2017	Saturday		
+3/12/2017	Sunday		
+3/13/2017	Monday		
+3/14/2017	Tuesday		
+3/15/2017	Wednesday		
+3/16/2017	Thursday		
+3/17/2017	Friday		
+3/18/2017	Saturday		
+3/19/2017	Sunday		
+3/20/2017	Monday		
+3/21/2017	Tuesday		
+3/22/2017	Wednesday		
+3/23/2017	Thursday		
+3/24/2017	Friday		
+3/25/2017	Saturday		
+3/26/2017	Sunday		
+3/27/2017	Monday		
+3/28/2017	Tuesday		
+3/29/2017	Wednesday		
+3/30/2017	Thursday		
+3/31/2017	Friday		
+4/01/2017	Saturday		
+4/02/2017	Sunday		
+4/03/2017	Monday		
+4/04/2017	Tuesday		
+4/05/2017	Wednesday		
+4/06/2017	Thursday		
+4/07/2017	Friday		
+4/08/2017	Saturday		
+4/09/2017	Sunday		
+4/10/2017	Monday		
+4/11/2017	Tuesday		
+4/12/2017	Wednesday		
+4/13/2017	Thursday		
+4/14/2017	Friday		
+4/15/2017	Saturday		
+4/16/2017	Sunday		
+4/17/2017	Monday		
+4/18/2017	Tuesday		
+4/19/2017	Wednesday		
+4/20/2017	Thursday		
+4/21/2017	Friday		
+4/22/2017	Saturday		
+4/23/2017	Sunday		
+4/24/2017	Monday		
+4/25/2017	Tuesday		
+4/26/2017	Wednesday		
+4/27/2017	Thursday		
+4/28/2017	Friday		
+4/29/2017	Saturday		
+4/30/2017	Sunday		
+5/01/2017	Monday		
+5/02/2017	Tuesday		
+5/03/2017	Wednesday		
+5/04/2017	Thursday		
+5/05/2017	Friday		
+5/06/2017	Saturday		
+5/07/2017	Sunday		
+5/08/2017	Monday		
+5/09/2017	Tuesday		
+5/10/2017	Wednesday		
+5/11/2017	Thursday		
+5/12/2017	Friday		
+5/13/2017	Saturday		
+5/14/2017	Sunday		
+5/15/2017	Monday		
+5/16/2017	Tuesday		
+5/17/2017	Wednesday		
