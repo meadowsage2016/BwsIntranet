@@ -7,10 +7,16 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
-    <title>Title</title>
-</head>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<html lang="en">
+<c:import url="include-headtag.jsp" />
+
 <body>
 
+<%@ include file="include-navigation.jsp" %>
+
+
+
+<%@ include file="include-footer.jsp" %>
 </body>
 </html>

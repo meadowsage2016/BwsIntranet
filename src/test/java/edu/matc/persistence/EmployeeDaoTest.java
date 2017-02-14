@@ -34,7 +34,6 @@ public class EmployeeDaoTest extends EmployeeDao {
 
     @Test
     public void testGetEmployeeById() throws Exception {
-        //TODO test the getUser Methods
         Employee employee = dao.getEmployeeById(4);
         assertEquals("Return wrong employee", "Mike", employee.getFirstName());
     }
@@ -70,7 +69,7 @@ public class EmployeeDaoTest extends EmployeeDao {
     public void testDeleteEmployee() throws Exception {
 
         int before = dao.getAllEmployees().size();
-        dao.deleteEmployee(45);
+        dao.deleteEmployee(38);
         int after = dao.getAllEmployees().size();
         assertEquals("Delete not made", before -1, after);
     }
