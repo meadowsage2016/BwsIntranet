@@ -20,14 +20,14 @@
 |	2/03/2017	|	Friday	|		|		|
 |	2/04/2017	|	Saturday	|		|		|
 |	2/05/2017	|	Sunday	|		|		|
-|	2/06/2017	|	Monday	|		|		|
+|	2/06/2017	|	Monday	|8:00-12:30		|		|
 |	2/07/2017	|	Tuesday	|		|		|
-|	2/08/2017	|	Wednesday	|		|		|
-|	2/09/2017	|	Thursday	|		|		|
+|	2/08/2017	|	Wednesday	|8:00-11:00		|Vm failed did AWS setup on PC side		|
+|	2/09/2017	|	Thursday	|5:30 - 12:30		|AWS setup and VM failed, went to school to rebuild.|
 |	2/10/2017	|	Friday	|		|		|
 |	2/11/2017	|	Saturday	|		|		|
-|	2/12/2017	|	Sunday	|		|		|
-|	2/13/2017	|	Monday	|		|		|
+|	2/12/2017	|	Sunday	|4:30 - 12:00		|Jsp's and databases		|
+|	2/13/2017	|	Monday	|2:30 - 1:30		|Bootstrap, AWS complete process and deploy |
 |	2/14/2017	|	Tuesday	|		|		|
 |	2/15/2017	|	Wednesday	|		|		|
 |	2/16/2017	|	Thursday	|		|		|
