@@ -9,54 +9,33 @@
 
 <div class="jumbotron">
     <div class="container text-center">
-        <h1>My Portfolio</h1>
-        <p>Some text that represents "Me"...</p>
+        <img src="images/bwsSign.jpg" alt="Badger Welding Sign" >
     </div>
 </div>
 
 <div class="container-fluid bg-3 text-center">
-    <h3>Some of my Work</h3><br>
     <div class="row">
         <div class="col-sm-3">
-            <p>Some text..</p>
-            <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+            <h3>Seven Day Forecast...</h3>
+            <img src="images/sevenDayForecast.jpg" alt="Weather Forecast" >
         </div>
         <div class="col-sm-3">
-            <p>Some text..</p>
-            <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+            <h3>Breaking News...</h3>
+            <img src="images/breakingNews.jpeg" alt="Breaking News" >
         </div>
         <div class="col-sm-3">
-            <p>Some text..</p>
-            <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+            <h3>Local News..</h3>
+            <img src="images/localNews.jpeg" alt="Local News" >
         </div>
         <div class="col-sm-3">
-            <p>Some text..</p>
-            <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+            <h3>National News..</h3>
+            <img src="images/National%20News.png" alt="National News" >
         </div>
     </div>
 </div>
 <br>
 
-<div class="container-fluid bg-3 text-center">
-    <div class="row">
-        <div class="col-sm-3">
-            <p>Some text..</p>
-            <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-        </div>
-        <div class="col-sm-3">
-            <p>Some text..</p>
-            <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-        </div>
-        <div class="col-sm-3">
-            <p>Some text..</p>
-            <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-        </div>
-        <div class="col-sm-3">
-            <p>Some text..</p>
-            <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-        </div>
-    </div>
-</div>
+
 <br><br>
 
 <%@ include file="include-footer.jsp" %>

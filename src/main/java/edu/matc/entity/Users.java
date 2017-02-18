@@ -5,5 +5,5 @@ package edu.matc.entity;
  * @author Susan Hundt
  */
 
-public class User {
+public class Users {
 }
