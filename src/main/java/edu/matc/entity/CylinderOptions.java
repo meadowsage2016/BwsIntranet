@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.math.BigDecimal;
 
 /**
  * CylinderOptions Class holds all information for individual gas types
@@ -21,16 +22,16 @@ public class CylinderOptions {
     private String gasNumber;
     private String  gasDescription;
     private String cylinderCode;
-    private Double cylinderRent;
-    private Double cylinderOnePPRent;
-    private Double cylinderFiveYearLease;
-    private Double cylinderPurchase;
+    private BigDecimal cylinderRent;
+    private BigDecimal cylinderOnePPRent;
+    private BigDecimal cylinderFiveYearLease;
+    private BigDecimal cylinderPurchase;
 
     public CylinderOptions() {
 
     }
 
-    public CylinderOptions(String gasNumber, String gasDescription, String cylinderCode, Double cylinderRent, Double cylinderOnePPRent, Double cylinderFiveYearLease, Double cylinderPurchase) {
+    public CylinderOptions(String gasNumber, String gasDescription, String cylinderCode, BigDecimal cylinderRent, BigDecimal cylinderOnePPRent, BigDecimal cylinderFiveYearLease, BigDecimal cylinderPurchase) {
         super();
         this.gasNumber = gasNumber;
         this.gasDescription = gasDescription;
@@ -65,35 +66,35 @@ public class CylinderOptions {
         this.cylinderCode = cylinderCode;
     }
 
-    public Double getCylinderRent() {
+    public BigDecimal getCylinderRent() {
         return cylinderRent;
     }
 
-    public void setCylinderRent(Double cylinderRent) {
+    public void setCylinderRent(BigDecimal cylinderRent) {
         this.cylinderRent = cylinderRent;
     }
 
-    public Double getCylinderOnePPRent() {
+    public BigDecimal getCylinderOnePPRent() {
         return cylinderOnePPRent;
     }
 
-    public void setCylinderOnePPRent(Double cylinderOnePPRent) {
+    public void setCylinderOnePPRent(BigDecimal cylinderOnePPRent) {
         this.cylinderOnePPRent = cylinderOnePPRent;
     }
 
-    public Double getCylinderFiveYearLease() {
+    public BigDecimal getCylinderFiveYearLease() {
         return cylinderFiveYearLease;
     }
 
-    public void setCylinderFiveYearLease(Double cylinderFiveYearLease) {
+    public void setCylinderFiveYearLease(BigDecimal cylinderFiveYearLease) {
         this.cylinderFiveYearLease = cylinderFiveYearLease;
     }
 
-    public Double getCylinderPurchase() {
+    public BigDecimal getCylinderPurchase() {
         return cylinderPurchase;
     }
 
-    public void setCylinderPurchase(Double cylinderPurchase) {
+    public void setCylinderPurchase(BigDecimal cylinderPurchase) {
         this.cylinderPurchase = cylinderPurchase;
     }
 

@@ -22,6 +22,11 @@
 
         <!-- List the annotated entity class/es -->
         <mapping class="edu.matc.entity.Employee"/>
+        <mapping class="edu.matc.entity.CylinderOptions"/>
+        <mapping class="edu.matc.entity.DeliveryRoute"/>
+        <mapping class="edu.matc.entity.Subdealers"/>
+        <mapping class="edu.matc.entity.BwsBlog"/>
+        <mapping class="edu.matc.entity.Users"/>
 
     </session-factory>
 

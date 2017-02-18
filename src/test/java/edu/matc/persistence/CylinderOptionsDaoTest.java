@@ -1,26 +1,43 @@
 package edu.matc.persistence;
 
+import edu.matc.entity.CylinderOptions;
+import edu.matc.persistence.CylinderOptionsDao;
+import org.apache.log4j.Logger;
+import org.junit.Before;
 import org.junit.Test;
+
+import java.util.List;
 
 import static org.junit.Assert.*;
 
 /**
- * Created by student on 2/18/17.
+ * @author Sue Hundt
  */
-public class CylinderOptionsDaoTest {
+public class CylinderOptionsDaoTest extends CylinderOptionsDao {
+
+    static Logger log = Logger.getLogger(CylinderOptionsDaoTest.class.getName());
+    CylinderOptionsDaoTest dao;
+
+    @Before
+    public void setup() {
+        dao = new CylinderOptionsDaoTest();
+    }
+
+
     @Test
-    public void getCylOptionById() throws Exception {
+    public void testGetCylOptionById() throws Exception {
 
     }
 
     @Test
-    public void getCylOptionByGasNumber() throws Exception {
+    public void testGetCylOptionByGasNumber() throws Exception {
 
     }
 
     @Test
-    public void getAllCylOptions() throws Exception {
-
+    public void testGetAllCylOptions() throws Exception {
+        List<CylinderOptions> cylOptions = dao.getAllCylOptions();
+        assertTrue(cylOptions.size() > 0);
     }
 
     @Test
