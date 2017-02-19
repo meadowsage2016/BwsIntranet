@@ -38,11 +38,13 @@ public class CylinderOptionsDao {
      * @param gasNumber
      * @return CylinderOptions
      */
-    public List<CylinderOptions> getCylOptionByGasNumber(String gasNumber) {
+    public CylinderOptions getCylOptionByGasNumber(String gasNumber) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        session.beginTransaction();
         Criteria criteria = session.createCriteria(CylinderOptions.class);
         criteria.add(Restrictions.eq("gasNumber", gasNumber));
-        return criteria.list();
+        CylinderOptions cylinder = (CylinderOptions) criteria.uniqueResult();
+        return cylinder;
     }
 
     /** Return a list of all cylOptions

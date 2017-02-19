@@ -22,16 +22,16 @@ public class CylinderOptions {
     private String gasNumber;
     private String  gasDescription;
     private String cylinderCode;
-    private BigDecimal cylinderRent;
-    private BigDecimal cylinderOnePPRent;
-    private BigDecimal cylinderFiveYearLease;
-    private BigDecimal cylinderPurchase;
+    private Double cylinderRent;
+    private Double cylinderOnePPRent;
+    private Double cylinderFiveYearLease;
+    private Double cylinderPurchase;
 
     public CylinderOptions() {
 
     }
 
-    public CylinderOptions(String gasNumber, String gasDescription, String cylinderCode, BigDecimal cylinderRent, BigDecimal cylinderOnePPRent, BigDecimal cylinderFiveYearLease, BigDecimal cylinderPurchase) {
+    public CylinderOptions(String gasNumber, String gasDescription, String cylinderCode, Double cylinderRent, Double cylinderOnePPRent, Double cylinderFiveYearLease, Double cylinderPurchase) {
         super();
         this.gasNumber = gasNumber;
         this.gasDescription = gasDescription;
@@ -66,35 +66,35 @@ public class CylinderOptions {
         this.cylinderCode = cylinderCode;
     }
 
-    public BigDecimal getCylinderRent() {
+    public Double getCylinderRent() {
         return cylinderRent;
     }
 
-    public void setCylinderRent(BigDecimal cylinderRent) {
+    public void setCylinderRent(Double cylinderRent) {
         this.cylinderRent = cylinderRent;
     }
 
-    public BigDecimal getCylinderOnePPRent() {
+    public Double getCylinderOnePPRent() {
         return cylinderOnePPRent;
     }
 
-    public void setCylinderOnePPRent(BigDecimal cylinderOnePPRent) {
+    public void setCylinderOnePPRent(Double cylinderOnePPRent) {
         this.cylinderOnePPRent = cylinderOnePPRent;
     }
 
-    public BigDecimal getCylinderFiveYearLease() {
+    public Double getCylinderFiveYearLease() {
         return cylinderFiveYearLease;
     }
 
-    public void setCylinderFiveYearLease(BigDecimal cylinderFiveYearLease) {
+    public void setCylinderFiveYearLease(Double cylinderFiveYearLease) {
         this.cylinderFiveYearLease = cylinderFiveYearLease;
     }
 
-    public BigDecimal getCylinderPurchase() {
+    public Double getCylinderPurchase() {
         return cylinderPurchase;
     }
 
-    public void setCylinderPurchase(BigDecimal cylinderPurchase) {
+    public void setCylinderPurchase(Double cylinderPurchase) {
         this.cylinderPurchase = cylinderPurchase;
     }
 

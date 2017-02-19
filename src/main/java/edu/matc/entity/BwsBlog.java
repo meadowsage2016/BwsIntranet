@@ -28,9 +28,8 @@ public class BwsBlog {
 
     }
 
-    public BwsBlog(String blogUser, Timestamp blogDateTime, String blogText) {
+    public BwsBlog(String blogUser, String blogText) {
         this.blogUser = blogUser;
-        this.blogDateTime = blogDateTime;
         this.blogText = blogText;
     }
 
