@@ -69,7 +69,7 @@ public class EmployeeDaoTest extends EmployeeDao {
     public void testDeleteEmployee() throws Exception {
 
         int before = dao.getAllEmployees().size();
-        dao.deleteEmployee(60);
+        dao.deleteEmployee(62);
         int after = dao.getAllEmployees().size();
         assertEquals("Delete not made", before -1, after);
     }
