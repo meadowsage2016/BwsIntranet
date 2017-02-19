@@ -1,7 +1,6 @@
 package edu.matc.persistence;
 
 import edu.matc.entity.CylinderOptions;
-import edu.matc.persistence.CylinderOptionsDao;
 import org.apache.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
