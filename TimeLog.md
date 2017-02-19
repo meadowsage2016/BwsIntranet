@@ -1,6 +1,6 @@
 | Date  | Day  |   Time    |   Notes:   |
 |-----------------------------|------------------------------|---------------------|------------------------------------------------------------------|
-|	1/17/2017	|	Tuesday	|		|		|
+|	1/17/2017	|	Tuesday	|		|		|  
 |	1/18/2017	|	Wednesday	|		|		|
 |	1/19/2017	|	Thursday	|		|		|
 |	1/20/2017	|	Friday	|		|		|
@@ -15,12 +15,12 @@
 |	1/29/2017	|	Sunday	|		|		|
 |	1/30/2017	|	Monday	|		|		|
 |	1/31/2017	|	Tuesday	|		|		|
-|	2/01/2017	|	Wednesday	|		|		|
+|	2/01/2017	|	Wednesday	|4:30-11:30 		|fixing localdate in exercise 1 so i could test the calculateAge method.  Spun my wheels with pushing  to Github.  worked on ListTest and Santa.  Don't know if santa is really working.  have not started santas tests.		|
 |	2/02/2017	|	Thursday	|		|		|
-|	2/03/2017	|	Friday	|		|		|
-|	2/04/2017	|	Saturday	|		|		|
-|	2/05/2017	|	Sunday	|		|		|
-|	2/06/2017	|	Monday	|8:00-12:30		|		|
+|	2/03/2017	|	Friday	| 8:30-11:30		|Santa and cleaning up git directories		|
+|	2/04/2017	|	Saturday	|6:30 -  12:00		|DAO		|
+|	2/05/2017	|	Sunday	|	5:30 - 12:00	|exerc 3 cont		|
+|	2/06/2017	|	Monday	|6:30 -  12:00		|		|
 |	2/07/2017	|	Tuesday	|		|		|
 |	2/08/2017	|	Wednesday	|8:00-11:00		|Vm failed did AWS setup on PC side		|
 |	2/09/2017	|	Thursday	|5:30 - 12:30		|AWS setup and VM failed, went to school to rebuild.|
@@ -30,9 +30,9 @@
 |	2/13/2017	|	Monday	|2:30 - 1:30		|Bootstrap, AWS complete process and deploy |
 |	2/14/2017	|	Tuesday	|		|		|
 |	2/15/2017	|	Wednesday	|		|		|
-|	2/16/2017	|	Thursday	|		|		|
-|	2/17/2017	|	Friday	|		|		|
-|	2/18/2017	|	Saturday	|		|		|
+|	2/16/2017	|	Thursday	|8:00 - 11:00		|		|
+|	2/17/2017	|	Friday	|8:00 - 12:00		|DAO for 		|
+|	2/18/2017	|	Saturday	|3:30 - 11:00		|Daos for the rest-tests for getAll on each		|
 |	2/19/2017	|	Sunday	|		|		|
 |	2/20/2017	|	Monday	|		|		|
 |	2/21/2017	|	Tuesday	|		|		|
