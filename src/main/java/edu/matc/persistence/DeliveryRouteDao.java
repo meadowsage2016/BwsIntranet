@@ -31,11 +31,13 @@ public class DeliveryRouteDao {
      * @param deliveryCityOrBusiness Employee's last name which is the search criteria
      * @return Employee
      */
-    public List<DeliveryRoute> getDeliveryRouteByCityOrBusiness(String deliveryCityOrBusiness) {
+    public DeliveryRoute getDeliveryRouteByCityOrBusiness(String deliveryCityOrBusiness) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        session.beginTransaction();
         Criteria criteria = session.createCriteria(DeliveryRoute.class);
         criteria.add(Restrictions.eq("deliveryCityOrBusiness", deliveryCityOrBusiness));
-        return criteria.list();
+        DeliveryRoute  route = (DeliveryRoute) criteria.uniqueResult();
+        return route;
     }
 
     /** Return a list of all employees
