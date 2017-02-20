@@ -22,37 +22,37 @@ public class UserRolesDaoTest extends UserRolesDao {
         dao = new UserRolesDaoTest();
     }
 
-    @Test
+    @Test // GET BY ID                                                                                                1
     public void testGetUserRoleById() throws Exception {
         UserRoles userRole = dao.getUserRoleById(4);
-        assertEquals("Return wrong User", "Sue", userRole.getUser_name());
+        assertEquals("Return wrong User", "admin", userRole.getUser_name());
     }
 
-    @Test
+    @Test  // GET BY ROLE_NAME                                    ADMINISTRATOR
     public void testGetUserRoleByUserRoleName() throws Exception {
         List<UserRoles> userRoleFound = dao.getUserRoleByUserRoleName("administrator");
         assertEquals("2 Administrators Not Found", 2, userRoleFound.size());
     }
 
-    @Test
+    @Test  //  GET ALL
     public void testGetAllUserRoles() throws Exception {
         List<UserRoles> userRoles = dao.getAllUserRoles();
         assertTrue(userRoles.size() > 0);
     }
 
-    @Test
+    @Test  // ADD
     public void testAddUserRole() throws Exception {
         int before = dao.getAllUserRoles().size();
-        UserRoles newUserRole = new UserRoles("Maggie", "registered-user");
+        UserRoles newUserRole = new UserRoles("Maggie3", "registered-user");
         dao.addUserRole(newUserRole);
         int after = dao.getAllUserRoles().size();
         assertEquals("User not added correctly", before + 1, after);
     }
 
-    @Test
+    @Test  //   DELETE  ***CHANGE - MUST EXISTS ***                                                                  7
     public void testDeleteUserRole() throws Exception {
         int before = dao.getAllUserRoles().size();
-        dao.deleteUserRole(5);
+        dao.deleteUserRole(7);
         int after = dao.getAllUserRoles().size();
         assertEquals("Delete not made", before -1, after);
     }

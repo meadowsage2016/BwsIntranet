@@ -23,42 +23,42 @@ public class DeliveryRouteDaoTest extends DeliveryRouteDao {
         dao = new DeliveryRouteDaoTest();
     }
 
-    @Test
+    @Test  // GET BY ID                                                                                            4
     public void testGetDeliveryRouteById() throws Exception {
         DeliveryRoute route = dao.getDeliveryRouteById(4);
         assertEquals("Return wrong route", "BARABOO", route.getDeliveryCityOrBusiness());
     }
 
-    @Test
+    @Test  //  GET BY CITY                                                                                           RICHLAND CENTER
     public void testGetDeliveryRouteByCityOrBusiness() throws Exception {
         DeliveryRoute route = dao.getDeliveryRouteByCityOrBusiness("RICHLAND CENTER");
         assertEquals("CITY Not Found", "RICHLAND CENTER", route.getDeliveryCityOrBusiness());
     }
 
-    @Test
+    @Test  // GET ALL
     public void testGetAllDeliveryRoutes() throws Exception {
         List<DeliveryRoute> routes = dao.getAllDeliveryRoutes();
         assertTrue(routes.size() > 0);
     }
 
-    @Test
+    @Test  // ADD ***CHANGE - MUST BE UNIQUE ***                                                                   HOME4
     public void testAddDeliveryRoute() throws Exception {
         int before = dao.getAllDeliveryRoutes().size();
-        DeliveryRoute cylinder = new DeliveryRoute("Home", "Saturday", "Weekly");
+        DeliveryRoute cylinder = new DeliveryRoute("Home4", "Saturday", "Weekly");
         dao.addDeliveryRoute(cylinder);
         int after = dao.getAllDeliveryRoutes().size();
         assertEquals("Route not added correctly", before + 1, after);
     }
 
-    @Test
+    @Test  // DELETE ***CHANGE - MUST EXISTS ***                                                                      90
     public void testDeleteDeliveryRoute() throws Exception {
         int before = dao.getAllDeliveryRoutes().size();
-        dao.deleteDeliveryRoute(88);
+        dao.deleteDeliveryRoute(90);
         int after = dao.getAllDeliveryRoutes().size();
         assertEquals("Delete not made", before -1, after);
     }
 
-    @Test
+    @Test  // UPDATE BY ID                                                                                              87
     public void testUpdateDeliveryRoute() throws Exception {
         DeliveryRoute route = dao.getDeliveryRouteById(87);
         String newDay = "Never";

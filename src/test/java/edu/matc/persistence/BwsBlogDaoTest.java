@@ -23,25 +23,25 @@ public class BwsBlogDaoTest extends BwsBlogDao {
         dao = new BwsBlogDaoTest();
     }
 
-    @Test
+    @Test  // GET BY USER ID                                                                             1
     public void testGetBwsBlogById() throws Exception {
         BwsBlog blog = dao.getBwsBlogById(1);
         assertEquals("Return wrong user", "admin", blog.getBlogUser());
     }
 
-    @Test
+    @Test  // GET BY USER NAME                                                                         ADMIN
     public void testGetBlogByUser() throws Exception {
         List<BwsBlog> blogUserName = dao.getBlogByUser("admin");
         assertEquals("User Not Found", 8, blogUserName.size());
     }
 
-    @Test
+    @Test  // GET ALL
     public void testGetAllBlogs() throws Exception {
         List<BwsBlog> blogs = dao.getAllBlogs();
         assertTrue(blogs.size() > 0);
     }
 
-    @Test
+    @Test  // ADD
     public void testAddBwsBlog() throws Exception {
         int before = dao.getAllBlogs().size();
         BwsBlog newBlog = new BwsBlog("Sue","Guess  who is president?");
@@ -50,15 +50,15 @@ public class BwsBlogDaoTest extends BwsBlogDao {
         assertEquals("Blog not added correctly", before + 1, after);
     }
 
-    @Test
+    @Test  // DELETE BY ID ****CHANGE****                                                          22
     public void testDeleteBlog() throws Exception {
         int before = dao.getAllBlogs().size();
-        dao.deleteBlog(23);
+        dao.deleteBlog(22);
         int after = dao.getAllBlogs().size();
         assertEquals("Delete not made", before -1, after);
     }
 
-    @Test
+    @Test  // UPDATE BY ID                                                                             10
     public void testUpdateBlog() throws Exception {
         BwsBlog blog = dao.getBwsBlogById(10);
         String newblogText = "You are not a dandy!!!";

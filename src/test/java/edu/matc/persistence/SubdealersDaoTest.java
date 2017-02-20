@@ -22,43 +22,43 @@ public class SubdealersDaoTest extends SubdealersDao {
         dao = new SubdealersDaoTest();
     }
 
-    @Test
+    @Test  // GET BY ID                                                                                             37
     public void testGetSubdealerById() throws Exception {
         Subdealers subdealer = dao.getSubdealerById(37);
         assertEquals("Return wrong employee", "MARELL INC", subdealer.getCustomerName());
     }
 
-    @Test
+    @Test  // GET BY CUSTOMER NUMBER                                                                             01070
     public void testGetsubdealerByCustomerNumber() throws Exception {
         Subdealers subdealer = dao.getsubdealerByCustomerNumber("01070");
         assertEquals("Customer Not Found", "MCFARLANE MFG CO -STORE ACCT", subdealer.getCustomerName());
     }
 
-    @Test
+    @Test  // GET ALL
     public void testGetAllSubdealers() throws Exception {
         List<Subdealers> subdealers = dao.getAllSubdealers();
         assertTrue(subdealers.size() > 0);
     }
 
-    @Test
+    @Test  //  ADD  ***CHANGE - MUST BE UNIQUE ***                                                               99993
     public void testAddSubdealer() throws Exception {
 
         int before = dao.getAllSubdealers().size();
-        Subdealers newSubdealer = new Subdealers("99991", "Mr Transfer", "101 South Dickinson", "PO Box 3379", "Madison", "WI", "53704", "Dane", "Delete me");
+        Subdealers newSubdealer = new Subdealers("99993", "Mr Transfer", "101 South Dickinson", "PO Box 3379", "Madison", "WI", "53704", "Dane", "Delete me");
         dao.addSubdealer(newSubdealer);
         int after = dao.getAllSubdealers().size();
         assertEquals("Subdealer not added correctly", before + 1, after);
     }
 
-    @Test
+    @Test  //  DELETE  ***CHANGE - MUST BE EXISTS ***                                                               38
     public void testDeleteSubdealer() throws Exception {
         int before = dao.getAllSubdealers().size();
-        dao.deleteSubdealer(39);
+        dao.deleteSubdealer(38);
         int after = dao.getAllSubdealers().size();
         assertEquals("Delete not made", before -1, after);
     }
 
-    @Test
+    @Test  // UPDATE BY ID                              10
     public void testUpdateEmployee() throws Exception {
         Subdealers subdealerToEdit = dao.getSubdealerById(10);
         String newAddress1 = "123 Johnson St";

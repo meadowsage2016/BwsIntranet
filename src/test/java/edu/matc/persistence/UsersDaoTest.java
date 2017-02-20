@@ -23,45 +23,45 @@ public class UsersDaoTest extends UsersDao {
         dao = new UsersDaoTest();
     }
 
-    @Test
+    @Test  // GET BY ID                                                                                               3
     public void testGetUserById() throws Exception {
         Users user = dao.getUserById(3);
         assertEquals("Return wrong User", "Sue", user.getUser_name());
 
     }
 
-    @Test
+    @Test  // GET BY USER NAME                                                                                    ADMIN
     public void testGetUserByUserName() throws Exception {
         Users userFound = dao.getUserByUserName("admin");
         assertEquals("User Not Found", "admin", userFound.getUser_name());
     }
 
-    @Test
+    @Test  // GET ALL
     public void testGetAllUsers() throws Exception {
         List<Users> users = dao.getAllUsers();
         assertTrue(users.size() > 0);
     }
 
-    @Test
+    @Test  // ADD  ***CHANGE - MUST BE UNIQUE ****
     public void testAddUser() throws Exception {
         int before = dao.getAllUsers().size();
-        Users newSubdealer = new Users("Maggie", "maggie");
+        Users newSubdealer = new Users("Maggie4", "maggie");
         dao.addUser(newSubdealer);
         int after = dao.getAllUsers().size();
         assertEquals("User not added correctly", before + 1, after);
     }
 
-    @Test
+    @Test  //  DELETE   *** CHANGE - MUST EXISTS  ***                                              7
     public void testDeleteUser() throws Exception {
         int before = dao.getAllUsers().size();
-        dao.deleteUser(5);
+        dao.deleteUser(7);
         int after = dao.getAllUsers().size();
         assertEquals("Delete not made", before -1, after);
     }
 
-    @Test
+    @Test  // UPDATE  *************CHANGE - MUST EXISTS **********                                    3
     public void testUpdateUser() throws Exception {
-        Users userToEdit = dao.getUserById(4);
+        Users userToEdit = dao.getUserById(3);
         String passwordChange = "password";
         userToEdit.setUser_pass(passwordChange);
         dao.updateUser(userToEdit);
