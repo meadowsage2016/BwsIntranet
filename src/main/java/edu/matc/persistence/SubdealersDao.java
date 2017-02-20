@@ -32,11 +32,13 @@ public class SubdealersDao {
      * @param customerNumber Employee's last name which is the search criteria
      * @return Employee
      */
-    public List<Subdealers> getsubdealerByCustomerNumber(String customerNumber) {
+    public Subdealers getsubdealerByCustomerNumber(String customerNumber) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        session.beginTransaction();
         Criteria criteria = session.createCriteria(Subdealers.class);
         criteria.add(Restrictions.eq("customerNumber", customerNumber));
-        return criteria.list();
+        Subdealers subdealer = (Subdealers) criteria.uniqueResult();
+        return subdealer;
     }
 
     /** Return a list of all employees
@@ -62,6 +64,7 @@ public class SubdealersDao {
         int id = (Integer) session.save(subdealer);
         session.getTransaction().commit();
         return id;
+
     }
 
     /**

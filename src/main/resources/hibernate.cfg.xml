@@ -27,6 +27,7 @@
         <mapping class="edu.matc.entity.Subdealers"/>
         <mapping class="edu.matc.entity.BwsBlog"/>
         <mapping class="edu.matc.entity.Users"/>
+        <mapping class="edu.matc.entity.UserRoles"/>
 
     </session-factory>
 

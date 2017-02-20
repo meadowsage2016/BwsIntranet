@@ -1,6 +1,6 @@
 package edu.matc.persistence;
 
-import edu.matc.entity.Users;
+import edu.matc.entity.UserRoles;
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Created by student on 2/18/17.
  */
-public class UsersDao {
+public class UserRolesDao {
 
     private final Logger log = Logger.getLogger(this.getClass());
 
@@ -21,47 +21,45 @@ public class UsersDao {
      * @param id user's id
      * @return User
      */
-    public Users getUserById(int id) {
+    public UserRoles getUserRoleById(int id) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        Users user = (Users) session.get(Users.class, id);
-        return user;
+        UserRoles userRoles = (UserRoles) session.get(UserRoles.class, id);
+        return userRoles;
     }
 
     /** Retrieve employee by lastname
      *
-     * @param userName  name which is the search criteria
+     * @param userRoleName  name which is the search criteria
      * @return Employee
      */
-    public Users getUserByUserName(String userName) {
+    public List<UserRoles> getUserRoleByUserRoleName(String userRoleName) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        session.beginTransaction();
-        Criteria criteria = session.createCriteria(Users.class);
-        criteria.add(Restrictions.eq("user_name", userName));
-        Users userFound = (Users) criteria.uniqueResult();
-        return userFound;
+        Criteria criteria = session.createCriteria(UserRoles.class);
+        criteria.add(Restrictions.eq("role_name", userRoleName));
+        return criteria.list();
     }
 
     /** Return a list of all employees
      *
      * @return All employees
      */
-    public List<Users> getAllUsers() {
-        List<Users> users = new ArrayList<Users>();
+    public List<UserRoles> getAllUserRoles() {
+        List<UserRoles> userRoles = new ArrayList<UserRoles>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        users = session.createCriteria(Users.class).list();
-        return users;
+        userRoles = session.createCriteria(UserRoles.class).list();
+        return userRoles;
     }
 
 
     /** save or update user
-     * @param user
+     * @param userRole
      * @return id of the inserted employee
      */
 
-    public int addUser(Users user) throws Exception {
+    public int addUserRole(UserRoles userRole) throws Exception {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         session.beginTransaction();
-        int id = (Integer) session.save(user);
+        int id = (Integer) session.save(userRole);
         session.getTransaction().commit();
         return id;
     }
@@ -70,21 +68,21 @@ public class UsersDao {
      * delete a user by id
      * @param id the user's id
      */
-    public void deleteUser(int id) throws Exception {
+    public void deleteUserRole(int id) throws Exception {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        Users user = (Users) session.get(Users.class, id);
+        UserRoles userRole = (UserRoles) session.get(UserRoles.class, id);
         session.beginTransaction();
-        session.delete(user);
+        session.delete(userRole);
         session.getTransaction().commit();
 
     }
-    public void updateUser(Users user) throws Exception {
+    public void updateUserRole(UserRoles userRole) throws Exception {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         session.beginTransaction();
 
-        session.update(user);
+        session.update(userRole);
         session.getTransaction().commit();
 
     }
