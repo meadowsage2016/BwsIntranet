@@ -33,8 +33,8 @@
 |	2/16/2017	|	Thursday	|8:00 - 11:00		|		|
 |	2/17/2017	|	Friday	|8:00 - 12:00		|DAO for 		|
 |	2/18/2017	|	Saturday	|3:30 - 11:00		|Daos for the rest-tests for getAll on each		|
-|	2/19/2017	|	Sunday	|		|		|
-|	2/20/2017	|	Monday	|		|		|
+|	2/19/2017	|	Sunday	|3:30 - 10:30		|completed daos tests for all entities, researched jQuery to create tables that have built in sort options		|
+|	2/20/2017	|	Monday	| 6:00 - 12:30		|Watched week 6 videos and worked on first three assignments.  Got hung up on #3.  Tried to figure problem with AWS deploy		|
 |	2/21/2017	|	Tuesday	|		|		|
 |	2/22/2017	|	Wednesday	|		|		|
 |	2/23/2017	|	Thursday	|		|		|
