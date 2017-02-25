@@ -12,7 +12,72 @@
         <img src="images/bwsSign.jpg" alt="Badger Welding Sign" >
     </div>
 </div>
-
+<div class="container-fluid bg-3 text-center">
+    <div class="row">
+        <div class="col-sm-3">
+        <form action="/EmployeeSearch" method="GET">
+            <div class="form-group">
+                <fieldset class="form-group">
+                    <legend><h3>Employee Directory</h3></legend>
+                        <label for="firstName">Search by First Name:</label>
+                        <input class="form-control" type="text" id="firstName">
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="1">Show All Employees
+                        </label>
+                    </div>
+                    <input type="submit" name="Submit" />
+                 </fieldset>
+            </div>
+        </form>
+    </div>
+        <div class="col-sm-3">
+            <form action="/DeliveryRouteSearch" method="GET">
+                <fieldset class="form-group">
+                    <legend><h3>Deliver Routes</h3></legend>
+                    <label for="searchCity">Search By City or Other Location</label>
+                    <input class="form-control" id="searchCity" type="text" name="city"/>
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label">
+                            <input class="form-check-input" name="selectDeliveryRouteType" type="checkbox" id="inlineCheckbox2" value="1">View All Delivery Routes:
+                        </label>
+                    </div>
+                    <input type="submit" name="Submit" />
+                </fieldset>
+            </form>
+        </div>
+        <div class="col-sm-3">
+            <form action="/SubdealerSearch" method="GET">
+                <fieldset class="form-group">
+                    <legend><h3>Subdealers</h3></legend>
+                    <label for="county">Search By County</label>
+                    <input class="form-control" id="county" type="text" name="county" />
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="1">View All Subdealers:
+                        </label>
+                    </div>
+                    <input type="submit" name="Submit" />
+                </fieldset>
+            </form>
+        </div>
+        <div class="col-sm-3">
+            <form action="/CylinderSearch" method="GET">
+                <fieldset class="form-group">
+                    <legend><h3>Cylinders: Rent-Prepay Rent - 5 Year Lease - Purchase</h3></legend>
+                    <label for="gasNumber">Search By Gas Number</label>
+                    <input class="form-control" id="gasNumber" type="text" name="gasNumber"/>
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="1">View All Gases:
+                        </label>
+                    </div>
+                    <input type="submit" name="Submit" />
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
 <div class="container-fluid bg-3 text-center">
     <div class="row">
         <div class="col-sm-3">

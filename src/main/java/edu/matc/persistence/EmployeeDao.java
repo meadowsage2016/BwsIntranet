@@ -31,13 +31,13 @@ public class EmployeeDao {
 
     /** Retrieve employee by lastname
      *
-     * @param lastName Employee's last name which is the search criteria
+     * @param firstName Employee's first name which is the search criteria
      * @return Employee
      */
-    public List<Employee> getEmployeesByLastName(String lastName) {
+    public List<Employee> getEmployeesByFirstName(String firstName) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Criteria criteria = session.createCriteria(Employee.class);
-        criteria.add(Restrictions.eq("lastName", lastName));
+        criteria.add(Restrictions.eq("firstName", firstName));
         return criteria.list();
     }
 

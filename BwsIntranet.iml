@@ -47,5 +47,7 @@
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.16.12" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.groovy:groovy-all:2.3.7" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet:jstl:1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.webjars:jquery-ui:1.9.2" level="project" />
+    <orderEntry type="library" name="Maven: org.webjars:jquery:1.8.2" level="project" />
   </component>
 </module>
