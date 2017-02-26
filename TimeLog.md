@@ -36,10 +36,10 @@
 |	2/19/2017	|	Sunday	|3:30 - 10:30		|completed daos tests for all entities, researched jQuery to create tables that have built in sort options		|
 |	2/20/2017	|	Monday	| 6:00 - 12:30		|Watched week 6 videos and worked on first three assignments.  Got hung up on #3.  Tried to figure problem with AWS deploy		|
 |	2/21/2017	|	Tuesday	|		|		|
-|	2/22/2017	|	Wednesday	|		|		|
+|	2/22/2017	|	Wednesday	|8:00-11:00		|Jquery and JSTL together on a webpage		|
 |	2/23/2017	|	Thursday	|		|		|
-|	2/24/2017	|	Friday	|		|		|
-|	2/25/2017	|	Saturday	|		|		|
+|	2/24/2017	|	Friday	|5:00 - 1:00		|servlets and jsp jstl for 4 searches		|
+|	2/25/2017	|	Saturday	|4:00 - 11:30		|complete servlets and jsp jstl for 4 searches, attempt to push war file to AWS. work on Ativity 3 redo		|
 |	2/26/2017	|	Sunday	|		|		|
 |	2/27/2017	|	Monday	|		|		|
 |	2/28/2017	|	Tuesday	|		|		|
