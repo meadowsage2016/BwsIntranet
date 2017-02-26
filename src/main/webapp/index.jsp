@@ -20,10 +20,10 @@
                 <fieldset class="form-group">
                     <legend><h3>Employee Directory</h3></legend>
                         <label for="firstName">Search by First Name:</label>
-                        <input class="form-control" type="text" id="firstName">
+                        <input class="form-control" type="text" id="firstName" name="searchEmployeeFirstName">
                     <div class="form-check form-check-inline">
                         <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="1">Show All Employees
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="showAllEmployees" value="1">Show All Employees
                         </label>
                     </div>
                     <input type="submit" name="Submit" />
@@ -54,7 +54,7 @@
                     <input class="form-control" id="county" type="text" name="county" />
                     <div class="form-check form-check-inline">
                         <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="1">View All Subdealers:
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" name="subdealerSearchType" value="1">View All Subdealers:
                         </label>
                     </div>
                     <input type="submit" name="Submit" />
@@ -62,14 +62,14 @@
             </form>
         </div>
         <div class="col-sm-3">
-            <form action="/CylinderSearch" method="GET">
+            <form action="/CylinderOptionsSearch" method="GET">
                 <fieldset class="form-group">
                     <legend><h3>Cylinders: Rent-Prepay Rent - 5 Year Lease - Purchase</h3></legend>
                     <label for="gasNumber">Search By Gas Number</label>
                     <input class="form-control" id="gasNumber" type="text" name="gasNumber"/>
                     <div class="form-check form-check-inline">
                         <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="1">View All Gases:
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" name="selectCylinderOptionsSearchType" value="1">View All Gases:
                         </label>
                     </div>
                     <input type="submit" name="Submit" />

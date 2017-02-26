@@ -26,28 +26,25 @@ public class CylinderOptionsServlet  extends HttpServlet {
         CylinderOptions result = null;
         List<CylinderOptions> results = new ArrayList<CylinderOptions>();
 
-        // Local variable references ServletContext
-        ServletContext application = getServletContext();
-
         // Get Searchtype and Searchword submitted from form
         String searchType  = request.getParameter("selectCylinderOptionsSearchType");
         String gasNumber = request.getParameter("searchByGasNumber");
 
         //  Take updated Search object and store in Sessio
-        HttpSession  session      = request.getSession();
-        session.setAttribute("noRecordsFoundMessage", "");
+        HttpSession  sessionCyl      = request.getSession();
+        sessionCyl.setAttribute("noRecordsFoundMessage", "");
 
-        if(searchType == "1") {
+//        if(searchType == "1") {
 
             results = cylinder.getAllCylOptions();
 
-            if (results.isEmpty()) {
+/**            if (results.isEmpty()) {
                 session.setAttribute("noRecordsFoundMessage", "No records found for search City entered.");
             }
             else {
-
-                session.setAttribute("SearchResults", results);
-            }
+*/
+                sessionCyl.setAttribute("SearchResults", results);
+/**            }
 
         }
 
@@ -63,7 +60,7 @@ public class CylinderOptionsServlet  extends HttpServlet {
                 session.setAttribute("SearchResults", result);
             }
         }
-
+*/
 
         // Local variable to hold url of results page
         String url =  "/cylinderOptionsJSP.jsp";

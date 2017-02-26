@@ -23,36 +23,36 @@ public class EmployeeSearchServlet  extends HttpServlet {
         EmployeeDao employee = new EmployeeDao();
 
         // Local variable references ServletContext
-        ServletContext application = getServletContext();
+//        ServletContext application = getServletContext();
 
         // Get Searchtype and Searchword submitted from form
-        String searchType  = request.getParameter("selectEmployeeSearchType");
+        String searchType  = request.getParameter("showAllEmployees");
         String firstName = request.getParameter("searchEmployeeFirstName");
 
         // Set Search object variables
 
         List<Employee> results;
 
-        if(searchType == "1") {
+ //       if(searchType == "1") {
 
-            results = employee.getAllEmployees();
+        results = employee.getAllEmployees();
 
-        } else {
+  //      } else {
 
-            results = employee.getEmployeesByFirstName(firstName);
-        }
-
+ //           results = employee.getEmployeesByFirstName(firstName);
+//        }
+//
         //  Take updated Search object and store in Sessio
-        HttpSession  session      = request.getSession();
-        session.setAttribute("noRecordsFoundMessage", "");
+        HttpSession  sessionEmp      = request.getSession();
+        sessionEmp.setAttribute("noRecordsFoundMessage", "");
 
-        if (results.isEmpty()) {
-            session.setAttribute("noRecordsFoundMessage", "No records found for search criteria entered.");
-        }
-        else {
+ //       if (results.isEmpty()) {
+ //           session.setAttribute("noRecordsFoundMessage", "No records found for search criteria entered.");
+ //       }
+ //       else {
 
-            session.setAttribute("SearchResults", results);
-        }
+        sessionEmp.setAttribute("SearchResults", results);
+//        }
 
         // Local variable to hold url of results page
         String url =  "/employeeDirectoryJSP.jsp";

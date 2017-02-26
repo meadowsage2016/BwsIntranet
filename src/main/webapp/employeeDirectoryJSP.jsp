@@ -1,10 +1,9 @@
-<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<html lang="en">
+<!DOCTYPE html>
 <c:import url="include-headtag.jsp" />
 
 <body>
-
 <h3><c:out value="${noRecordsFoundMessage}" /></h3>
 
 <div id="wrapper">
