@@ -24,6 +24,7 @@ public class UsersDao {
     public Users getUserById(int id) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Users user = (Users) session.get(Users.class, id);
+        session.close();
         return user;
     }
 
@@ -38,6 +39,7 @@ public class UsersDao {
         Criteria criteria = session.createCriteria(Users.class);
         criteria.add(Restrictions.eq("user_name", userName));
         Users userFound = (Users) criteria.uniqueResult();
+        session.close();
         return userFound;
     }
 
@@ -63,6 +65,7 @@ public class UsersDao {
         session.beginTransaction();
         int id = (Integer) session.save(user);
         session.getTransaction().commit();
+        session.close();
         return id;
     }
 
@@ -77,6 +80,7 @@ public class UsersDao {
         session.beginTransaction();
         session.delete(user);
         session.getTransaction().commit();
+        session.close();
 
     }
     public void updateUser(Users user) throws Exception {
@@ -86,6 +90,7 @@ public class UsersDao {
 
         session.update(user);
         session.getTransaction().commit();
+        session.close();
 
     }
 

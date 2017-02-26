@@ -26,6 +26,7 @@ public class EmployeeDao {
     public Employee getEmployeeById(int id) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Employee employee = (Employee) session.get(Employee.class, id);
+        session.close();
         return employee;
     }
 
@@ -38,6 +39,7 @@ public class EmployeeDao {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Criteria criteria = session.createCriteria(Employee.class);
         criteria.add(Restrictions.eq("firstName", firstName));
+        session.close();
         return criteria.list();
     }
 
@@ -49,6 +51,7 @@ public class EmployeeDao {
         List<Employee> employees = new ArrayList<Employee>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         employees = session.createCriteria(Employee.class).list();
+        session.close();
         return employees;
     }
 
@@ -63,6 +66,7 @@ public class EmployeeDao {
         session.beginTransaction();
         int id = (Integer) session.save(employee);
         session.getTransaction().commit();
+        session.close();
         return id;
     }
 
@@ -77,7 +81,7 @@ public class EmployeeDao {
         session.beginTransaction();
         session.delete(employee);
         session.getTransaction().commit();
-
+        session.close();
     }
     public void updateEmployee(Employee employee) throws Exception {
 
@@ -86,7 +90,7 @@ public class EmployeeDao {
 
         session.update(employee);
         session.getTransaction().commit();
-
+        session.close();
     }
 
 }

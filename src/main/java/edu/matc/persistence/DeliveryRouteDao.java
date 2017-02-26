@@ -23,6 +23,7 @@ public class DeliveryRouteDao {
     public DeliveryRoute getDeliveryRouteById(int id) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         DeliveryRoute route = (DeliveryRoute) session.get(DeliveryRoute.class, id);
+        session.close();
         return route;
     }
 
@@ -37,6 +38,7 @@ public class DeliveryRouteDao {
         Criteria criteria = session.createCriteria(DeliveryRoute.class);
         criteria.add(Restrictions.eq("deliveryCityOrBusiness", deliveryCityOrBusiness));
         DeliveryRoute  route = (DeliveryRoute) criteria.uniqueResult();
+        session.close();
         return route;
     }
 
@@ -48,6 +50,7 @@ public class DeliveryRouteDao {
         List<DeliveryRoute> routes = new ArrayList<DeliveryRoute>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         routes = session.createCriteria(DeliveryRoute.class).list();
+        session.close();
         return routes;
     }
 
@@ -62,6 +65,7 @@ public class DeliveryRouteDao {
         session.beginTransaction();
         int id = (Integer) session.save(route);
         session.getTransaction().commit();
+        session.close();
         return id;
     }
 
@@ -76,6 +80,7 @@ public class DeliveryRouteDao {
         session.beginTransaction();
         session.delete(route);
         session.getTransaction().commit();
+        session.close();
 
     }
     public void updateDeliveryRoute(DeliveryRoute route) throws Exception {
@@ -85,6 +90,7 @@ public class DeliveryRouteDao {
 
         session.update(route);
         session.getTransaction().commit();
+        session.close();
 
     }
 

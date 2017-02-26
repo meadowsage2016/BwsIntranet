@@ -24,6 +24,7 @@ public class SubdealersDao {
     public Subdealers getSubdealerById(int id) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Subdealers subdealer = (Subdealers) session.get(Subdealers.class, id);
+        session.close();
         return subdealer;
     }
 
@@ -38,6 +39,7 @@ public class SubdealersDao {
         Criteria criteria = session.createCriteria(Subdealers.class);
         criteria.add(Restrictions.eq("customerNumber", customerNumber));
         Subdealers subdealer = (Subdealers) criteria.uniqueResult();
+        session.close();
         return subdealer;
     }
 
@@ -49,6 +51,7 @@ public class SubdealersDao {
         List<Subdealers> subdealers = new ArrayList<Subdealers>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         subdealers = session.createCriteria(Subdealers.class).list();
+        session.close();
         return subdealers;
     }
 
@@ -63,6 +66,7 @@ public class SubdealersDao {
         session.beginTransaction();
         int id = (Integer) session.save(subdealer);
         session.getTransaction().commit();
+        session.close();
         return id;
 
     }
@@ -78,6 +82,7 @@ public class SubdealersDao {
         session.beginTransaction();
         session.delete(subdealer);
         session.getTransaction().commit();
+        session.close();
 
     }
     public void updateSubdealer(Subdealers subdealer) throws Exception {
@@ -87,7 +92,7 @@ public class SubdealersDao {
 
         session.update(subdealer);
         session.getTransaction().commit();
-
+        session.close();
     }
 
 }

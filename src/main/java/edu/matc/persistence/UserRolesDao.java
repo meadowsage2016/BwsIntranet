@@ -36,6 +36,7 @@ public class UserRolesDao {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Criteria criteria = session.createCriteria(UserRoles.class);
         criteria.add(Restrictions.eq("role_name", userRoleName));
+        session.close();
         return criteria.list();
     }
 
@@ -47,6 +48,7 @@ public class UserRolesDao {
         List<UserRoles> userRoles = new ArrayList<UserRoles>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         userRoles = session.createCriteria(UserRoles.class).list();
+        session.close();
         return userRoles;
     }
 
@@ -61,6 +63,7 @@ public class UserRolesDao {
         session.beginTransaction();
         int id = (Integer) session.save(userRole);
         session.getTransaction().commit();
+        session.close();
         return id;
     }
 
@@ -75,6 +78,7 @@ public class UserRolesDao {
         session.beginTransaction();
         session.delete(userRole);
         session.getTransaction().commit();
+        session.close();
 
     }
     public void updateUserRole(UserRoles userRole) throws Exception {
@@ -84,6 +88,7 @@ public class UserRolesDao {
 
         session.update(userRole);
         session.getTransaction().commit();
+        session.close();
 
     }
 

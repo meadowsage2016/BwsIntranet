@@ -64,7 +64,7 @@
         <div class="col-sm-3">
             <form action="/CylinderOptionsSearch" method="GET">
                 <fieldset class="form-group">
-                    <legend><h3>Cylinders: Rent-Prepay Rent - 5 Year Lease - Purchase</h3></legend>
+                    <legend><h3>Cylinders Options: </h3></legend>
                     <label for="gasNumber">Search By Gas Number</label>
                     <input class="form-control" id="gasNumber" type="text" name="gasNumber"/>
                     <div class="form-check form-check-inline">

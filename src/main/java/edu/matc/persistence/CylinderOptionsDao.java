@@ -30,6 +30,7 @@ public class CylinderOptionsDao {
     public CylinderOptions getCylOptionById(int id) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         CylinderOptions cylOption = (CylinderOptions) session.get(CylinderOptions.class, id);
+        session.close();
         return cylOption;
     }
 
@@ -44,6 +45,7 @@ public class CylinderOptionsDao {
         Criteria criteria = session.createCriteria(CylinderOptions.class);
         criteria.add(Restrictions.eq("gasNumber", gasNumber));
         CylinderOptions cylinder = (CylinderOptions) criteria.uniqueResult();
+        session.close();
         return cylinder;
     }
 
@@ -55,6 +57,7 @@ public class CylinderOptionsDao {
         List<CylinderOptions> cylOption = new ArrayList<CylinderOptions>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         cylOption = session.createCriteria(CylinderOptions.class).list();
+        session.close();
         return cylOption;
     }
 
@@ -69,6 +72,7 @@ public class CylinderOptionsDao {
         session.beginTransaction();
         int id = (Integer) session.save(cylOption);
         session.getTransaction().commit();
+        session.close();
         return id;
     }
 
@@ -83,6 +87,7 @@ public class CylinderOptionsDao {
         session.beginTransaction();
         session.delete(cylOption);
         session.getTransaction().commit();
+        session.close();
 
     }
 
@@ -93,6 +98,7 @@ public class CylinderOptionsDao {
 
         session.update(cylOption);
         session.getTransaction().commit();
+        session.close();
 
     }
 
