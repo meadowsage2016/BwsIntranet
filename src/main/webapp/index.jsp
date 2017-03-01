@@ -15,7 +15,7 @@
 <div class="container-fluid bg-3 text-center">
     <div class="row">
         <div class="col-sm-3">
-        <form action="/EmployeeSearch" method="GET">
+        <form action="EmployeeSearch" method="GET">
             <div class="form-group">
                 <fieldset class="form-group">
                     <legend><h3>Employee Directory</h3></legend>
@@ -32,7 +32,7 @@
         </form>
     </div>
         <div class="col-sm-3">
-            <form action="/DeliveryRouteSearch" method="GET">
+            <form action="DeliveryRouteSearch" method="GET">
                 <fieldset class="form-group">
                     <legend><h3>Deliver Routes</h3></legend>
                     <label for="searchCity">Search By City or Other Location</label>
@@ -47,7 +47,7 @@
             </form>
         </div>
         <div class="col-sm-3">
-            <form action="/SubdealerSearch" method="GET">
+            <form action="SubdealerSearch" method="GET">
                 <fieldset class="form-group">
                     <legend><h3>Subdealers</h3></legend>
                     <label for="county">Search By County</label>
@@ -62,7 +62,7 @@
             </form>
         </div>
         <div class="col-sm-3">
-            <form action="/CylinderOptionsSearch" method="GET">
+            <form action="CylinderOptionsSearch" method="GET">
                 <fieldset class="form-group">
                     <legend><h3>Cylinders Options: </h3></legend>
                     <label for="gasNumber">Search By Gas Number</label>
@@ -74,6 +74,7 @@
                     </div>
                     <input type="submit" name="Submit" />
                 </fieldset>
+
             </form>
         </div>
     </div>
