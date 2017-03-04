@@ -1,14 +1,21 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:import url="include-headtag.jsp" />
+<c:set var="title" value="Cylinder Options" />
+<script type="text/javascript" class="init">
+    $(document).ready( function () {
+        $('#keywords').DataTable();
+    } );
+</script>
 <%--
   Created by IntelliJ IDEA.
-  User: student
-  Date: 2/13/17
+  Sue Hundt  Date: 2/13/17
   Time: 6:40 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
-<c:import url="include-headtag.jsp" />
 
 <body>
 
