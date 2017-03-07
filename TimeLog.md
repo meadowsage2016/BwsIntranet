@@ -40,14 +40,14 @@
 |	2/23/2017	|	Thursday	|		|		|
 |	2/24/2017	|	Friday	|5:00 - 1:00		|servlets and jsp jstl for 4 searches		|
 |	2/25/2017	|	Saturday	|4:00 - 11:30		|complete servlets and jsp jstl for 4 searches, attempt to push war file to AWS. work on Ativity 3 redo		|
-|	2/26/2017	|	Sunday	|		|		|
+|	2/26/2017	|	Sunday	|4-11		|		|
 |	2/27/2017	|	Monday	|		|		|
 |	2/28/2017	|	Tuesday	|		|		|
 |	3/01/2017	|	Wednesday	|		|		|
-|	3/02/2017	|	Thursday	|		|		|
-|	3/03/2017	|	Friday	|		|		|
+|	3/02/2017	|	Thursday	|8 - 11		|Week 7 videos		|
+|	3/03/2017	|	Friday	|8 to 12		|Jquery added to JSP tables		|
 |	3/04/2017	|	Saturday	|		|		|
-|	3/05/2017	|	Sunday	|		|		|
+|	3/05/2017	|	Sunday	|2 - 11		|Week 7 Activities		|
 |	30/6/2017	|	Monday	|		|		|
 |	3/07/2017	|	Tuesday	|		|		|
 |	3/08/2017	|	Wednesday	|		|		|
