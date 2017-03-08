@@ -1,0 +1,206 @@
+
+
+
+
+Week 1
+ (1/16/17)
+
+
+
+
+1. Environment
+2. IntelliJ
+3. Tomcat/Tomee+
+4. Maven
+Week 1 Exercise *
+*Work in bold is always due before the next class meeting
+
+Week 2
+(1/23/17)
+
+1. Create screen layouts.  Map out sections of the screen that will be used for different functions.
+
+2. Problem statement (README.md) 
+
+3. Screen design pushed to GitHub. 
+1. Git
+2. Logging
+3. Deployment
+4. Unit Testing
+Week 2 Exercise
+Select your first extracurricular activity and sign up for your presentation time
+Individual Project Checkpoint 1
+Problem statement, project plan, screen design and time log pushed to GitHub. 
+
+Week 3
+(1/30/17)
+
+1. Create framework for database and tables.
+2. Screen design and application flow, due Week 3.
+3. Regular (minimum of weekly) time log entries documenting progress and time spent on the project.
+
+
+1. DAOs
+2. Hibernate
+Week 3 Exercise
+Feedback on any extracurricular presentations
+
+Week 4
+(2/6/17)
+
+1. Create database and tables.  Import data from insert statements created from Excel worksheets.—Completed for Subdealer & DeliveryRoute
+2. Research and implement project in Intellij using Mavin.
+3. Create a list of Entities needed.
+(a)BlogEntry – (b)Employee – (c)DeliveryRoute – (4)User – (5)Subdealer – (6)LeasePurchase
+4. time log pushed to GitHub.
+5. project plan,
+6. Create a list of JSP pages needed.
+
+7. Create Hibernate.cfg.xml, log4j.properties, 
+8. Create/modify POM for basic needs: jUnit, log4j, JSTL, MySql, etc.  
+9. Review and implement Bootstrap in JSP pages.
+10. Feedback on presentations and Code reveiws
+CHECK POINT TWO: --Database designed and created,-- at least one DAO implemented with Hibernate, --DAO is unit tested,--Log4J is implemented (no System.out.printlns), --class design and any other diagrams you plan to use have been created. Due before Week 5 class
+
+
+1. AWS
+2. Catch Up/Project Work Time
+3. Design Reviews
+Peer Reviews
+Feedback on any extracurricular presentations
+Individual Project Checkpoint 2
+
+Week 5
+ (2/13/17)
+
+1. Create Java Servlet to start program and JSP to display home page
+      2. Research and list API’s that I plan to use.  
+       (a)Weather,
+      (b)News:(b.1) local/(b.2)national
+      (c) WORD OF THE DAY:	
+       (d)QUOTE OF THE MONTH:
+      (e)blogging
+     3.  Add security
+     4.  Feedback on presentations
+
+
+
+1. Security and Authentication
+Week 5 Exercise
+Feedback on any extracurricular presentations
+
+Week 6
+(2/20/17)
+
+1. Create Entities need for each search section and JSP pages for output. Include Hibernate.
+
+2. Add security to the Home page for access to company documents and resources. 
+3. Create list of external files (pdf’s, Word, or Excel Documents) needed.  
+4. CHECKPOINT 3:
+5. Deployed to AWS, at least one JSP that displays data from the database is implemented. Due before Week 7 class.
+
+
+1. Web Services and SOAP
+2. Reminder: Career Fair Wednesday, Feb 22. Details
+Week 6 Activity 2 & 3
+Feedback on any extracurricular presentations
+Sign up your team for the team project
+Individual Project Checkpoint 3
+
+Week 7
+(2/27/17)
+
+1. Searches:  Employee Directory, Delivery Routes, Sub Dealers, Lease/Purchase Prices. 
+2. Create Test code for all searches.
+
+1. RESTful Web Services
+2. Reminder: Daytime Section, no formal class Thursday, March 2
+Week 6 Activity 2 & 3
+Feedback on any extracurricular presentations
+Team project repository created per Week 7 info
+
+Week 8
+(3/6/17)
+
+1.  Implement API’s and test.
+
+
+1. Catch Up/Project Work Time
+2. Code Reviews
+Peer Reviews
+Feedback on any extracurricular presentations
+
+Week 9
+(3/20/17)
+
+1. Incorporate a minimum of one technology/library/framework/tool that requires independent research (a topic not covered in class that is new to you).
+
+ 
+1. Custom Tags
+Week 9 Exercise
+Feedback on any extracurricular presentations
+
+Week 10
+(3/27/17)
+
+
+
+1. Multithreading
+Week 10 Exercise
+Feedback on any extracurricular presentations
+
+Week 11
+(4/3/17)
+
+
+
+1. Catch Up/Project Work Time
+Feedback on any extracurricular presentations
+
+Week 12
+(4/10/17)
+
+
+
+1. Team Project Presentations
+Feedback on any extracurricular presentations
+
+Week 13
+(4/17/17)
+
+
+
+1. JNDI
+2. JMS
+3. EJB
+Week 13 Exercise
+Feedback on any extracurricular presentations
+
+Week 14
+(4/24/17)
+
+
+
+1. JNDI
+2. JMS
+3. EJB
+Peer Reviews
+Feedback on any extracurricular presentations
+
+Week 15
+(5/1/17)
+
+
+
+1. Individual Project Presentations
+Active audience member
+
+Week 16
+(5/8/17)
+ 
+
+
+1. Individual Project Presentations
+Active audience member
+
+

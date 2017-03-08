@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="BwsIntranet:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="BwsIntranet.war">
+      <element id="artifact" artifact-name="BwsIntranet:war exploded" />
+    </root>
+  </artifact>
+</component>
