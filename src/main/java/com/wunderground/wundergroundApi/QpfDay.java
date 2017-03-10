@@ -1,0 +1,39 @@
+package com.wunderground.wundergroundApi;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import javax.annotation.Generated;
+
+@Generated("com.robohorse.robopojogenerator")
+public class QpfDay{
+
+	@JsonProperty("mm")
+	private Object mm;
+
+	@JsonProperty("in")
+	private Object in;
+
+	public void setMm(Object mm){
+		this.mm = mm;
+	}
+
+	public Object getMm(){
+		return mm;
+	}
+
+	public void setIn(Object in){
+		this.in = in;
+	}
+
+	public Object getIn(){
+		return in;
+	}
+
+	@Override
+ 	public String toString(){
+		return 
+			"QpfDay{" + 
+			"mm = '" + mm + '\'' + 
+			",in = '" + in + '\'' + 
+			"}";
+		}
+}

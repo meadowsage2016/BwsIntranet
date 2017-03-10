@@ -10,11 +10,11 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
 @WebServlet(
-        name = "cylindetOptionsSearch",
+        name = "cylinderOptionsSearch",
         urlPatterns = { "/CylinderOptionsSearch" }
 )
 /**
- * Created by student on 2/24/17.
+ * Created by Sue Hundt on 2/24/17.
  */
 public class CylinderOptionsServlet  extends HttpServlet {
 

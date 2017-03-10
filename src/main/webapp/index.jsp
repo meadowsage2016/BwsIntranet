@@ -84,6 +84,18 @@
         <div class="col-sm-3">
             <h3>Seven Day Forecast...</h3>
             <img src="images/sevenDayForecast.jpg" alt="Weather Forecast" >
+                <form action="WundergroundApi" method="GET">
+                    <fieldset class="form-group">
+                        <legend><h5>Get Weather Forecast</h5></legend>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox5" name="getWeather" value="">
+                            </label>
+                        </div>
+                        <input type="submit" name="Submit" />
+                    </fieldset>
+                </form>
+            </div>
         </div>
         <div class="col-sm-3">
             <h3>Breaking News...</h3>
