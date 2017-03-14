@@ -27,41 +27,12 @@ public class SubdealersSearchServlet  extends HttpServlet {
         Subdealers result = null;
         List<Subdealers> results = new ArrayList<Subdealers>();
 
-        // Get Searchtype and Searchword submitted from form
-        String searchType  = request.getParameter("subdealerSearchType");
-        String county = request.getParameter("county");
-
         //  Take updated Search object and store in Sessio
         HttpSession  sessionSub      = request.getSession();
         sessionSub.setAttribute("noRecordsFoundMessage", "");
 
-//        if(searchType == "1") {
-
         results = subdealer.getAllSubdealers();
-
-/**            if (results.isEmpty()) {
- session.setAttribute("noRecordsFoundMessage", "No records found for search City entered.");
- }
- else {
- */
         sessionSub.setAttribute("SearchResults", results);
-/**            }
-
- }
-
- if(searchType == "2") {
-
- result = cylinder.getCylOptionByGasNumber(gasNumber);
-
-
- if (result == null) {
- session.setAttribute("noRecordsFoundMessage", "No record found for search City entered.");
- } else {
-
- session.setAttribute("SearchResults", result);
- }
- }
- */
 
         // Local variable to hold url of results page
         String url =  "/subdealersJSP.jsp";

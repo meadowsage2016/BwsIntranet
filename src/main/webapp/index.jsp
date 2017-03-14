@@ -9,73 +9,26 @@
 
 <div class="jumbotron">
     <div class="container text-center">
-        <img src="images/bwsSign.jpg" alt="Badger Welding Sign" >
+        <img src="images/bwsSign125.jpg" alt="Badger Welding Sign" >
     </div>
 </div>
 <div class="container-fluid bg-3 text-center">
     <div class="row">
-        <div class="col-sm-3">
-        <form action="EmployeeSearch" method="GET">
-            <div class="form-group">
-                <fieldset class="form-group">
-                    <legend><h3>Employee Directory</h3></legend>
-                        <label for="firstName">Search by First Name:</label>
-                        <input class="form-control" type="text" id="firstName" name="searchEmployeeFirstName">
-                    <div class="form-check form-check-inline">
-                        <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="showAllEmployees" value="1">Show All Employees
-                        </label>
-                    </div>
-                    <input type="submit" name="Submit" />
-                 </fieldset>
-            </div>
-        </form>
-    </div>
-        <div class="col-sm-3">
-            <form action="DeliveryRouteSearch" method="GET">
-                <fieldset class="form-group">
-                    <legend><h3>Deliver Routes</h3></legend>
-                    <label for="searchCity">Search By City or Other Location</label>
-                    <input class="form-control" id="searchCity" type="text" name="city"/>
-                    <div class="form-check form-check-inline">
-                        <label class="form-check-label">
-                            <input class="form-check-input" name="selectDeliveryRouteType" type="checkbox" id="inlineCheckbox2" value="1">View All Delivery Routes:
-                        </label>
-                    </div>
-                    <input type="submit" name="Submit" />
-                </fieldset>
-            </form>
-        </div>
-        <div class="col-sm-3">
-            <form action="SubdealerSearch" method="GET">
-                <fieldset class="form-group">
-                    <legend><h3>Subdealers</h3></legend>
-                    <label for="county">Search By County</label>
-                    <input class="form-control" id="county" type="text" name="county" />
-                    <div class="form-check form-check-inline">
-                        <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" name="subdealerSearchType" value="1">View All Subdealers:
-                        </label>
-                    </div>
-                    <input type="submit" name="Submit" />
-                </fieldset>
-            </form>
-        </div>
-        <div class="col-sm-3">
-            <form action="CylinderOptionsSearch" method="GET">
-                <fieldset class="form-group">
-                    <legend><h3>Cylinders Options: </h3></legend>
-                    <label for="gasNumber">Search By Gas Number</label>
-                    <input class="form-control" id="gasNumber" type="text" name="gasNumber"/>
-                    <div class="form-check form-check-inline">
-                        <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" name="selectCylinderOptionsSearchType" value="1">View All Gases:
-                        </label>
-                    </div>
-                    <input type="submit" name="Submit" />
-                </fieldset>
 
-            </form>
+        <div class="col-sm-3" >
+            <a  href="EmployeeSearch" class="searchLink"><h3>EMPLOYEE DIRECTORY</h3></a>
+        </div>
+
+        <div class="col-sm-3" class="searchLink">
+            <a  href="DeliveryRouteSearch" class="searchLink"><h3>DELIVERY ROUTES</h3></a>
+        </div>
+
+        <div class="col-sm-3" class="searchLink">
+            <a  href="SubdealerSearch" class="searchLink"><h3>SUBDEALERS DIRECTORY</h3></a>
+        </div>
+
+        <div class="col-sm-3" class="searchLink">
+            <a href="CylinderOptionsSearch" class="searchLink"><h3>CYLINDER LEASE/OWN OPTIONS</h3></a>
         </div>
     </div>
 </div>
@@ -95,7 +48,6 @@
                         <input type="submit" name="Submit" />
                     </fieldset>
                 </form>
-            </div>
         </div>
         <div class="col-sm-3">
             <h3>Breaking News...</h3>

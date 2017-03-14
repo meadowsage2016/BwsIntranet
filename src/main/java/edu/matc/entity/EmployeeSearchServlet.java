@@ -22,34 +22,15 @@ public class EmployeeSearchServlet  extends HttpServlet {
 
         EmployeeDao employee = new EmployeeDao();
 
-        // Local variable references ServletContext
-//        ServletContext application = getServletContext();
-
-        // Get Searchtype and Searchword submitted from form
-        String searchType  = request.getParameter("showAllEmployees");
-        String firstName = request.getParameter("searchEmployeeFirstName");
-
         // Set Search object variables
 
         List<Employee> results;
 
- //       if(searchType == "1") {
-
         results = employee.getAllEmployees();
 
-  //      } else {
-
- //           results = employee.getEmployeesByFirstName(firstName);
-//        }
-//
         //  Take updated Search object and store in Sessio
         HttpSession  sessionEmp      = request.getSession();
         sessionEmp.setAttribute("noRecordsFoundMessage", "");
-
- //       if (results.isEmpty()) {
- //           session.setAttribute("noRecordsFoundMessage", "No records found for search criteria entered.");
- //       }
- //       else {
 
         sessionEmp.setAttribute("SearchResults", results);
 //        }
