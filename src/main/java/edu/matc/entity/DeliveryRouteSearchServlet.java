@@ -15,7 +15,7 @@ import javax.servlet.annotation.*;
 /**
  * Created by Susan Hundt on 2/24/17.
  */
-public class DeliveryRouteServlet  extends HttpServlet {
+public class DeliveryRouteSearchServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

@@ -16,7 +16,7 @@ import javax.servlet.annotation.*;
 /**
  * Created by Sue Hundt on 2/24/17.
  */
-public class CylinderOptionsServlet  extends HttpServlet {
+public class CylinderOptionsSearchServlet  extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

@@ -29,6 +29,8 @@
         <mapping class="edu.matc.entity.BwsBlog"/>
         <mapping class="edu.matc.entity.Users"/>
         <mapping class="edu.matc.entity.UserRoles"/>
+        <mapping class="edu.matc.entity.CitiesByZip"/>
+
 
     </session-factory>
 
