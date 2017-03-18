@@ -27,7 +27,11 @@ import java.util.List;
  * Created by student on 3/9/17.
  */
 public class WundergroundApiServlet  extends HttpServlet {
+
     static Logger log = Logger.getLogger(WundergroundApiServlet.class.getName());
+
+
+
         public void doGet(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
 

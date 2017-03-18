@@ -34,6 +34,7 @@ public class CitiesByZipDao {
      */
     public List<CitiesByZip> getCityByZipCode(String zipCode) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        CitiesByZip cities = (CitiesByZip) session.get(CitiesByZip.class, zipCode);
         Criteria criteria = session.createCriteria(CitiesByZip.class);
         criteria.add(Restrictions.eq("zipCode", zipCode));
         session.close();
@@ -52,6 +53,13 @@ public class CitiesByZipDao {
         return cities;
     }
 
+    public List<CitiesByZip> getCityByZip(String zipCode) {
+        List<CitiesByZip> city = new ArrayList<CitiesByZip>();
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        city = session.createCriteria(CitiesByZip.class).list();
+        session.close();
+        return city;
+    }
 
     /** save or update user
      * @param city
