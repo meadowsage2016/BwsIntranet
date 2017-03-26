@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib uri="http://matc.edu/tags" prefix="sh" %>
 <c:import url="include-headtag.jsp" />
 <c:set var="title" value="Subdealers" />
 <script type="text/javascript" class="init">
@@ -46,6 +47,9 @@
         </c:forEach>
         </tbody>
     </table>
+    <div>
+        <p><sh:SendEmailIfError /></p>
+    </div>
 </div>
 
 <%@ include file="include-footer.jsp" %>
