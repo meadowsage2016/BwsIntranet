@@ -18,6 +18,7 @@
 <!DOCTYPE html>
 
 <body>
+<%@ include file="include-navigation.jsp" %>
 <h3><c:out value="${noRecordsFoundMessage}" /></h3>
 
 <div id="wrapper">

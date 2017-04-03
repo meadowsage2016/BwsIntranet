@@ -1,13 +1,18 @@
 package com.wunderground.wundergroundApi;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.annotation.Generated;
 
 @Generated("com.robohorse.robopojogenerator")
+@JsonIgnoreProperties(ignoreUnknown = true)
+
+
 public class Response{
 
 	@JsonProperty("response")
 	private Response response;
+
 
 	@JsonProperty("location")
 	private Location location;
@@ -17,6 +22,17 @@ public class Response{
 
 	@JsonProperty("current_observation")
 	private CurrentObservation currentObservation;
+
+	public Response() {
+	}
+
+	public Response(Response response, Location location, Forecast forecast, CurrentObservation currentObservation) {
+		this.response = response;
+		this.location = location;
+		this.forecast = forecast;
+		this.currentObservation = currentObservation;
+	}
+
 
 	public void setResponse(Response response){
 		this.response = response;

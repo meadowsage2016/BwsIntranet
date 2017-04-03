@@ -21,6 +21,7 @@ public class CurrentObservation{
 	@JsonProperty("wind_kph")
 	private double windKph;
 
+
 	@JsonProperty("wind_mph")
 	private double windMph;
 
@@ -173,6 +174,69 @@ public class CurrentObservation{
 
 	@JsonProperty("visibility_mi")
 	private String visibilityMi;
+
+
+	public CurrentObservation() {
+	}
+
+	public CurrentObservation(String nowcast, double tempC, String observationEpoch, double tempF, double windKph, double windMph, int windDegrees, String temperatureString, String weather, String feelslikeString, String precipTodayMetric, String precip1hrString, String iconUrl, Image image, String uV, String stationId, String localEpoch, String localTzShort, String windDir, String precip1hrMetric, String pressureIn, String localTzLong, String windGustMph, String windchillString, String windGustKph, String windString, String localTimeRfc822, String visibilityKm, String relativeHumidity, String pressureMb, String observationTimeRfc822, String precip1hrIn, String feelslikeC, String observationTime, String feelslikeF, String historyUrl, String windchillF, String windchillC, String precipTodayString, String icon, String precipTodayIn, String solarradiation, ObservationLocation observationLocation, int dewpointF, DisplayLocation displayLocation, String dewpointString, String pressureTrend, int dewpointC, Estimated estimated, String forecastUrl, String localTzOffset, String heatIndexF, String heatIndexC, String obUrl, String heatIndexString, String visibilityMi) {
+		this.nowcast = nowcast;
+		this.tempC = tempC;
+		this.observationEpoch = observationEpoch;
+		this.tempF = tempF;
+		this.windKph = windKph;
+		this.windMph = windMph;
+		this.windDegrees = windDegrees;
+		this.temperatureString = temperatureString;
+		this.weather = weather;
+		this.feelslikeString = feelslikeString;
+		this.precipTodayMetric = precipTodayMetric;
+		this.precip1hrString = precip1hrString;
+		this.iconUrl = iconUrl;
+		this.image = image;
+		this.uV = uV;
+		this.stationId = stationId;
+		this.localEpoch = localEpoch;
+		this.localTzShort = localTzShort;
+		this.windDir = windDir;
+		this.precip1hrMetric = precip1hrMetric;
+		this.pressureIn = pressureIn;
+		this.localTzLong = localTzLong;
+		this.windGustMph = windGustMph;
+		this.windchillString = windchillString;
+		this.windGustKph = windGustKph;
+		this.windString = windString;
+		this.localTimeRfc822 = localTimeRfc822;
+		this.visibilityKm = visibilityKm;
+		this.relativeHumidity = relativeHumidity;
+		this.pressureMb = pressureMb;
+		this.observationTimeRfc822 = observationTimeRfc822;
+		this.precip1hrIn = precip1hrIn;
+		this.feelslikeC = feelslikeC;
+		this.observationTime = observationTime;
+		this.feelslikeF = feelslikeF;
+		this.historyUrl = historyUrl;
+		this.windchillF = windchillF;
+		this.windchillC = windchillC;
+		this.precipTodayString = precipTodayString;
+		this.icon = icon;
+		this.precipTodayIn = precipTodayIn;
+		this.solarradiation = solarradiation;
+		this.observationLocation = observationLocation;
+		this.dewpointF = dewpointF;
+		this.displayLocation = displayLocation;
+		this.dewpointString = dewpointString;
+		this.pressureTrend = pressureTrend;
+		this.dewpointC = dewpointC;
+		this.estimated = estimated;
+		this.forecastUrl = forecastUrl;
+		this.localTzOffset = localTzOffset;
+		this.heatIndexF = heatIndexF;
+		this.heatIndexC = heatIndexC;
+		this.obUrl = obUrl;
+		this.heatIndexString = heatIndexString;
+		this.visibilityMi = visibilityMi;
+	}
 
 	public void setNowcast(String nowcast){
 		this.nowcast = nowcast;

@@ -39,34 +39,18 @@
 
     </div>
 </div>
-<div class="container-fluid bg-3 text-center">
+<div class="container-fluid bg-12 text-center">
     <div class="row">
-        <div class="col-sm-3">
-            <h3>Seven Day Forecast...</h3>
-            <img src="images/sevenDayForecast.jpg" alt="Weather Forecast" >
-                <form action="WundergroundApi" method="GET">
-                    <fieldset class="form-group">
-                        <legend><h5>Get Weather Forecast</h5></legend>
-                        <div class="form-check form-check-inline">
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox5" name="getWeather" value="">
-                            </label>
-                        </div>
-                        <input type="submit" name="Submit" />
-                    </fieldset>
-                </form>
+        <div class="col-sm-12">
+            <c:import url="WundergroundApi" />
         </div>
-        <div class="col-sm-3">
+    </div>
+</div>
+<div class="container-fluid bg-12 text-center">
+    <div class="row">
+        <div class="col-sm-12">
             <h3>Breaking News...</h3>
-            <img src="images/breakingNews.jpeg" alt="Breaking News" >
-        </div>
-        <div class="col-sm-3">
-            <h3>Local News..</h3>
-            <img src="images/localNews.jpeg" alt="Local News" >
-        </div>
-        <div class="col-sm-3">
-            <h3>National News..</h3>
-            <img src="images/National%20News.png" alt="National News" >
+            <c:import url="NewsApi" />
         </div>
     </div>
 </div>
