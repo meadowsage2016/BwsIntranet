@@ -29,7 +29,7 @@
 <div id="wrapper">
     <h1>Sortable Table of Cities by ZipCode</h1>
 
-    <table id="keywords" cellspacing="0" cellpadding="0">
+    <table id="keywords" class="row-border stripe hover compact" cellspacing="0" cellpadding="0">
         <thead>
         <tr>
             <th><span>City</span></th>
@@ -38,6 +38,15 @@
             <th><span>County Number</span></th>
         </tr>
         </thead>
+        <tfoot>
+        <tr>
+            <th><span>City</span></th>
+            <th><span>ZipCode</span></th>
+            <th><span>Salesman Number</span></th>
+            <th><span>County Number</span></th>
+        </tr>
+        </tfoot>
+
         <tbody>
         <c:forEach items="${SearchResults}" var="city">
             <tr>
@@ -45,6 +54,7 @@
                 <td>${city.zipCode}</td>
                 <td>${city.salesmanNumber}</td>
                 <td>${city.countyNumber}</td>
+                <td><a href="CitiesByZipSearchMaint"${city.zipCode}>Admin</a></td>
             </tr>
         </c:forEach>
         </tbody>

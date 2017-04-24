@@ -60,7 +60,7 @@ public class NewsApiServlet  extends HttpServlet {
 
         Client sportsClient = ClientBuilder.newClient();
         WebTarget sportsTarget =
-                sportsClient.target("https://newsapi.org/v1/articles?source=the-wall-street-journal&sortBy=top&apiKey=4e50f2b2b7f441cfaf895d1d91e31a5c");
+                sportsClient.target("https://newsapi.org/v1/articles?source=fox-sports&sortBy=top&apiKey=4e50f2b2b7f441cfaf895d1d91e31a5c");
         String newSportsApiResponse = sportsTarget.request(MediaType.APPLICATION_JSON).get(String.class);
         log.info("************************" + newSportsApiResponse + "********************************");
 
@@ -112,4 +112,3 @@ public class NewsApiServlet  extends HttpServlet {
 
 
 }
-

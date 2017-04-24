@@ -1,0 +1,22 @@
+table {
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
+.newsImage {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 10%;
+    height: 10%;
+}
+
+#weather {
+    background-image: url('weatherlight.png');
+}
+
+.weather {
+
+    background-image: url('weatherlight.png');
+}

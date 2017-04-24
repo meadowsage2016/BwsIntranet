@@ -24,7 +24,7 @@
 <div id="wrapper">
     <h1>Sortable Table of Employees</h1>
 
-    <table id="keywords" cellspacing="0" cellpadding="0">
+    <table id="keywords" class="row-border stripe hover compact" cellspacing="0" cellpadding="0">
         <thead>
         <tr>
             <th><span>First Name</span></th>
@@ -34,6 +34,15 @@
             <th><span>Department</span></th>
         </tr>
         </thead>
+        <tfoot>
+        <tr>
+            <th><span>First Name</span></th>
+            <th><span>Last Name</span></th>
+            <th><span>Phone Extension</span></th>
+            <th><span>Cell Phone</span></th>
+            <th><span>Department</span></th>
+        </tr>
+        </tfoot>
         <tbody>
         <c:forEach items="${SearchResults}" var="employee">
             <tr>

@@ -1,7 +1,8 @@
 /**
  * Created by student on 3/17/17.
  */
-function init() {
+$(document).ready(function() {
+
     var updateButton = document.getElementById("updateBtn");
     updateButton.onclick = updateTableOption;
 
@@ -11,7 +12,12 @@ function init() {
     var deleteButton = document.getElementById("deleteBtn");
 
     deleteButton.onclick = deleteTableOption;
-}
+
+    console.log("Im in the doc ready");
+
+})
+
+
 
 function updateTableOption() {
     var updateOption = document.getElementsByName("dataTable").value;

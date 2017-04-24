@@ -8,55 +8,62 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:import url="include-headtag.jsp" />
 
 
 <h3><c:out value="${noRecordsFoundMessage}" /></h3>
-
 <div>
-    <h2>Cnn Headlines</h2>
-    <ul>
-    <c:forEach items="${CNNNewsResult}" var="CNNnews">
-        <li>
-        ${CNNnews.getPublishedAt()}
-        ${CNNnews.getAuthor()}
-        ${CNNnews.getUrlToImage()}
-        ${CNNnews.getDescription()}
-        ${CNNnews.getTitle()}
-        ${CNNnews.getUrl()}
-        </li>
-    </c:forEach>
-    </ul>
-</div>
 
-<div>
-    <h2>WSJ Headlines</h2>
-    <ul>
-    <c:forEach items="${WSJNewsResult}" var="WSJnews">
-    <li>
-        ${WSJnews.getPublishedAt()}
-        ${WSJnews.getAuthor()}
-        ${WSJnews.getUrlToImage()}
-        ${WSJnews.getDescription()}
-        ${WSJnews.getTitle()}
-        ${WSJnews.getUrl()}
-    </li>
-    </c:forEach>
+    <div role="navigation">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#CNN" aria-controls="CNN" role="tab" data-toggle="tab">CNN</a></li>
+        <li role="presentation"><a href="#WallStreetJournal" aria-controls="WallStreetJournal" role="tab" data-toggle="tab">Wall Street Journal</a></li>
+        <li role="presentation"><a href="#FoxSports" aria-controls="FoxSports" role="tab" data-toggle="tab">Fox Sports</a></li>
     </ul>
-</div>
 
-<div>
-    <h2>Fox Sports Headlines</h2>
-    <ul>
-        <c:forEach items="${SportsNewsResult}" var="SportsNews">
-            <li>
-                    ${SportsNews.getPublishedAt()}
-                    ${SportsNews.getAuthor()}
-                    ${SportsNews.getUrlToImage()}
-                    ${SportsNews.getDescription()}
-                    ${SportsNews.getTitle()}
-                    ${SportsNews.getUrl()}
-            </li>
-        </c:forEach>
-    </ul>
-</div>
+    <!-- Tab panes -->
+        <div class="tab-content">
 
+            <div role="tabpanel" class="tab-pane active" id="CNN">
+                <h3>Cnn Headlines</h3>
+                <c:forEach items="${CNNNewsResult}" var="CNNnews">
+                    <p>
+                        <img class="newsImage" src="${CNNnews.getUrlToImage()}" style="height:10%;width:10%;"/>
+                        <a href="${CNNnews.getUrl()}" target="_blank">${CNNnews.getTitle()}</a>
+                        <br />
+                        ${CNNnews.getDescription()}
+                        <hr />
+                    </p>
+                </c:forEach>
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="WallStreetJournal">
+                <h3>Wall Street Journal</h3>
+                <c:forEach items="${WSJNewsResult}" var="WSJnews">
+                    <p>
+                        <img class="newsImage" src="${WSJnews.getUrlToImage()}" style="height:10%;width:10%;"/>
+                        <a href="${WSJnews.getUrl()}" target="_blank">${WSJnews.getTitle()}</a>
+                        <br />
+                        ${WSJnews.getDescription()}
+                        <hr />
+                    </p>
+                </c:forEach>
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="FoxSports">
+                <h3>Fox Sports Headlines</h3>
+                <c:forEach items="${SportsNewsResult}" var="SportsNews">
+                    <p>
+                        <img class="newsImage" src="${SportsNews.getUrlToImage()}" style="height:10%;width:10%;"/>
+                        <a href="${SportsNews.getUrl()}" target="_blank">${SportsNews.getTitle()}</a>
+                        <br />
+                        ${SportsNews.getDescription()}
+                        <hr />
+                    </p>
+                </c:forEach>
+            </div>
+
+        </div>
+    </div>
+</div>
