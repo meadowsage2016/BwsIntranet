@@ -41,8 +41,8 @@ public class EmployeeDaoTest extends EmployeeDao {
     @Test  // GET BY LAST NAME                                                                             JOHNSTON
     public void testGetEmployeesByLastName() throws Exception {
 
-        List<Employee> employeesWithFirstName = dao.getEmployeesByFirstName("Sue");
-        assertEquals("Employees Not Found", 4, employeesWithFirstName.size());
+            List<Employee> employeesWithFirstName = dao.getEmployeesByFirstName("Sue");
+            assertEquals("Employees Not Found", 4, employeesWithFirstName.size());
     }
 
     @Test  // UPDATE BY ID                                                                                        70

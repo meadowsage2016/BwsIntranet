@@ -28,7 +28,7 @@
 <div id="wrapper">
     <h1>Sortable Table of Delivery Route</h1>
 
-    <table id="keywords" cellspacing="0" cellpadding="0">
+    <table id="keywords" class="row-border stripe hover compact" cellspacing="0" cellpadding="0">
         <thead>
         <tr>
             <th><span>City or Other Location</span></th>
@@ -36,6 +36,13 @@
             <th><span>Frequency</span></th>
         </tr>
         </thead>
+        <tfoot>
+        <tr>
+            <th><span>City or Other Location</span></th>
+            <th><span>Delivery Day</span></th>
+            <th><span>Frequency</span></th>
+        </tr>
+        </tfoot>
         <tbody>
         <c:forEach items="${SearchResults}" var="route">
             <tr>
