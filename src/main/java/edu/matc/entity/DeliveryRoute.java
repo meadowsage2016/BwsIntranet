@@ -15,6 +15,8 @@ import javax.persistence.Table;
 @Table(name="DeliveryRoute")
 public class DeliveryRoute {
 
+
+
     @Id
     @GeneratedValue(generator = "increment")
     @GenericGenerator(name="increment", strategy = "increment")
@@ -27,6 +29,13 @@ public class DeliveryRoute {
 
     }
 
+    public int getDeliveryRouteId() {
+        return deliveryRouteId;
+    }
+
+    public void setDeliveryRouteId(int deliveryRouteId) {
+        this.deliveryRouteId = deliveryRouteId;
+    }
     public DeliveryRoute(String deliveryCityOrBusiness, String deliveryDay, String deliveryFrequency) {
         super();
         this.deliveryCityOrBusiness = deliveryCityOrBusiness;

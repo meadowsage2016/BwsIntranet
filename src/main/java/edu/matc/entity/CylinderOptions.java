@@ -15,6 +15,7 @@ import java.math.BigDecimal;
 @Entity
 @Table(name="CylinderOptions")
 public class CylinderOptions {
+
     @Id
     @GeneratedValue(generator = "increment")
     @GenericGenerator(name="increment", strategy = "increment")
@@ -40,6 +41,14 @@ public class CylinderOptions {
         this.cylinderOnePPRent = cylinderOnePPRent;
         this.cylinderFiveYearLease = cylinderFiveYearLease;
         this.cylinderPurchase = cylinderPurchase;
+    }
+
+    public int getCylinderOptionId() {
+        return cylinderOptionId;
+    }
+
+    public void setCylinderOptionId(int cylinderOptionId) {
+        this.cylinderOptionId = cylinderOptionId;
     }
 
     public String getGasNumber() {

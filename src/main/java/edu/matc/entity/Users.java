@@ -14,6 +14,8 @@ import javax.persistence.Table;
 @Entity
 @Table(name="users")
 public class Users {
+
+
     @Id
     @GeneratedValue(generator = "increment")
     @GenericGenerator(name="increment", strategy = "increment")
@@ -30,6 +32,13 @@ public class Users {
         this.user_pass = user_pass;
     }
 
+    public int getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
+    }
 
     public String getUser_name() {
         return user_name;

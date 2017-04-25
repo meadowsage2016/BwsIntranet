@@ -54,7 +54,8 @@
                 <td>${city.zipCode}</td>
                 <td>${city.salesmanNumber}</td>
                 <td>${city.countyNumber}</td>
-                <td><a href="CitiesByZipSearchMaint"${city.zipCode}>Admin</a></td>
+<!--               <td><a href="CitiesByZipSearchMaint"${city.citiesByZipId}>Admin</a></td>
+-->
             </tr>
         </c:forEach>
         </tbody>

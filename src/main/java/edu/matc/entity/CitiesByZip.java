@@ -14,10 +14,11 @@ import javax.persistence.Table;
 @Table(name="CitiesByZip")
 public class CitiesByZip {
 
+
     @Id
     @GeneratedValue(generator = "increment")
     @GenericGenerator(name="increment", strategy = "increment")
-    private int CitiesByZipId;
+    private int citiesByZipId;
     private String zipCode;
     private String cityName;
     private String countyNumber;
@@ -33,6 +34,14 @@ public class CitiesByZip {
         this.cityName = cityName;
         this.countyNumber = countyNumber;
         this.salesmanNumber = salesmanNumber;
+    }
+
+    public int getCitiesByZipId() {
+        return citiesByZipId;
+    }
+
+    public void setCitiesByZipId(int CitiesByZipId) {
+        citiesByZipId = CitiesByZipId;
     }
 
     public String getZipCode() {
@@ -70,7 +79,7 @@ public class CitiesByZip {
     @Override
     public String toString() {
         return "CitiesByZip{" +
-                "CitiesByZipId=" + CitiesByZipId +
+                "CitiesByZipId=" + citiesByZipId +
                 ", zipCode='" + zipCode + '\'' +
                 ", cityName='" + cityName + '\'' +
                 ", countyNumber='" + countyNumber + '\'' +
