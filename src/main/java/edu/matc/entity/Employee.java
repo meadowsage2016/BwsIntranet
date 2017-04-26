@@ -13,6 +13,7 @@ import javax.persistence.*;
 @Table(name="Employee")
 public class Employee {
 
+
     @Id
     @GeneratedValue(generator = "increment")
     @GenericGenerator(name="increment", strategy = "increment")
@@ -46,6 +47,18 @@ public class Employee {
 
     }
 
+
+    public int getEmployeeId() {
+        return employeeId;
+    }
+
+    public void setEmployeeId(int employeeId) {
+        this.employeeId = employeeId;
+    }
+
+    public void setPhoneExtension(String phoneExtension) {
+        this.phoneExtension = phoneExtension;
+    }
     public String getFirstName() {
         return firstName;
     }

@@ -49,6 +49,8 @@
                 <td>${route.deliveryCityOrBusiness}</td>
                 <td>${route.deliveryDay}</td>
                 <td>${route.deliveryFrequency}</td>
+  <!--              <td><a href="DeliveryRouteMaint"${route.deliveryRouteId}>Admin</a></td>  -->
+
             </tr>
         </c:forEach>
         </tbody>

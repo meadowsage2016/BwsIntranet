@@ -29,8 +29,8 @@
     ${ForecastResult.getPrecipTodayString()}
     ${ForecastResult.getObservationLocation()}>
 
-    <a href="${ForecastResult.getForecastUrl()}">Forecast</a>
-    <a href="${ForecastResult.getHistoryUrl()}">History</a>
+    <a href="${ForecastResult.getForecastUrl()}" target="_blank">Forecast</a>
+    <a href="${ForecastResult.getHistoryUrl()}" target="_blank">History</a>
     </p>
 
     </div>

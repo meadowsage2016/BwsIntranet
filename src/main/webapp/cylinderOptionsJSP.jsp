@@ -57,7 +57,8 @@
                 <td>${cylinder.cylinderOnePPRent}</td>
                 <td>${cylinder.cylinderFiveYearLease}</td>
                 <td>${cylinder.cylinderPurchase}</td>
-                <td><a href="CylinderOptionsMaint"${cylinder.gasNumber}>Admin</a></td>
+<!--            <td><a href="CylinderOptionsMaint"${cylinder.cylinderOptionId}>Admin</a></td>
+-->
             </tr>
         </c:forEach>
         </tbody>

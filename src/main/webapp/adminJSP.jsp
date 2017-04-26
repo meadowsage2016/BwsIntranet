@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: student
@@ -7,165 +8,135 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
-    <title>$Title$</title>
-    <script src="js/Administration.js" charset="utf-8"></script>
-</head>
+<c:import url="include-headtag.jsp" />
 <body>
 <h2>Administrator Console</h2>
-<form id="updateForm">
+
+<form id="TableSelectForm">
     <div class='container'>
 
         <fieldset class="form-group">
-            <legend><h2>Select Table to UPDATE</h2></legend>
-        <div id="updateTablesContainer" class="form-group">
+            <legend><h2>EMPLOYEES TABLE</h2></legend>
+            <div id="EmpTableContainer" class="form-group">
 
-        <div class="radio-inline">
-            <label class="radio-inline">
-                <input type="radio" class="form-check-input" name="dataTable" id="updateDataTable1" value="employee">
-               Employees - Search Term:  Enter 'First Name Last Name'
-            </label>
-        </div>
-        <div class="radio-inline">
-            <label class="radio-inline">
-                <input type="radio" class="form-check-input" name="dataTable" id="updateDataTable2" value="deliveryRoute">
-                Delivery Routes - Search Term:  Enter 'City'
-            </label>
-        </div>
-        <div class="radio-inline">
-            <label class="radio-inline">
-                <input type="radio" class="form-check-input" name="dataTable" id="updateDataTable3" value="cylinders">
-                Cylinder Options - Search Term:  - Enter 'Gas Number'
-            </label>
-        </div>
-        <div class="radio-inline">
-            <label class="radio-inline">
-                <input type="radio" class="form-check-input" name="dataTable" id="updateDataTable4" value="subdealers">
-                Subdealers - Search Term: - Enter 'Customer Number'
-            </label>
-        </div>
-        <div class="radio-inline">
-            <label class="radio-inline">
-                <input type="radio" class="form-check-input" name="dataTable" id="updateDataTable5" value="cities">
-                Cities By ZipCode Search Term: - Enter 'Zip Code'-
-            </label>
-        </div>
-        <div class="radio-inline">
-            <label class="radio-inline">
-                <input type="radio" class="form-check-input" name="dataTable" id="updateDataTable6" value="users">
-                Users - Search Term: - Enter 'User Name'
-            </label>
-        </div>
-            <div>
-                <label for="searchTerm">
-                   SEARCH TERM
-                </label>
-                <input type="text" id="searchTerm" name="searchTerm">
-            </div>
-
-        </div>
-            <input type="button" value="Submit" id="updateBtn"/>
+                <div class="radio-inline">
+                    <label class="radio-inline">
+                        <input type="radio" class="form-check-input" name="maint" id="edt1" value="edt1">
+                        ADD
+                    </label>
+                </div>
+                <div class="radio-inline">
+                    <label class="radio-inline">
+                        <input type="radio" class="form-check-input" name="maint" id="edt2" value="edt2">
+                        UPDATE
+                    </label>
+                </div>
+                <div class="radio-inline">
+                    <label class="radio-inline">
+                        <input type="radio" class="form-check-input" name="maint" id="edt3" value="edt3">
+                        DELETE
+                    </label>
+                </div>
+                </div>
         </fieldset>
-    </div>
-</form>
-<form id="addForm">
-    <div class='container'>
-
         <fieldset class="form-group">
-            <legend><h2>Select Table to ADD RECORD</h2></legend>
-            <div id="AddTablesContainer" class="form-group">
+            <legend><h2>DELIVERY ROUTES TABLE</h2></legend>
+            <div id="RoutesTablesContainer" class="form-group">
 
                 <div class="radio-inline">
                     <label class="radio-inline">
-                        <input type="radio" class="form-check-input" name="addDataTable" id="addDataTable1" value="employee">
-                        Employees
+                        <input type="radio" class="form-check-input" name="maint" id="rdt1" value="rdt1">
+                        ADD
                     </label>
                 </div>
                 <div class="radio-inline">
                     <label class="radio-inline">
-                        <input type="radio" class="form-check-input" name="addDataTable" id="addDataTable2" value="deliveryRoute">
-                        Delivery Routes
+                        <input type="radio" class="form-check-input" name="maint" id="rdt2" value="rdt2">
+                        UPDATE
                     </label>
                 </div>
                 <div class="radio-inline">
                     <label class="radio-inline">
-                        <input type="radio" class="form-check-input" name="addDataTable" id="addDataTable3" value="cylinders">
-                        Cylinder Options
-                    </label>
-                </div>
-                <div class="radio-inline">
-                    <label class="radio-inline">
-                        <input type="radio" class="form-check-input" name="addDataTable" id="addDdtaTable4" value="subdealers">
-                        Subdealers - Search Term: - Enter 'Customer Number'
-                    </label>
-                </div>
-                <div class="radio-inline">
-                    <label class="radio-inline">
-                        <input type="radio" class="form-check-input" name="addDataTable" id="addDataTable5" value="cities">
-                        Cities By ZipCode
-                    </label>
-                </div>
-                <div class="radio-inline">
-                    <label class="radio-inline">
-                        <input type="radio" class="form-check-input" name="addDataTable" id="addDataTable6" value="users">
-                        Users
-                    </label>
-                </div>
-                </div>
-            <input type="button" value="Submit" id="addBtn"/>
-        </fieldset>
-    </div>
-</form>
-<form id="deleteForm">
-    <div class='container'>
-
-        <fieldset class="form-group">
-            <legend><h2>Select Table to DELETE RECORD</h2></legend>
-            <div id="DeleteTablesContainer" class="form-group">
-
-                <div class="radio-inline">
-                    <label class="radio-inline">
-                        <input type="radio" class="form-check-input" name="deleteDataTable" id="deleteDataTable1" value="employee">
-                        Employees
-                    </label>
-                </div>
-                <div class="radio-inline">
-                    <label class="radio-inline">
-                        <input type="radio" class="form-check-input" name="deleteDataTable" id="deleteDataTable2" value="deliveryRoute">
-                        Delivery Routes
-                    </label>
-                </div>
-                <div class="radio-inline">
-                    <label class="radio-inline">
-                        <input type="radio" class="form-check-input" name="deleteDataTable" id="deleteDataTable3" value="cylinders">
-                        Cylinder Options
-                    </label>
-                </div>
-                <div class="radio-inline">
-                    <label class="radio-inline">
-                        <input type="radio" class="form-check-input" name="deleteDataTable" id="deleteDataTable4" value="subdealers">
-                        Subdealers - Search Term: - Enter 'Customer Number'
-                    </label>
-                </div>
-                <div class="radio-inline">
-                    <label class="radio-inline">
-                        <input type="radio" class="form-check-input" name="deleteDataTable" id="deleteDataTable5" value="cities">
-                        Cities By ZipCode
-                    </label>
-                </div>
-                <div class="radio-inline">
-                    <label class="radio-inline">
-                        <input type="radio" class="form-check-input" name="deleteDataTable" id="deleteDataTable6" value="users">
-                        Users
+                        <input type="radio" class="form-check-input" name="maint" id="rdt3" value="rdt3">
+                        DELETE
                     </label>
                 </div>
             </div>
-            <input type="button" value="Submit" id="deleteBtn"/>
+        </fieldset>
+        <fieldset class="form-group">
+            <legend><h2>SUB-DEALERS TABLE</h2></legend>
+            <div id="SubdealersTableContainer" class="form-group">
+
+                <div class="radio-inline">
+                    <label class="radio-inline">
+                        <input type="radio" class="form-check-input" name="maint" id="sdt1" value="sdt1">
+                        ADD
+                    </label>
+                </div>
+                <div class="radio-inline">
+                    <label class="radio-inline">
+                        <input type="radio" class="form-check-input" name="maint" id="sdt2" value="sdt2">
+                        UPDATE
+                    </label>
+                </div>
+                <div class="radio-inline">
+                    <label class="radio-inline">
+                        <input type="radio" class="form-check-input" name="maint" id="sdt3" value="sdt3">
+                        DELETE
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="form-group">
+            <legend><h2>CYLINDER OPTIONS TABLE</h2></legend>
+            <div id="CylinderOptionsTablesContainer" class="form-group">
+
+                <div class="radio-inline">
+                    <label class="radio-inline">
+                        <input type="radio" class="form-check-input" name="maint" id="cdt1" value="cdt1">
+                        ADD
+                    </label>
+                </div>
+                <div class="radio-inline">
+                    <label class="radio-inline">
+                        <input type="radio" class="form-check-input" name="maint" id="cdt2" value="cdt2">
+                        UPDATE
+                    </label>
+                </div>
+                <div class="radio-inline">
+                    <label class="radio-inline">
+                        <input type="radio" class="form-check-input" name="maint" id="cdt3" value="cdt3">
+                        DELETE
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="form-group">
+            <legend><h2>CITIES BY ZIP TABLE</h2></legend>
+            <div id="CitiesTablesContainer" class="form-group">
+
+                <div class="radio-inline">
+                    <label class="radio-inline">
+                        <input type="radio" class="form-check-input" name="maint" id="zdt1" value="zdt1">
+                        ADD
+                    </label>
+                </div>
+                <div class="radio-inline">
+                    <label class="radio-inline">
+                        <input type="radio" class="form-check-input" name="maint" id="zdt2" value="zdt2">
+                        UPDATE
+                    </label>
+                </div>
+                <div class="radio-inline">
+                    <label class="radio-inline">
+                        <input type="radio" class="form-check-input" name="maint" id="zdt3" value="zdt3">
+                        DELETE
+                    </label>
+                </div>
+            </div>
+            <input type="button" value="Submit" id="MaintBtn"/>
         </fieldset>
     </div>
 </form>
-<script type="text/javascript">
-    init();
-</script>
 </body>
 </html>

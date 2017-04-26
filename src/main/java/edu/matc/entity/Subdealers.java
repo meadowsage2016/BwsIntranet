@@ -14,6 +14,7 @@ import javax.persistence.Table;
 @Table(name="Subdealers")
 public class Subdealers {
 
+
     @Id
     @GeneratedValue(generator = "increment")
     @GenericGenerator(name="increment", strategy = "increment")
@@ -43,6 +44,13 @@ public class Subdealers {
         this.sdZipCode = sdZipCode;
         this.sdCounty = sdCounty;
         this.subdealerNotes = subdealerNotes;
+    }
+    public int getSubdealerId() {
+        return subdealerId;
+    }
+
+    public void setSubdealerId(int subdealerId) {
+        this.subdealerId = subdealerId;
     }
 
     public String getCustomerNumber() {
