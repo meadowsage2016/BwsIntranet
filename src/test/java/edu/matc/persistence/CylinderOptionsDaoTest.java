@@ -25,20 +25,20 @@ public class CylinderOptionsDaoTest extends CylinderOptionsDao {
 
 
     @Test // GET BY ID                                                                                           1
-    public void testGetCylOptionById() throws Exception {
+    public void testGetCylOptionById() {
         CylinderOptions cylinder = dao.getCylOptionById(1);
         assertEquals("Return wrong GAS", "DUMMYGASNO", cylinder.getGasNumber());
 
     }
 
     @Test  // GET MY GAS NUMBER                                                                          OX251
-    public void testGetCylOptionByGasNumber() throws Exception {
+    public void testGetCylOptionByGasNumber() {
         CylinderOptions cylinder = dao.getCylOptionByGasNumber("OX251");
         assertEquals("Gas Not Found", "OX251", cylinder.getGasNumber());
     }
 
     @Test  // GET ALL
-    public void testGetAllCylOptions() throws Exception {
+    public void testGetAllCylOptions() {
         List<CylinderOptions> cylOptions = dao.getAllCylOptions();
         assertTrue(cylOptions.size() > 0);
     }
@@ -46,7 +46,7 @@ public class CylinderOptionsDaoTest extends CylinderOptionsDao {
     @Test  // ADD  ***CHANGE - MUST BE UNIQUE ****                                                       SUE2
     public void addCylOptions() throws Exception {
         int before = dao.getAllCylOptions().size();
-        CylinderOptions cylinder = new CylinderOptions("Sue2", "my specia mix - toxic", "HPL  SUEMX", .01, 3.65, 20.00, 9999.99);
+        CylinderOptions cylinder = new CylinderOptions("Sue4s", "my specia mix - toxic", "HPL  SUEMX", .01, 3.65, 20.00, 9999.99);
         dao.addCylOptions(cylinder);
         int after = dao.getAllCylOptions().size();
         assertEquals("Cylinder not added correctly", before + 1, after);
@@ -55,7 +55,7 @@ public class CylinderOptionsDaoTest extends CylinderOptionsDao {
     @Test  // DELETE  *** CHANGE ***                                                                     745
     public void deleteCylOption() throws Exception {
         int before = dao.getAllCylOptions().size();
-        dao.deleteCylOption(745);
+        dao.deleteCylOption(747);
         int after = dao.getAllCylOptions().size();
         assertEquals("Delete not made", before -1, after);
 
@@ -63,7 +63,7 @@ public class CylinderOptionsDaoTest extends CylinderOptionsDao {
 
     @Test  // UPDATE ** CANNOT BE SAME ID AS DELETE ***
     public void updateCylOption() throws Exception {
-        CylinderOptions cylinder = dao.getCylOptionById(747);
+        CylinderOptions cylinder = dao.getCylOptionById(744);
         Double newRent = .99;
         cylinder.setCylinderRent(newRent);
         dao.updateCylOption(cylinder);

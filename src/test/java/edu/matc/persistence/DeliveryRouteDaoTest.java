@@ -24,36 +24,36 @@ public class DeliveryRouteDaoTest extends DeliveryRouteDao {
     }
 
     @Test  // GET BY ID                                                                                            4
-    public void testGetDeliveryRouteById() throws Exception {
+    public void testGetDeliveryRouteById() {
         DeliveryRoute route = dao.getDeliveryRouteById(4);
         assertEquals("Return wrong route", "BARABOO", route.getDeliveryCityOrBusiness());
     }
 
     @Test  //  GET BY CITY                                                                                           RICHLAND CENTER
-    public void testGetDeliveryRouteByCityOrBusiness() throws Exception {
+    public void testGetDeliveryRouteByCityOrBusiness() {
         DeliveryRoute route = dao.getDeliveryRouteByCityOrBusiness("RICHLAND CENTER");
         assertEquals("CITY Not Found", "RICHLAND CENTER", route.getDeliveryCityOrBusiness());
     }
 
     @Test  // GET ALL
-    public void testGetAllDeliveryRoutes() throws Exception {
+    public void testGetAllDeliveryRoutes() {
         List<DeliveryRoute> routes = dao.getAllDeliveryRoutes();
         assertTrue(routes.size() > 0);
     }
 
     @Test  // ADD ***CHANGE - MUST BE UNIQUE ***                                                                   HOME4
-    public void testAddDeliveryRoute() throws Exception {
+    public void testAddDeliveryRoute() {
         int before = dao.getAllDeliveryRoutes().size();
-        DeliveryRoute cylinder = new DeliveryRoute("Home4", "Saturday", "Weekly");
+        DeliveryRoute cylinder = new DeliveryRoute("Home6", "Saturday", "Weekly");
         dao.addDeliveryRoute(cylinder);
         int after = dao.getAllDeliveryRoutes().size();
         assertEquals("Route not added correctly", before + 1, after);
     }
 
     @Test  // DELETE ***CHANGE - MUST EXISTS ***                                                                      90
-    public void testDeleteDeliveryRoute() throws Exception {
+    public void testDeleteDeliveryRoute() {
         int before = dao.getAllDeliveryRoutes().size();
-        dao.deleteDeliveryRoute(90);
+        dao.deleteDeliveryRoute(88);
         int after = dao.getAllDeliveryRoutes().size();
         assertEquals("Delete not made", before -1, after);
     }

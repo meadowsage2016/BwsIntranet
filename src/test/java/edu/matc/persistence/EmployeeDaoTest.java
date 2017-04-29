@@ -27,28 +27,28 @@ public class EmployeeDaoTest extends EmployeeDao {
     }
 
     @Test  // GET ALL
-    public void testGetAllEmployees() throws Exception {
+    public void testGetAllEmployees(){
         List<Employee> employees = dao.getAllEmployees();
         assertTrue(employees.size() > 0);
     }
 
     @Test  // GET BY ID                                                                                              4
-    public void testGetEmployeeById() throws Exception {
+    public void testGetEmployeeById() {
         Employee employee = dao.getEmployeeById(4);
         assertEquals("Return wrong employee", "Mike", employee.getFirstName());
     }
 
     @Test  // GET BY LAST NAME                                                                             JOHNSTON
-    public void testGetEmployeesByLastName() throws Exception {
+    public void testGetEmployeesByLastName(){
 
-            List<Employee> employeesWithFirstName = dao.getEmployeesByFirstName("Sue");
-            assertEquals("Employees Not Found", 4, employeesWithFirstName.size());
+            List<Employee> employeesWithLastName = dao.getEmployeesByLastName("Sally");
+            assertEquals("Employees Not Found", 2, employeesWithLastName.size());
     }
 
     @Test  // UPDATE BY ID                                                                                        70
-    public void testUpdateEmployee() throws Exception {
+    public void testUpdateEmployee()  {
 
-        Employee employee = dao.getEmployeeById(70);
+        Employee employee = dao.getEmployeeById(64);
         String newName = "Johnson";
         employee.setLastName(newName);
         dao.updateEmployee(employee);
@@ -56,20 +56,20 @@ public class EmployeeDaoTest extends EmployeeDao {
     }
 
     @Test  // ADD
-    public void testAddNewEmployee() throws Exception {
+    public void testAddNewEmployee() {
 
         int before = dao.getAllEmployees().size();
-        Employee newEmployee = new Employee("Phoenix", "Hundt", "president", "6085551212" , "997");
+        Employee newEmployee = new Employee("Phoenix", "Sally", "president", "6085551212" , "997");
         dao.addEmployee(newEmployee);
         int after = dao.getAllEmployees().size();
         assertEquals("User not added correctly", before + 1, after);
     }
 
     @Test  // DELETE ***CHANGE - MUST EXISTS ***                                                                           65
-    public void testDeleteEmployee() throws Exception {
+    public void testDeleteEmployee() {
 
         int before = dao.getAllEmployees().size();
-        dao.deleteEmployee(65);
+        dao.deleteEmployee(70);
         int after = dao.getAllEmployees().size();
         assertEquals("Delete not made", before -1, after);
     }

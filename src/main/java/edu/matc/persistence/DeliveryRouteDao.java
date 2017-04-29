@@ -3,6 +3,7 @@ package edu.matc.persistence;
 import edu.matc.entity.DeliveryRoute;
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 
@@ -20,25 +21,42 @@ public class DeliveryRouteDao {
      * @param id user's id
      * @return User
      */
+
     public DeliveryRoute getDeliveryRouteById(int id) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        DeliveryRoute route = (DeliveryRoute) session.get(DeliveryRoute.class, id);
-        session.close();
+        DeliveryRoute route = new DeliveryRoute();
+
+        try {
+            route = (DeliveryRoute) session.get(DeliveryRoute.class, id);
+        } catch (HibernateException hibernateException) {
+            log.error("Hibernate Exception", hibernateException);
+        } finally {
+            session.close();
+        }
         return route;
+
     }
 
-    /** Retrieve employee by lastname
+      /** Retrieve
      *
      * @param deliveryCityOrBusiness Employee's last name which is the search criteria
      * @return Employee
      */
     public DeliveryRoute getDeliveryRouteByCityOrBusiness(String deliveryCityOrBusiness) {
+
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        session.beginTransaction();
-        Criteria criteria = session.createCriteria(DeliveryRoute.class);
-        criteria.add(Restrictions.eq("deliveryCityOrBusiness", deliveryCityOrBusiness));
-        DeliveryRoute  route = (DeliveryRoute) criteria.uniqueResult();
-        session.close();
+        DeliveryRoute route = new DeliveryRoute();
+        try {
+            session.beginTransaction();
+            Criteria criteria = session.createCriteria(DeliveryRoute.class);
+            criteria.add(Restrictions.eq("deliveryCityOrBusiness", deliveryCityOrBusiness));
+            route = (DeliveryRoute) criteria.uniqueResult();
+        } catch (HibernateException hibernateException) {
+            log.error("Hibernate Exception", hibernateException);
+        } finally {
+            session.close();
+        }
+
         return route;
     }
 
@@ -49,8 +67,14 @@ public class DeliveryRouteDao {
     public List<DeliveryRoute> getAllDeliveryRoutes() {
         List<DeliveryRoute> routes = new ArrayList<DeliveryRoute>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        routes = session.createCriteria(DeliveryRoute.class).list();
-        session.close();
+        try {
+            routes = session.createCriteria(DeliveryRoute.class).list();
+        } catch  (HibernateException hibernateException) {
+            log.error("Hibernate Exception", hibernateException);
+        } finally {
+            session.close();
+        }
+
         return routes;
     }
 
@@ -60,12 +84,19 @@ public class DeliveryRouteDao {
      * @return id of the inserted employee
      */
 
-    public int addDeliveryRoute(DeliveryRoute route) throws Exception {
+    public int addDeliveryRoute(DeliveryRoute route) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        session.beginTransaction();
-        int id = (Integer) session.save(route);
-        session.getTransaction().commit();
-        session.close();
+        int id = 0;
+        try {
+            session.beginTransaction();
+            id = (Integer) session.save(route);
+            session.getTransaction().commit();
+        } catch (HibernateException hibernateException) {
+            log.error("Hibernate Exception", hibernateException);
+        } finally {
+            session.close();
+        }
+
         return id;
     }
 
@@ -73,25 +104,34 @@ public class DeliveryRouteDao {
      * delete a user by id
      * @param id the user's id
      */
-    public void deleteDeliveryRoute(int id) throws Exception {
+    public void deleteDeliveryRoute(int id) {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        DeliveryRoute route = (DeliveryRoute) session.get(DeliveryRoute.class, id);
-        session.beginTransaction();
-        session.delete(route);
-        session.getTransaction().commit();
-        session.close();
+        try {
+            DeliveryRoute route = (DeliveryRoute) session.get(DeliveryRoute.class, id);
+            session.beginTransaction();
+            session.delete(route);
+            session.getTransaction().commit();
+        } catch (HibernateException hibernateException) {
+            log.error("Hibernate Exception", hibernateException);
+        } finally {
+            session.close();
+        }
 
     }
     public void updateDeliveryRoute(DeliveryRoute route) throws Exception {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        session.beginTransaction();
 
-        session.update(route);
-        session.getTransaction().commit();
-        session.close();
-
+        try {
+            session.beginTransaction();
+            session.update(route);
+            session.getTransaction().commit();
+        } catch (HibernateException hibernateException) {
+            log.error("Hibernate Exception", hibernateException);
+        } finally {
+            session.close();
+        }
     }
 
 }

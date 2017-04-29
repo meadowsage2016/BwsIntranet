@@ -2,6 +2,7 @@ package edu.matc.persistence;
 
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 import edu.matc.entity.Subdealers;
@@ -23,8 +24,14 @@ public class SubdealersDao {
      */
     public Subdealers getSubdealerById(int id) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        Subdealers subdealer = (Subdealers) session.get(Subdealers.class, id);
+        Subdealers subdealer = new Subdealers();
+        try {
+        subdealer = (Subdealers) session.get(Subdealers.class, id);
+    } catch (HibernateException hibernateException) {
+        log.error("Hibernate Exception", hibernateException);
+    } finally {
         session.close();
+    }
         return subdealer;
     }
 
@@ -35,11 +42,17 @@ public class SubdealersDao {
      */
     public Subdealers getsubdealerByCustomerNumber(String customerNumber) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        Subdealers subdealer = new Subdealers();
+        try{
         session.beginTransaction();
         Criteria criteria = session.createCriteria(Subdealers.class);
         criteria.add(Restrictions.eq("customerNumber", customerNumber));
-        Subdealers subdealer = (Subdealers) criteria.uniqueResult();
+        subdealer = (Subdealers) criteria.uniqueResult();
+    } catch (HibernateException hibernateException) {
+        log.error("Hibernate Exception", hibernateException);
+        } finally {
         session.close();
+        }
         return subdealer;
     }
 
@@ -50,10 +63,17 @@ public class SubdealersDao {
     public List<Subdealers> getAllSubdealers() {
         List<Subdealers> subdealers = new ArrayList<Subdealers>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        subdealers = session.createCriteria(Subdealers.class).list();
-        session.close();
+
+        try {
+            subdealers = session.createCriteria(Subdealers.class).list();
+        } catch (HibernateException hibernateException) {
+            log.error("Hibernate Exception", hibernateException);
+        } finally {
+            session.close();
+        }
         return subdealers;
     }
+
 
 
     /** save or update user
@@ -63,10 +83,17 @@ public class SubdealersDao {
 
     public int addSubdealer(Subdealers subdealer) throws Exception {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        int id = 0;
+        try {
         session.beginTransaction();
-        int id = (Integer) session.save(subdealer);
+        id = (Integer) session.save(subdealer);
         session.getTransaction().commit();
+        } catch (HibernateException hibernateException) {
+        log.error("Hibernate Exception", hibernateException);
+        } finally {
         session.close();
+        }
+
         return id;
 
     }
@@ -78,21 +105,33 @@ public class SubdealersDao {
     public void deleteSubdealer(int id) throws Exception {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
+
+        try{
         Subdealers subdealer = (Subdealers) session.get(Subdealers.class, id);
         session.beginTransaction();
         session.delete(subdealer);
         session.getTransaction().commit();
+        } catch (HibernateException hibernateException) {
+        log.error("Hibernate Exception", hibernateException);
+        } finally {
         session.close();
+        }
 
     }
     public void updateSubdealer(Subdealers subdealer) throws Exception {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
+
+        try{
         session.beginTransaction();
 
         session.update(subdealer);
         session.getTransaction().commit();
+        } catch (HibernateException hibernateException) {
+        log.error("Hibernate Exception", hibernateException);
+        } finally {
         session.close();
+        }
     }
 
 }

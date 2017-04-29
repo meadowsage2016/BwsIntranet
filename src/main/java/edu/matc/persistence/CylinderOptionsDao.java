@@ -3,6 +3,7 @@ package edu.matc.persistence;
 import edu.matc.entity.CylinderOptions;
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 
@@ -29,8 +30,15 @@ public class CylinderOptionsDao {
      */
     public CylinderOptions getCylOptionById(int id) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        CylinderOptions cylOption = (CylinderOptions) session.get(CylinderOptions.class, id);
+        CylinderOptions cylOption = new CylinderOptions();
+
+        try {
+            cylOption = (CylinderOptions) session.get(CylinderOptions.class, id);
+        } catch (HibernateException hibernateException) {
+        log.error("Hibernate Exception", hibernateException);
+    } finally {
         session.close();
+    }
         return cylOption;
     }
 
@@ -41,11 +49,18 @@ public class CylinderOptionsDao {
      */
     public CylinderOptions getCylOptionByGasNumber(String gasNumber) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        session.beginTransaction();
-        Criteria criteria = session.createCriteria(CylinderOptions.class);
-        criteria.add(Restrictions.eq("gasNumber", gasNumber));
-        CylinderOptions cylinder = (CylinderOptions) criteria.uniqueResult();
+        CylinderOptions cylinder = new CylinderOptions();
+
+        try {
+            session.beginTransaction();
+            Criteria criteria = session.createCriteria(CylinderOptions.class);
+            criteria.add(Restrictions.eq("gasNumber", gasNumber));
+            cylinder = (CylinderOptions) criteria.uniqueResult();
+        } catch (HibernateException hibernateException) {
+        log.error("Hibernate Exception", hibernateException);
+    } finally {
         session.close();
+    }
         return cylinder;
     }
 
@@ -54,10 +69,17 @@ public class CylinderOptionsDao {
      * @return All cylOptions
      */
     public List<CylinderOptions> getAllCylOptions() {
+
         List<CylinderOptions> cylOption = new ArrayList<CylinderOptions>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        cylOption = session.createCriteria(CylinderOptions.class).list();
-        session.close();
+
+        try {
+            cylOption = session.createCriteria(CylinderOptions.class).list();
+        }catch (HibernateException hibernateException) {
+            log.error("Hibernate Exception", hibernateException);
+        } finally {
+            session.close();
+        }
         return cylOption;
     }
 
@@ -68,11 +90,19 @@ public class CylinderOptionsDao {
      */
 
     public int addCylOptions(CylinderOptions cylOption) throws Exception {
+
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        session.beginTransaction();
-        int id = (Integer) session.save(cylOption);
-        session.getTransaction().commit();
-        session.close();
+        int id = 0;
+
+        try {
+            session.beginTransaction();
+            id = (Integer) session.save(cylOption);
+            session.getTransaction().commit();
+        } catch (HibernateException hibernateException) {
+            log.error("Hibernate Exception", hibernateException);
+        } finally {
+            session.close();
+        }
         return id;
     }
 
@@ -83,23 +113,34 @@ public class CylinderOptionsDao {
     public void deleteCylOption(int id) throws Exception {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        CylinderOptions cylOption = (CylinderOptions) session.get(CylinderOptions.class, id);
-        session.beginTransaction();
-        session.delete(cylOption);
-        session.getTransaction().commit();
-        session.close();
+
+        try {
+            CylinderOptions cylOption = (CylinderOptions) session.get(CylinderOptions.class, id);
+            session.beginTransaction();
+            session.delete(cylOption);
+            session.getTransaction().commit();
+        } catch (HibernateException hibernateException) {
+            log.error("Hibernate Exception", hibernateException);
+        } finally {
+            session.close();
+        }
 
     }
+
 
     public void updateCylOption(CylinderOptions cylOption) throws Exception {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        session.beginTransaction();
 
-        session.update(cylOption);
-        session.getTransaction().commit();
-        session.close();
+        try {
+            session.beginTransaction();
 
+            session.update(cylOption);
+            session.getTransaction().commit();
+        } catch (HibernateException hibernateException) {
+            log.error("Hibernate Exception", hibernateException);
+        } finally {
+            session.close();
+        }
     }
-
 }

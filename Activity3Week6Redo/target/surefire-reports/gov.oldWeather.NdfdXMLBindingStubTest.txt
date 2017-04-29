@@ -1,9 +1,0 @@
--------------------------------------------------------------------------------
-Test set: gov.oldWeather.NdfdXMLBindingStubTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.885 sec <<< FAILURE!
-testLatLonListZipCode(gov.oldWeather.NdfdXMLBindingStubTest)  Time elapsed: 4.845 sec  <<< FAILURE!
-junit.framework.ComparisonFailure: Result did not match expected value expected:<???> but was:<<?xml version='1.0'?><dwml version='1.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:noNamespaceSchemaLocation='http://graphical.weather.gov/xml/DWMLgen/schema/DWML.xsd'><latLonList>43.0798,-89.3875</latLonList></dwml>>
-	at junit.framework.Assert.assertEquals(Assert.java:81)
-	at gov.oldWeather.NdfdXMLBindingStubTest.testLatLonListZipCode(NdfdXMLBindingStubTest.java:14)
-
