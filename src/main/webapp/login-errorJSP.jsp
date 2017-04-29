@@ -9,8 +9,9 @@ To change this template use File | Settings | File Templates.
 <html>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
+<head>
 <c:import url="include-headtag.jsp" />
-
+</head>
 <body>
 <%@ include file="include-navigation.jsp" %>
 Logon Error.

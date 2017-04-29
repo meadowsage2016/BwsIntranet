@@ -9,7 +9,9 @@
 <html>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
+<head>
 <c:import url="include-headtag.jsp" />
+</head>
 <div>
     <h3>Cylinder Images</h3>
     <a href="images/cylinders/acetylene.jpg">Acetylene</a>

@@ -8,8 +8,9 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<head>
 <c:import url="include-headtag.jsp" />
-
+</head>
 
 <h3><c:out value="${noRecordsFoundMessage}" /></h3>
 <div>

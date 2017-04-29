@@ -1,6 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<head>
 <c:import url="include-headtag.jsp" />
+</head>
 <c:set var="title" value="Cylinder Options" />
 <script type="text/javascript" class="init">
     $(document).ready( function () {

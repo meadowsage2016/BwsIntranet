@@ -7,13 +7,16 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<head>
 <c:import url="include-headtag.jsp" />
+    <script type="text/javascript" class="init">
+        $(document).ready( function () {
+            $('#keywords').DataTable();
+        } );
+    </script>
+</head>
 <c:set var="title" value="Delivery Routes" />
-<script type="text/javascript" class="init">
-    $(document).ready( function () {
-        $('#keywords').DataTable();
-    } );
-</script>
+
 
 <!DOCTYPE html>
 <c:import url="include-headtag.jsp" />

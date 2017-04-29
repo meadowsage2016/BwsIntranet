@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
+<head>
 <c:import url="include-headtag.jsp" />
-
+</head>
 <body>
 
 <%@ include file="include-navigation.jsp" %>
@@ -40,15 +41,19 @@
 <div class="container-fluid bg-12" id="weather">
     <div class="row">
         <div class="col-sm-12">
+            <!--
             <c:import url="WundergroundApi" />
+            -->
         </div>
     </div>
 </div>
 <div class="container-fluid bg-12">
     <div class="row">
         <div class="col-sm-12">
+            <!--
             <h3>Breaking News...</h3>
             <c:import url="NewsApi" />
+            -->
         </div>
     </div>
 </div>
