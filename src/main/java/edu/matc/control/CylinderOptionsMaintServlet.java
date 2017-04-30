@@ -22,29 +22,35 @@ package edu.matc.control;
         name = "CylinderOptionsMaint",
         urlPatterns = { "/CylinderOptionsMaint" }
 )
-public class CylinderOptionsMaintServlet extends HttpServlet { public void doGet(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException {
+public class CylinderOptionsMaintServlet extends HttpServlet {
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
 
-    CylinderOptionsDao cyl = new CylinderOptionsDao();
+        //  Take updated Search object and store in Sessio
+        HttpSession session = request.getSession(true);
+        session.removeAttribute("MaintResult");
+        String paramValue = request.getParameter("maint");
 
-    CylinderOptions result = null;
-    List<CylinderOptions> results = new ArrayList<CylinderOptions>();
+        if (paramValue.matches("1")) {
+            // Local variable to hold url of results page
+            String url = "/newCylinderOptionsJSP.jsp";
 
-    //  Take updated Search object and store in Sessio
-    HttpSession sessionCylinderOptions     = request.getSession();
-    sessionCylinderOptions.setAttribute("noRecordsFoundMessage", "");
+            // Forward the request header to the JSP page
+            RequestDispatcher dispatcher
+                    = getServletContext().getRequestDispatcher(url);
+            dispatcher.forward(request, response);
+        }
 
-    String paramName = "gasNumber";
-    String paramValue = request.getParameter(paramName);
-    result = cyl.getCylOptionByGasNumber(paramValue);
-    sessionCylinderOptions.setAttribute("SearchResults", result);
+        if (paramValue.matches("3")) {
+            // Local variable to hold url of results page
+            String url = "/deleteCylinderOptionsJSP.jsp";
 
-    // Local variable to hold url of results page
-    String url =  "/newCylinderOptionsJSP.jsp";
+            // Forward the request header to the JSP page
+            RequestDispatcher dispatcher
+                    = getServletContext().getRequestDispatcher(url);
+            dispatcher.forward(request, response);
+        }
 
-    // Forward the request header to the JSP page
-    RequestDispatcher dispatcher
-            = getServletContext().getRequestDispatcher(url);
-    dispatcher.forward(request, response);
-}
+
+    }
 }

@@ -26,7 +26,8 @@ public class EmployeeMaintServlet extends HttpServlet {
             throws ServletException, IOException {
 
         //  Take updated Search object and store in Sessio
-        HttpSession session = request.getSession();
+        HttpSession session = request.getSession(true);
+        session.removeAttribute("MaintResult");
         String paramValue = request.getParameter("maint");
 
         if (paramValue.matches("1")) {
@@ -34,6 +35,16 @@ public class EmployeeMaintServlet extends HttpServlet {
             String url = "/newEmployeeJSP.jsp";
 
         // Forward the request header to the JSP page
+            RequestDispatcher dispatcher
+                    = getServletContext().getRequestDispatcher(url);
+            dispatcher.forward(request, response);
+        }
+
+        if (paramValue.matches("3")) {
+            // Local variable to hold url of results page
+            String url = "/deleteEmployeeJSP.jsp";
+
+            // Forward the request header to the JSP page
             RequestDispatcher dispatcher
                     = getServletContext().getRequestDispatcher(url);
             dispatcher.forward(request, response);

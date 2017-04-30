@@ -10,6 +10,7 @@
 <html>
 <head>
 <c:import url="include-headtag.jsp" />
+    <c:import url="include-navigation.jsp"/>
 </head>
 <h2>Administrator Console</h2>
 
@@ -79,7 +80,7 @@
         </fieldset>
     </div>
 </form>
-<form id="SubdealersTable" action="subdealersMaint" method="POST">
+<form id="SubdealersTable" action="SubdealersMaint" method="POST">
     <div class='container'>
         <fieldset class="form-group">
             <legend><h2>SUB-DEALERS TABLE</h2></legend>

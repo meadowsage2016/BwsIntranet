@@ -10,6 +10,7 @@
 <html>
 <head>
     <c:import url="include-headtag.jsp" />
+    <c:import url="include-navigation.jsp" />
     <script>
         $("#newCylOptForm").validate();
     </script>
