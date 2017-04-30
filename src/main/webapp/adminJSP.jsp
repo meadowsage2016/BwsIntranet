@@ -48,7 +48,7 @@
 
 </form>
 
-<form id="DeliveryRoutesTable" action="routesMaint">
+<form id="DeliveryRoutesTable" action="DeliveryRouteMaintServlet" method="POST">
 
     <div class='container'>
 
@@ -74,12 +74,12 @@
                         DELETE
                     </label>
                 </div>
-                <input type="button" value="Submit" id="RoutesMaintBtn"/>
+                <input type="submit" value="Submit" id="RoutesMaintBtn"/>
             </div>
         </fieldset>
     </div>
 </form>
-<form id="SubdealersTable" action="subdealersMaint">
+<form id="SubdealersTable" action="subdealersMaint" method="POST">
     <div class='container'>
         <fieldset class="form-group">
             <legend><h2>SUB-DEALERS TABLE</h2></legend>
@@ -103,7 +103,7 @@
                         DELETE
                     </label>
                 </div>
-                <input type="button" value="Submit" id="SubdealersMaintBtn"/>
+                <input type="submit" value="Submit" id="SubdealersMaintBtn"/>
             </div>
         </fieldset>
 
@@ -111,7 +111,7 @@
 
 </form>
 
-<form id="CylinderOptionsTable" action="cylOptMaint">
+<form id="CylinderOptionsTable" action="cylOptMaint" method=POST">
 
     <div class='container'>
 
@@ -137,7 +137,7 @@
                         DELETE
                     </label>
                 </div>
-                <input type="button" value="Submit" id="CylOptMaintBtn"/>
+                <input type="submit" value="Submit" id="CylOptMaintBtn"/>
             </div>
         </fieldset>
 
@@ -145,7 +145,7 @@
 
 </form>
 
-<form id="CitiesTable" action="citiesMaint">
+<form id="CitiesTable" action="citiesMaint" method="POST">
 
     <div class='container'>
 
@@ -172,7 +172,7 @@
                     </label>
                 </div>
             </div>
-            <input type="button" value="Submit" id="CitiesMaintBtn"/>
+            <input type="submit" value="Submit" id="CitiesMaintBtn"/>
         </fieldset>
 
     </div>

@@ -24,7 +24,7 @@ import java.util.List;
 public class EmployeeMaintServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@");
+
         //  Take updated Search object and store in Sessio
         HttpSession session = request.getSession();
         String paramValue = request.getParameter("maint");
