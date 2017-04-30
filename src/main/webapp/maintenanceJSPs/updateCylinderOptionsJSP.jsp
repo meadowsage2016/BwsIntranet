@@ -10,7 +10,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
 <head>
-<c:import url="include-headtag.jsp" />
+<c:import url="../include-headtag.jsp" />
 </head>
 <body>
 <header>
@@ -21,24 +21,8 @@
     </div><!--close strapline-->
 </header>
 
-<c:forEach items="${SearchResults}" var="cylinder">
-
-
-
-    <form action="/CylinderOptionsMaint" id="/CylindersByGasNumber" method="POST" onsubmit="return ValidateForm(this);">
-
-        <script type="text/javascript">
-            function ValidateForm(frm) {
-                if (frm.gasNumber.value == "") { alert('Gas Number is required.'); frm.gasNumber.focus(); return false; }
-                if (frm.gasDescription.value == "") { alert('Description is required.'); frm.gasDescription.focus(); return false; }
-                if (frm.cylinderCode.value == "") { alert('Cylinder Code is required.'); frm.cylinderCode.focus(); return false; }
-                if (frm.cylinderRent.value == "") { alert('Daily Rent Value is required'); frm.cylinderRent.focus(); return false; }
-                if (frm.cylinderOnePPRent.value == "") { alert('One Year PrePaid Rent  Value is required.'); frm.cylinderOnePPRent.focus(); return false; }
-                if (frm.cylinderFiveYearLease.value == "") { alert('Five Year Lease Value is required.'); frm.cylinderFiveYearLease.focus(); return false; }
-                if (frm.cylinderPurchase.value == "") { alert('Cylinder Purchase Value is required'); frm.cylinderPurchase.focus(); return false; }
-                return true; }
-        </script>
-
+<c:forEach items="${UpdateResult}" var="cylinder">
+<form id="updatCylOpts" action="/CylinderOptionsUpdate" method="POST">
         <table border="0" cellpadding="5" cellspacing="0">
             <tr>
                 <td style="width: 50%">
@@ -83,6 +67,6 @@
         <input type="submit" value="Submit">
     </form>
 </c:forEach>
-<h3><c:out value="${SuccessfulAdd}" /></h3>
+<h3><c:out value="${Message}" /></h3>
 </body>
 </html>

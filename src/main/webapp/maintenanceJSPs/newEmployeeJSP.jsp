@@ -9,8 +9,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <c:import url="include-headtag.jsp" />
-    <c:import url="include-navigation.jsp" />
+    <c:import url="../include-headtag.jsp" />
+    <c:import url="../include-navigation.jsp" />
     <script>
         $("#newEmpForm").validate();
     </script>

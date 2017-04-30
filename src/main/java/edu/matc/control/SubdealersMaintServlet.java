@@ -35,6 +35,16 @@ public class SubdealersMaintServlet extends HttpServlet{
             dispatcher.forward(request, response);
         }
 
+        if (paramValue.matches("2")) {
+            // Local variable to hold url of results page
+            String url = "/updateSubdealerJSP.jsp";
+
+            // Forward the request header to the JSP page
+            RequestDispatcher dispatcher
+                    = getServletContext().getRequestDispatcher(url);
+            dispatcher.forward(request, response);
+        }
+
         if (paramValue.matches("3")) {
             // Local variable to hold url of results page
             String url = "/deleteSubdealerJSP.jsp";
