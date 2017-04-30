@@ -111,7 +111,7 @@
 
 </form>
 
-<form id="CylinderOptionsTable" action="cylOptMaint" method=POST">
+<form id="CylinderOptionsTable" action="CylinderOptionsMaint" method=POST">
 
     <div class='container'>
 

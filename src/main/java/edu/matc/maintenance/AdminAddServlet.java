@@ -1,4 +1,4 @@
-package edu.matc.control;
+package edu.matc.maintenance;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

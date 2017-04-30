@@ -16,7 +16,7 @@
 </head>
 <body>
 
-<form class="cmxform" id="newRouteForm" method="get" action="DeliveryRouteAdd">
+<form class="cmxform" id="newRouteForm" method="POST" action="DeliveryRouteAdd">
     <fieldset>
         <legend>New Delivery Route</legend>
         <p>

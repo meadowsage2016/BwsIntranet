@@ -1,4 +1,4 @@
-package edu.matc.control;
+package edu.matc.searches;
 
 import edu.matc.entity.CylinderOptions;
 import edu.matc.persistence.CylinderOptionsDao;

@@ -1,4 +1,4 @@
-package edu.matc.control;
+package edu.matc.searches;
 
 import edu.matc.entity.DeliveryRoute;
 import edu.matc.persistence.DeliveryRouteDao;

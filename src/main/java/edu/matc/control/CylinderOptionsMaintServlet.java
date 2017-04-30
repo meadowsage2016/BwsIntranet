@@ -19,7 +19,7 @@ package edu.matc.control;
  * Created by Sue Hundt on 3/16/17.
  */
 @WebServlet(
-        name = "cylinderOptionsMaint",
+        name = "CylinderOptionsMaint",
         urlPatterns = { "/CylinderOptionsMaint" }
 )
 public class CylinderOptionsMaintServlet extends HttpServlet { public void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -40,7 +40,7 @@ public class CylinderOptionsMaintServlet extends HttpServlet { public void doGet
     sessionCylinderOptions.setAttribute("SearchResults", result);
 
     // Local variable to hold url of results page
-    String url =  "/cylinderOptionsMaintJSP.jsp";
+    String url =  "/newCylinderOptionsJSP.jsp";
 
     // Forward the request header to the JSP page
     RequestDispatcher dispatcher

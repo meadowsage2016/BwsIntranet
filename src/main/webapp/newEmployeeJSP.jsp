@@ -16,7 +16,7 @@
 </head>
 <body>
 
-<form class="cmxform" id="newEmpForm" method="get" action="employeeAdd">
+<form class="cmxform" id="newEmpForm" method="POST" action="employeeAdd">
     <fieldset>
         <legend>New Employee</legend>
         <p>

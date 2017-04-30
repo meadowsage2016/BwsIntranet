@@ -1,4 +1,4 @@
-package edu.matc.control;
+package edu.matc.maintenance;
 
 import edu.matc.entity.DeliveryRoute;
 import edu.matc.persistence.DeliveryRouteDao;
@@ -23,7 +23,7 @@ import java.util.List;
 )
 public class DeliveryRouteAddServlet extends HttpServlet {
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response)
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String message = "Add not Successful";
         int id = 0;

@@ -1,4 +1,4 @@
-package edu.matc.control;
+package edu.matc.searches;
 
 import edu.matc.entity.Employee;
 import edu.matc.persistence.EmployeeDao;
