@@ -27,7 +27,7 @@ public class DeliveryMaintServlet extends HttpServlet{
 
         if (paramValue.matches("1")) {
             // Local variable to hold url of results page
-            String url = "/newDeliveryRouteJSP.jsp";
+            String url = "/maintenance/newDeliveryRouteJSP.jsp";
 
             // Forward the request header to the JSP page
             RequestDispatcher dispatcher
@@ -37,7 +37,7 @@ public class DeliveryMaintServlet extends HttpServlet{
 
         if (paramValue.matches("2")) {
             // Local variable to hold url of results page
-            String url = "/updateDeliveryRouteJSP.jsp";
+            String url = "/maintenance/updateDeliveryRouteJSP.jsp";
 
             // Forward the request header to the JSP page
             RequestDispatcher dispatcher
@@ -47,7 +47,7 @@ public class DeliveryMaintServlet extends HttpServlet{
 
         if (paramValue.matches("3")) {
             // Local variable to hold url of results page
-            String url = "/deleteDeliveryRouteJSP.jsp";
+            String url = "/maintenance/deleteDeliveryRouteJSP.jsp";
 
             // Forward the request header to the JSP page
             RequestDispatcher dispatcher

@@ -30,6 +30,7 @@ public class EmployeeAddServlet extends HttpServlet {
         String department = "";
         String phoneExtension = "";
         String cellPhone = "";
+        String emailAddress = "";
         int id = 0;
 
         Employee emp = new Employee();
@@ -49,6 +50,7 @@ public class EmployeeAddServlet extends HttpServlet {
             emp.setDepartment(request.getParameter("department"));
             emp.setPhoneExtension(request.getParameter("phoneExtension"));
             emp.setCellPhone(request.getParameter("cellPhone"));
+            emp.setEmailAddress(request.getParameter("emailAddress"));
 
             id = dao.addEmployee(emp);
             if (id==1) {
@@ -61,7 +63,7 @@ public class EmployeeAddServlet extends HttpServlet {
             sessionAdd.setAttribute("MaintResult", results);
 
             // Local variable to hold url of results page
-            String url = "/newEmployeeJSP.jsp";
+            String url = "/maintenance/newEmployeeJSP.jsp";
 
 // Forward the request header to the JSP page
             RequestDispatcher dispatcher

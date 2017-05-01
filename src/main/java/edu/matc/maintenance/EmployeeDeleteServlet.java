@@ -36,38 +36,23 @@ public class EmployeeDeleteServlet extends HttpServlet  {
             String message = "Delete not Successful";
             int id = 0;
 
-            List<Employee> emps = new ArrayList<Employee>();
-            Set<String> empFound = new TreeSet<String>();
+            Employee emp = new Employee();
             EmployeeDao dao = new EmployeeDao();
 
             //  Take updated Search object and store in Session
             HttpSession sessionDelete = request.getSession();
-            String nameToDelete = request.getParameter("name");
+            String emailAddressToDelete = request.getParameter("emailAddress");
 
-            emps = dao.getEmployeesByLastName(nameToDelete);
+            emp = dao.getEmployeeByEmailAddress(emailAddressToDelete);
 
-            for (Employee emp : emps) {
-
-                int idint = emp.getEmployeeId();
-                String idString = Integer.toString(idint);
-                String name = emp.getLastName();
-                String first = emp.getFirstName();
-                String nameString = first + " " + name;
-                empFound.add(idString);
-                empFound.add(nameString);
-
-            }
-
-
-
-            int selected = 0;
+            int selected = emp.getEmployeeId();
 
             try {
                 dao.deleteEmployee(selected);
                 message="Successful delete.";
                 sessionDelete.setAttribute("Message", message);
                 // Local variable to hold url of results page
-                String url = "/deleteEmployeeJSP.jsp";
+                String url = "/maintenance/deleteEmployeeJSP.jsp";
 
                 // Forward the request header to the JSP page
                 RequestDispatcher dispatcher

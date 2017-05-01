@@ -1,9 +1,5 @@
 package edu.matc.control;
 
-        import edu.matc.entity.CylinderOptions;
-        import edu.matc.persistence.CitiesByZipDao;
-        import edu.matc.persistence.CylinderOptionsDao;
-
         import javax.servlet.RequestDispatcher;
         import javax.servlet.ServletException;
         import javax.servlet.annotation.WebServlet;
@@ -12,8 +8,6 @@ package edu.matc.control;
         import javax.servlet.http.HttpServletResponse;
         import javax.servlet.http.HttpSession;
         import java.io.IOException;
-        import java.util.ArrayList;
-        import java.util.List;
 
 /**
  * Created by Sue Hundt on 3/16/17.

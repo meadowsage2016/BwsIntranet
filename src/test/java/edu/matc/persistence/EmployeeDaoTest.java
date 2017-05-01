@@ -45,6 +45,13 @@ public class EmployeeDaoTest extends EmployeeDao {
             assertEquals("Employees Not Found", 2, employeesWithLastName.size());
     }
 
+    @Test  // GET BY Email Address                                                                             JOHNSTON
+    public void testGetEmployeesByEmailAddress(){
+
+        Employee employeesWithEmailAddress = dao.getEmployeeByEmailAddress("sue@badgerwelding.com");
+        assertEquals("Employee with Email Address Not Found", "Hundt", employeesWithEmailAddress.getLastName());
+    }
+
     @Test  // UPDATE BY ID                                                                                        70
     public void testUpdateEmployee()  {
 
@@ -59,7 +66,7 @@ public class EmployeeDaoTest extends EmployeeDao {
     public void testAddNewEmployee() {
 
         int before = dao.getAllEmployees().size();
-        Employee newEmployee = new Employee("Phoenix", "Sally", "president", "6085551212" , "997");
+        Employee newEmployee = new Employee("Phoenix", "Sally", "president", "6085551212" , "997", "phoenix@badgerwelding.com");
         dao.addEmployee(newEmployee);
         int after = dao.getAllEmployees().size();
         assertEquals("User not added correctly", before + 1, after);

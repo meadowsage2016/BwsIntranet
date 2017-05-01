@@ -1,7 +1,7 @@
-package edu.matc.searches;
+package edu.matc.underconstruction;
 
-import edu.matc.entity.CitiesByZip;
-import edu.matc.persistence.CitiesByZipDao;
+import edu.matc.underconstruction.CitiesByZip;
+import edu.matc.underconstruction.CitiesByZipDao;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

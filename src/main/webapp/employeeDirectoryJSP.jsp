@@ -33,6 +33,7 @@
             <th><span>Phone Extension</span></th>
             <th><span>Cell Phone</span></th>
             <th><span>Department</span></th>
+            <th><span>Email Address</span></th>
         </tr>
         </thead>
         <tfoot>
@@ -42,6 +43,7 @@
             <th><span>Phone Extension</span></th>
             <th><span>Cell Phone</span></th>
             <th><span>Department</span></th>
+            <th><span>Email Address</span></th>
         </tr>
         </tfoot>
         <tbody>
@@ -52,8 +54,7 @@
                 <td>${employee.phoneExtension}</td>
                 <td>${employee.cellPhone}</td>
                 <td>${employee.department}</td>
-<!--            <td><a href="EmployeesMaint"${employee.employeeId}>Admin</a></td>
--->
+                <td>${employee.emailAddress}</td>
             </tr>
         </c:forEach>
         </tbody>

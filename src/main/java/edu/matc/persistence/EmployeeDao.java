@@ -53,6 +53,28 @@ public class EmployeeDao {
 
     }
 
+    /** Retrieve employee by lastname
+     *
+     * @param emailAddress
+     * @return Employee
+     */
+
+    public Employee getEmployeeByEmailAddress(String emailAddress) {
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        Employee emp = new Employee();
+        try{
+            session.beginTransaction();
+            Criteria criteria = session.createCriteria(Employee.class);
+            criteria.add(Restrictions.eq("emailAddress", emailAddress));
+            emp = (Employee) criteria.uniqueResult();
+        } catch (HibernateException hibernateException) {
+            log.error("Hibernate Exception", hibernateException);
+        } finally {
+            session.close();
+        }
+        return emp;
+    }
+
     /** Return a list of all employees
      *
      * @return All employees
