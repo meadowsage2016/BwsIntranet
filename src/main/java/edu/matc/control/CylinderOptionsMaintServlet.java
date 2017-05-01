@@ -1,9 +1,5 @@
 package edu.matc.control;
 
-        import edu.matc.entity.CylinderOptions;
-        import edu.matc.persistence.CitiesByZipDao;
-        import edu.matc.persistence.CylinderOptionsDao;
-
         import javax.servlet.RequestDispatcher;
         import javax.servlet.ServletException;
         import javax.servlet.annotation.WebServlet;
@@ -12,8 +8,6 @@ package edu.matc.control;
         import javax.servlet.http.HttpServletResponse;
         import javax.servlet.http.HttpSession;
         import java.io.IOException;
-        import java.util.ArrayList;
-        import java.util.List;
 
 /**
  * Created by Sue Hundt on 3/16/17.
@@ -33,7 +27,7 @@ public class CylinderOptionsMaintServlet extends HttpServlet {
 
         if (paramValue.matches("1")) {
             // Local variable to hold url of results page
-            String url = "/newCylinderOptionsJSP.jsp";
+            String url = "/maintenanceJSPs/newCylinderOptionsJSP.jsp";
 
             // Forward the request header to the JSP page
             RequestDispatcher dispatcher
@@ -54,7 +48,7 @@ public class CylinderOptionsMaintServlet extends HttpServlet {
 
         if (paramValue.matches("3")) {
             // Local variable to hold url of results page
-            String url = "/deleteCylinderOptionsJSP.jsp";
+            String url = "/maintenanceJSPs/deleteCylinderOptionsJSP.jsp";
 
             // Forward the request header to the JSP page
             RequestDispatcher dispatcher

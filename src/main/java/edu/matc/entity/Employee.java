@@ -23,6 +23,7 @@ public class Employee {
     private String department;
     private String phoneExtension;
     private String cellPhone;
+    private String emailAddress;
 
     /**
      * Empty Constructor
@@ -36,7 +37,7 @@ public class Employee {
      *  and sets instance variables to create new employee
      */
     public Employee (String newFirstName, String newLastName, String newDepartment,
-                     String newCellPhone, String newPhoneExtension) {
+                     String newCellPhone, String newPhoneExtension, String newEmailAddress) {
 
         super();
         firstName = newFirstName;
@@ -44,6 +45,7 @@ public class Employee {
         department = newDepartment;
         phoneExtension = newPhoneExtension;
         cellPhone = newCellPhone;
+        emailAddress = newEmailAddress;
 
     }
 
@@ -99,6 +101,12 @@ public class Employee {
         this.cellPhone = cellPhone;
     }
 
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
     @Override
     public String toString() {
         return "Employee{" +
@@ -108,6 +116,7 @@ public class Employee {
                 ", department='" + department + '\'' +
                 ", phoneExtension='" + phoneExtension + '\'' +
                 ", cellPhone='" + cellPhone + '\'' +
+                ", emailAddress='" + emailAddress + '\'' +
                 '}';
     }
 

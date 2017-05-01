@@ -27,7 +27,7 @@ public class SubdealersMaintServlet extends HttpServlet{
 
         if (paramValue.matches("1")) {
             // Local variable to hold url of results page
-            String url = "/newSubdealerJSP.jsp";
+            String url = "/maintenanceJSPs/newSubdealerJSP.jsp";
 
             // Forward the request header to the JSP page
             RequestDispatcher dispatcher
@@ -37,7 +37,7 @@ public class SubdealersMaintServlet extends HttpServlet{
 
         if (paramValue.matches("2")) {
             // Local variable to hold url of results page
-            String url = "/updateSubdealerJSP.jsp";
+            String url = "/maintenanceJSPs/updateSubdealerJSP.jsp";
 
             // Forward the request header to the JSP page
             RequestDispatcher dispatcher
@@ -47,7 +47,7 @@ public class SubdealersMaintServlet extends HttpServlet{
 
         if (paramValue.matches("3")) {
             // Local variable to hold url of results page
-            String url = "/deleteSubdealerJSP.jsp";
+            String url = "/maintenanceJSPs/deleteSubdealerJSP.jsp";
 
             // Forward the request header to the JSP page
             RequestDispatcher dispatcher

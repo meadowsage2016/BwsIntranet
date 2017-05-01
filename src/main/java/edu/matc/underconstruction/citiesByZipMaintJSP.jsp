@@ -10,7 +10,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
 <head>
-<c:import url="../include-headtag.jsp" />
+<c:import url="../../../../webapp/include-headtag.jsp" />
 </head>
 <body>
 <header>

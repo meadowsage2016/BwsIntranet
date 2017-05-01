@@ -32,7 +32,7 @@ public class EmployeeMaintServlet extends HttpServlet {
 
         if (paramValue.matches("1")) {
             // Local variable to hold url of results page
-            String url = "/newEmployeeJSP.jsp";
+            String url = "/maintenanceJSPs/newEmployeeJSP.jsp";
 
         // Forward the request header to the JSP page
             RequestDispatcher dispatcher
@@ -42,7 +42,7 @@ public class EmployeeMaintServlet extends HttpServlet {
 
         if (paramValue.matches("2")) {
             // Local variable to hold url of results page
-            String url = "/updateEmployeeJSP.jsp";
+            String url = "/maintenanceJSPs/updateEmployeeJSP.jsp";
 
             // Forward the request header to the JSP page
             RequestDispatcher dispatcher
@@ -52,7 +52,7 @@ public class EmployeeMaintServlet extends HttpServlet {
 
         if (paramValue.matches("3")) {
             // Local variable to hold url of results page
-            String url = "/deleteEmployeeJSP.jsp";
+            String url = "/maintenanceJSPs/deleteEmployeeJSP.jsp";
 
             // Forward the request header to the JSP page
             RequestDispatcher dispatcher

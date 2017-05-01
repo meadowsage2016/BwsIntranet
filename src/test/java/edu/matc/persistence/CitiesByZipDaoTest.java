@@ -1,6 +1,7 @@
 package edu.matc.persistence;
 
-import edu.matc.entity.CitiesByZip;
+import edu.matc.underconstruction.CitiesByZip;
+import edu.matc.underconstruction.CitiesByZipDao;
 import org.apache.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,7 +13,7 @@ import static org.junit.Assert.*;
 /**
  * Created by student on 3/16/17.
  */
-public class CitiesByZipDaoTest extends CitiesByZipDao{
+public class CitiesByZipDaoTest extends CitiesByZipDao {
     static Logger log = Logger.getLogger(EmployeeDaoTest.class.getName());
     CitiesByZipDaoTest dao;
 

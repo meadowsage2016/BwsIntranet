@@ -1,4 +1,4 @@
-package edu.matc.control;
+package edu.matc.maintenance;
 
 import edu.matc.entity.Employee;
 import edu.matc.persistence.EmployeeDao;
