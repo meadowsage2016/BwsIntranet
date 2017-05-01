@@ -10,17 +10,18 @@
 <html>
 <head>
     <c:import url="../include-headtag.jsp" />
+    <script type="text/javascript" src="../js/verifyDeleteSubdealers.js"></script>
     <c:import url="../include-navigation.jsp" /></head>
 <body>
 <div class="container">
-<form id="deleteSubdealerForm" >
+<form id="deleteUserForm" >
     <fieldset>
-        <legend>Delete Subdealer</legend>
+        <legend>Delete User</legend>
         <div class="form-group">
-            <label for="customerNumber">Subdealer to Remove</label>
-            <input class="form-control" id="customerNumber" name="customerNumber" id="customerNumber" minlength="2" type="text" required>
+            <label for="userName">User to Remove</label>
+            <input class="form-control" id="userName" name="userName" id="userName" minlength="2" type="text" required>
         </div>
-            <input type="button" id="deleteBtn" value="Submit">
+            <input type="button" id="deleteUserBtn" value="Submit">
     </fieldset>
 </form>
 <c:out value="${Message}"/>

@@ -16,44 +16,42 @@
     </script>
 </head>
 <body>
-
+<div class="container">
 <form class="cmxform" id="newCylOptForm" method="POST" action="CylinderOptionsAdd">
     <fieldset>
         <legend>New Cylinder Option</legend>
-        <p>
-            <label for="gasNumber">Gas Number (required, at least 2 characters)</label>
-            <input id="gasNumber" name="gasNumber" minlength="2" type="text" required>
-        </p>
-        <p>
+        <div class="form-group">
+            <label for="gasNumber">Gas Number (required)</label>
+            <input class="form-control" id="gasNumber" name="gasNumber" minlength="2" type="text" required>
+        </div>
+        <div class="form-group">
             <label for="gasDescription">Gas Description (required)</label>
-            <input id="gasDescription" type="text" name="gasDescription" minlength="2" maxlength="40" required>
-        </p>
-        <p>
+            <input class="form-control" id="gasDescription" type="text" name="gasDescription" minlength="2" maxlength="40" required>
+        </div>
+        <div class="form-group">
             <label for="cylinderCode">cylinder Code (required)</label>
-            <input id="cylinderCode" type="text" minlength="2" maxlength="10" name="cylinderCode" required>
-        </p
-        <p>
-            <label for="cylinderRent">Daily Rent (required, at least 2 characters)</label>
-            <input id="cylinderRent" name="cylinderRent" minlength="2" type="text" required>
-        </p>
-        <p>
+            <input class="form-control" id="cylinderCode" type="text" minlength="2" maxlength="10" name="cylinderCode" required>
+        </div>
+        <div class="form-group">
+            <label for="cylinderRent">Daily Rent (required)</label>
+            <input class="form-control" id="cylinderRent" name="cylinderRent" minlength="2" type="text" required>
+        </div>
+        <div class="form-group">
             <label for="cylinderOnePPRent"> One Year Pre Paid PRent (required)</label>
-            <input id="cylinderOnePPRent" type="text" name="cylinderOnePPRent" minlength="2" maxlength="40" required>
-        </p>
-        <p>
+            <input class="form-control" id="cylinderOnePPRent" type="text" name="cylinderOnePPRent" minlength="2" maxlength="40" required>
+        </div>
+        <div class="form-group">
             <label for="cylinderFiveYearLease">Five Year Lease (required)</label>
-            <input id="cylinderFiveYearLease" type="text" minlength="2" maxlength="10" name="cylinderFiveYearLease" required>
-        </p>
-        <p>
+            <input class="form-control" id="cylinderFiveYearLease" type="text" minlength="2" maxlength="10" name="cylinderFiveYearLease" required>
+        </div>
+        <div class="form-group">
             <label for="cylinderPurchase">Purchase Price (optional)</label>
-            <input id="cylinderPurchase" type="text" minlength="2" maxlength="10" name="cylinderPurchase">
-        </p>
-        <p>
-            <input type="hidden" name="maintType" value="1">
-        </p>
-        <p>
+            <input class="form-control" id="cylinderPurchase" type="text" minlength="2" maxlength="10" name="cylinderPurchase">
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="hidden" name="maintType" value="1">
+        </div>
             <input class="submit" type="submit" value="Submit">
-        </p>
     </fieldset>
 </form>
 
@@ -70,5 +68,6 @@
 
     </tr>
 </c:forEach>
+</div>
 </body>
 </html>

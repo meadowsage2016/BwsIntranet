@@ -22,7 +22,7 @@ import java.util.List;
         urlPatterns = { "/EmployeesMaintServlet" }
 )
 public class EmployeeMaintServlet extends HttpServlet {
-    public void doPost(HttpServletRequest request, HttpServletResponse response)
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         //  Take updated Search object and store in Sessio
@@ -42,7 +42,7 @@ public class EmployeeMaintServlet extends HttpServlet {
 
         if (paramValue.matches("2")) {
             // Local variable to hold url of results page
-            String url = "/maintenanceJSPs/updateEmployeeJSP.jsp";
+            String url = "/maintenanceJSPs/updateEmployeeSelectJSP.jsp";
 
             // Forward the request header to the JSP page
             RequestDispatcher dispatcher
@@ -52,7 +52,7 @@ public class EmployeeMaintServlet extends HttpServlet {
 
         if (paramValue.matches("3")) {
             // Local variable to hold url of results page
-            String url = "/maintenanceJSPs/deleteEmployeeJSP.jsp";
+            String url = "/maintenanceJSPs/deleteEmployeesJSP.jsp";
 
             // Forward the request header to the JSP page
             RequestDispatcher dispatcher

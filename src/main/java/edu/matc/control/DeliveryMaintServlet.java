@@ -14,10 +14,10 @@ import java.io.IOException;
  */
 @WebServlet(
         name = "DeliveryRouteMaintServlet",
-        urlPatterns = { "/DeliveryRouteMaintServlet" }
+        urlPatterns = { "/DeliveryRoutesMaintServlet" }
 )
 public class DeliveryMaintServlet extends HttpServlet{
-    public void doPost(HttpServletRequest request, HttpServletResponse response)
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         //  Take updated Search object and store in Sessio
@@ -27,7 +27,7 @@ public class DeliveryMaintServlet extends HttpServlet{
 
         if (paramValue.matches("1")) {
             // Local variable to hold url of results page
-            String url = "/maintenanceJSPs/newDeliveryRoutesJSP.jsp";
+            String url = "/maintenanceJSPs/newDeliveryRouteJSP.jsp";
 
             // Forward the request header to the JSP page
             RequestDispatcher dispatcher
@@ -37,7 +37,7 @@ public class DeliveryMaintServlet extends HttpServlet{
 
         if (paramValue.matches("2")) {
             // Local variable to hold url of results page
-            String url = "/maintenanceJSPs/updateDeliveryRoutesJSP.jsp";
+            String url = "/maintenanceJSPs/updateDeliveryRoutesSelectJSP.jsp";
 
             // Forward the request header to the JSP page
             RequestDispatcher dispatcher

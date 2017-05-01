@@ -13,20 +13,18 @@
     <script type="text/javascript" src="../js/verifyDeleteEmployee.js"></script>
     <c:import url="../include-navigation.jsp" /></head>
 <body>
-
+<div class="container">
 <form id="deleteEmployeeForm" >
     <fieldset>
         <legend>Delete Employee</legend>
-        <p>
+        <div class="form-group">
             <label for="name">Employee to Remove</label>
-            <input id="name" name="name" id="name" minlength="2" type="text" required>
-        </p>
-        <p>
-            <input type="button" id="deleteBtn" value="Submit">
-        </p>
+            <input class="form-control" id="name" name="name" id="name" minlength="2" type="text" required>
+        </div>
+        <input type="button" id="deleteBtn" value="Submit">
     </fieldset>
 </form>
 <c:out value="${Message}"/>
-
+</div>
 </body>
 </html>

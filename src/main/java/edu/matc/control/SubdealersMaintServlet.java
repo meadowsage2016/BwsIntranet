@@ -17,7 +17,7 @@ import java.io.IOException;
         urlPatterns = { "/SubdealersMaint" }
 )
 public class SubdealersMaintServlet extends HttpServlet{
-    public void doPost(HttpServletRequest request, HttpServletResponse response)
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         //  Take updated Search object and store in Sessio
@@ -37,7 +37,7 @@ public class SubdealersMaintServlet extends HttpServlet{
 
         if (paramValue.matches("2")) {
             // Local variable to hold url of results page
-            String url = "/maintenanceJSPs/updateSubdealerJSP.jsp";
+            String url = "/maintenanceJSPs/updateSubdealersSelectJSP.jsp";
 
             // Forward the request header to the JSP page
             RequestDispatcher dispatcher
@@ -47,7 +47,7 @@ public class SubdealersMaintServlet extends HttpServlet{
 
         if (paramValue.matches("3")) {
             // Local variable to hold url of results page
-            String url = "/maintenanceJSPs/deleteSubdealerJSP.jsp";
+            String url = "/maintenanceJSPs/deleteSubdealersJSP.jsp";
 
             // Forward the request header to the JSP page
             RequestDispatcher dispatcher

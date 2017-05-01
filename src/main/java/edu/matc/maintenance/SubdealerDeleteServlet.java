@@ -45,7 +45,7 @@ public class SubdealerDeleteServlet extends HttpServlet  {
                 message="Successful delete.";
                 sessionDelete.setAttribute("Message", message);
                 // Local variable to hold url of results page
-                String url = "/deleteSubdealersJSP.jsp";
+                String url = "/maintenanceJSPs/deleteSubdealersJSP.jsp";
 
                 // Forward the request header to the JSP page
                 RequestDispatcher dispatcher

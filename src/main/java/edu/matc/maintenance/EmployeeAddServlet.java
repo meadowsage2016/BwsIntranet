@@ -19,7 +19,7 @@ import java.util.List;
  */
 @WebServlet(
         name = "employeeAdd",
-        urlPatterns = { "/employeeAdd" }
+        urlPatterns = { "/EmployeeAdd" }
 )
 public class EmployeeAddServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -63,7 +63,7 @@ public class EmployeeAddServlet extends HttpServlet {
             sessionAdd.setAttribute("MaintResult", results);
 
             // Local variable to hold url of results page
-            String url = "/maintenance/newEmployeeJSP.jsp";
+            String url = "/maintenanceJSPs/newEmployeeJSP.jsp";
 
 // Forward the request header to the JSP page
             RequestDispatcher dispatcher

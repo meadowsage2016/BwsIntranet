@@ -16,48 +16,46 @@
     </script>
 </head>
 <body>
-
+<div class="container">
 <form class="cmxform" id="newSubdealerForm" method="POST" action="SubdealersAdd">
     <fieldset>
-        <legend>New Subdealer<legend>
-        <p>
+        <legend>New Subdealer</legend>
+        <div class="form-group">
             <label for="customerNumber">Customer Number (required)</label>
-            <input id="customerNumber" name="customerNumber" minlength="5" maxlength="5" type="text" required>
-        </p>
-        <p>
+            <input class="form-control" id="customerNumber" name="customerNumber" minlength="5" maxlength="5" type="text" required>
+        </div>
+        <div class="form-group">
             <label for="customerName">Customer Name (required)</label>
-            <input id="customerName" type="text" name="customerName" minlength="2" maxlength="40" required>
-        </p>
-        <p>
+            <input class="form-control" id="customerName" type="text" name="customerName" minlength="2" maxlength="40" required>
+        </div>
+        <div class="form-group">
             <label for="sbAddress1">Address Field 1 (required)</label>
-            <input id="sbAddress1" type="text" minlength="2" maxlength="40" name="sbAddress1" required>
-        </p>
-        <p>
+            <input class="form-control" id="sbAddress1" type="text" minlength="2" maxlength="40" name="sbAddress1" required>
+        </div>
+        <div class="form-group">
             <label for="sdAddress2">Address Field 2 (optional)</label>
-            <input id="sdAddress2" name="sdAddress2" maxlength="40" type="text">
-        </p>
-        <p>
+            <input class="form-control" id="sdAddress2" name="sdAddress2" maxlength="40" type="text">
+        </div>
+        <div class="form-group">
             <label for="sdCity"> City (required)</label>
-            <input id="sdCity" type="text" name="sdCity" minlength="2" maxlength="40" required>
-        </p>
-        <p>
+            <input class="form-control" id="sdCity" type="text" name="sdCity" minlength="2" maxlength="40" required>
+        </div>
+        <div class="form-group">
             <label for="sdState">State (required)</label>
-            <input id="sdState" type="text" minlength="2" maxlength="2" name="sdState" required>
-        </p>
-        <p>
+            <input class="form-control" id="sdState" type="text" minlength="2" maxlength="2" name="sdState" required>
+        </div>
+        <div class="form-group">
             <label for="sdZipCode">Zip Code (required)</label>
-            <input id="sdZipCode" type="text" minlength="2" maxlength="10" name="sdZipCode" required>
-        </p>
-        <p>
+            <input class="form-control" id="sdZipCode" type="text" minlength="2" maxlength="10" name="sdZipCode" required>
+        </div>
+        <div class="form-group">
             <label for="subdealerNotes">Notes(optional)</label>
-            <input id="subdealerNotes" type="text" maxlength="500" name="subdealerNotes" >
-        </p>
-        <p>
-            <input type="hidden" name="maintType" value="1">
-        </p>
-        <p>
+            <input class="form-control" id="subdealerNotes" type="text" maxlength="500" name="subdealerNotes" >
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="hidden" name="maintType" value="1">
+        </div>
             <input class="submit" type="submit" value="Submit">
-        </p>
     </fieldset>
 </form>
 
@@ -75,5 +73,6 @@
 
     </tr>
 </c:forEach>
+</div>
 </body>
 </html>

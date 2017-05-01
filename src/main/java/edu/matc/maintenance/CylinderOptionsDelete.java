@@ -42,7 +42,7 @@ public class CylinderOptionsDelete  extends HttpServlet {
                 message="Successful delete.";
                 sessionDelete.setAttribute("Message", message);
                 // Local variable to hold url of results page
-                String url = "/deleteCylinderOptionsJSP.jsp";
+                String url = "/maintenance/deleteCylinderOptionsJSP.jsp";
 
                 // Forward the request header to the JSP page
                 RequestDispatcher dispatcher

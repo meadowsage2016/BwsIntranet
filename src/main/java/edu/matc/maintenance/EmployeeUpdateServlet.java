@@ -19,7 +19,7 @@ import java.util.List;
      */
     @WebServlet(
             name = "EmployeeUpdate",
-            urlPatterns = { "/maintenance/EmployeeUpdate" }
+            urlPatterns = { "/EmployeeUpdate" }
     )
     public class EmployeeUpdateServlet extends HttpServlet {
 

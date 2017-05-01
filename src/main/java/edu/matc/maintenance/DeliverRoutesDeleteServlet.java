@@ -45,7 +45,7 @@ public class DeliverRoutesDeleteServlet extends HttpServlet  {
                 message="Successful delete.";
                 sessionDelete.setAttribute("Message", message);
                 // Local variable to hold url of results page
-                String url = "/deleteDeliveryRoutesJSP.jsp";
+                String url = "/maintenanceJSP/deleteDeliveryRoutesJSP.jsp";
 
                 // Forward the request header to the JSP page
                 RequestDispatcher dispatcher

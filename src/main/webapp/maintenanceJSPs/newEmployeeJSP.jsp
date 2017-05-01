@@ -16,40 +16,44 @@
     </script>
 </head>
 <body>
-
+<div class="container">
 <form class="cmxform" id="newEmpForm" method="POST" action="employeeAdd">
     <fieldset>
         <legend>New Employee</legend>
-        <p>
+        <div class="form-group">
             <label for="firstName">First Name (required, at least 2 characters)</label>
-            <input id="firstName" name="firstName" minlength="2" type="text" required>
-        </p>
-        <p>
+            <input class="form-control" id="firstName" name="firstName" minlength="2" type="text" required>
+        </div>
+        <div class="form-group">
             <label for="lastName">Last Name (required)</label>
-            <input id="lastName" type="text" name="lastName" required>
-        </p>
-        <p>
+            <input class="form-control" id="lastName" type="text" name="lastName" required>
+        </div>
+        <div class="form-group">
             <label for="department">Department (required)</label>
-            <input id="department" type="text" name="department" required>
-        </p>
-        <p>
+            <input class="form-control" id="department" type="text" name="department" required>
+        </div>
+        <div class="form-group">
             <label for="phoneExtension">Phone Extension</label>
-            <input id="phoneExtension" type="text" minlength="3" maxlength="3" name="phoneExtension" required>
-        </p>
-        <p>
+            <input class="form-control" id="phoneExtension" type="text" minlength="3" maxlength="3" name="phoneExtension" required>
+        </div>
+        <div class="form-group">
             <label for="cellPhone">Cell Phone</label>
-            <input id="cellPhone" type="text" minlength="7" maxlength="10" PLACEHOLDER="6085551212" name="cellPhone" >
-        </p>
-        <p>
-            <input type="hidden" name="maintType" value="1">
-        </p>
-        <p>
+            <input class="form-control" id="cellPhone" type="text" minlength="7" maxlength="10" PLACEHOLDER="6085551212" name="cellPhone" >
+        </div>
+        <div class="form-group">
+            <label for="emailAddress">Email Address</label>
+            <input class="form-control" id="emailAddress" type="text" minlength="2" maxlength="40"  name="emailAddress" >
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="hidden" name="maintType" value="1">
+        </div>
             <input class="submit" type="submit" value="Submit">
-        </p>
     </fieldset>
 </form>
 <c:out value="${MaintResult}"/>
 
 </c>
+</c>
+</div>
 </body>
 </html>

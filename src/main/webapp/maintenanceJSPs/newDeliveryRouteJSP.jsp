@@ -16,28 +16,26 @@
     </script>
 </head>
 <body>
-
+<div class="container">
 <form class="cmxform" id="newRouteForm" method="POST" action="DeliveryRouteAdd">
     <fieldset>
         <legend>New Delivery Route</legend>
-        <p>
+        <div class="form-group">
             <label for="city">City or Business (required, at least 2 characters)</label>
-            <input id="city" name="city" minlength="2" type="text" required>
-        </p>
-        <p>
+            <input class="form-control" id="city" name="city" minlength="2" type="text" required>
+        </div>
+        <div class="form-group">
             <label for="day">Delivery Day(required)</label>
-            <input id="day" type="text" name="day" minlength="2" maxlength="10" required>
-        </p>
-        <p>
+            <input class="form-control" id="day" type="text" name="day" minlength="2" maxlength="10" required>
+        </div>
+        <div class="form-group">
             <label for="frequency">Frequency (required)</label>
-            <input id="frequency" type="text" minlength="2" maxlength="10" name="frequency" required>
-        </p>
-        <p>
-            <input type="hidden" name="maintType" value="1">
-        </p>
-        <p>
+            <input class="form-control"id="frequency" type="text" minlength="2" maxlength="10" name="frequency" required>
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="hidden" name="maintType" value="1">
+        </div>
             <input class="submit" type="submit" value="Submit">
-        </p>
     </fieldset>
 </form>
 
@@ -49,5 +47,6 @@
         <td>${route.deliveryFrequency}</td>
     </tr>
 </c:forEach>
+</div>
 </body>
 </html>

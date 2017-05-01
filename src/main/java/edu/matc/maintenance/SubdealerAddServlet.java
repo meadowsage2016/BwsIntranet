@@ -70,7 +70,7 @@ public class SubdealerAddServlet extends HttpServlet {
             sessionAdd.setAttribute("MaintResult", results);
 
             // Local variable to hold url of results page
-            String url = "/newSubdealerJSP.jsp";
+            String url = "/maintenanceJSPs/newSubdealerJSP.jsp";
 
             // Forward the request header to the JSP page
             RequestDispatcher dispatcher

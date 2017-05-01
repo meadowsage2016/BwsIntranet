@@ -13,20 +13,18 @@
     <c:import url="../include-navigation.jsp" />
 </head>
 <body>
-
-<form id="updateEmployeeForm" action="/maintenance/EmployeeUpdate" method="GET">
+<div class="container">
+<form id="updateEmployeeForm" action="/EmployeeUpdate" method="GET">
     <fieldset>
-        <legend>Select Delivery Route to Update - Enter City or Business</legend>
-        <p>
+        <legend>Select Employee to Update</legend>
+        <div class="form-group">
             <label for="emailAddress">Email Address of Employee to Update</label>
-            <input id="emailAddress" name="emailAddress" id="emailAddress" minlength="2" type="text" required>
-        </p>
-        <p>
+            <input class="form-control" id="emailAddress" name="emailAddress" id="emailAddress" minlength="2" type="text" required>
+        </div>
             <input type="submit" id="update" value="Submit">
-        </p>
     </fieldset>
 </form>
 <c:out value="${Message}"/>
-
+</div>
 </body>
 </html>

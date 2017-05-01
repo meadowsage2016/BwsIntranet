@@ -13,20 +13,18 @@
     <c:import url="../include-navigation.jsp" />
 </head>
 <body>
-
+<div class="container">
 <form id="updateSubdealersForm" action="/SubdealersUpdate" method="GET">
     <fieldset>
-        <legend>Select Delivery Route to Update - Enter City or Business</legend>
-        <p>
+        <legend>Customer Number of Subdealer to Update</legend>
+        <div class="form-group">
             <label for="customerNumber">Customer Number of Subdealer to Update</label>
-            <input id="customerNumber" name="customerNumber" id="customerNumber" minlength="2" type="text" required>
-        </p>
-        <p>
+            <input class="form-control" id="customerNumber" name="customerNumber" id="customerNumber" minlength="2" type="text" required>
+        </div>
             <input type="submit" id="update" value="Submit">
-        </p>
     </fieldset>
 </form>
 <c:out value="${Message}"/>
-
+</div>
 </body>
 </html>

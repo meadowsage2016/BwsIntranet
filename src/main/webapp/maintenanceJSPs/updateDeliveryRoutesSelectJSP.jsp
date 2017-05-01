@@ -13,20 +13,18 @@
     <c:import url="../include-navigation.jsp" />
 </head>
 <body>
-
+<div class="container">
 <form id="updateCylOptForm" action="/DeliveryRoutesUpdate" method="GET">
     <fieldset>
         <legend>Select Delivery Route to Update - Enter City or Business</legend>
-        <p>
-            <label for="city">Gas Number to Update</label>
-            <input id="city" name="city" id="city" minlength="2" type="text" required>
-        </p>
-        <p>
+        <div class="form-group">
+            <label for="city">City to Update</label>
+            <input class="form-control" id="city" name="city" id="city" minlength="2" type="text" required>
+        </div>
             <input type="submit" id="update" value="Submit">
-        </p>
     </fieldset>
 </form>
 <c:out value="${Message}"/>
-
+</div>
 </body>
 </html>

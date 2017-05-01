@@ -10,24 +10,21 @@
 <html>
 <head>
     <c:import url="../include-headtag.jsp" />
-    <script type="text/javascript" src="../js/verifyDeleteDeliveryRoute.js"></script>
     <c:import url="../include-navigation.jsp" />
 </head>
 <body>
-
+<div class="container">
 <form id="deleteDeliverRouteForm" >
     <fieldset>
         <legend>Delete Delivery Route</legend>
-        <p>
+        <div class="form-group">
             <label for="city">City or Business to Remove</label>
-            <input id="city" name="city" id="city" minlength="2" type="text" required>
-        </p>
-        <p>
-            <input type="button" id="deleteBtn" value="Submit">
-        </p>
+            <input class="form-control" id="city" name="city" id="city" minlength="2" type="text" required>
+        </div>
+        <input type="button" id="deleteBtn" value="Submit">
     </fieldset>
 </form>
 <c:out value="${Message}"/>
-
+</div>
 </body>
 </html>

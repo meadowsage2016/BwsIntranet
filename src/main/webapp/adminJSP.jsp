@@ -14,7 +14,7 @@
 </head>
 <h2>Administrator Console</h2>
 
-<form id="EmployeesTable" method="POST" action="EmployeesMaintServlet">
+<form id="EmployeesTable" method="GET" action="EmployeesMaintServlet">
 
 
     <div class='container'>
@@ -49,7 +49,7 @@
 
 </form>
 
-<form id="DeliveryRoutesTable" action="DeliveryRouteMaintServlet" method="POST">
+<form id="DeliveryRoutesTable" action="DeliveryRoutesMaintServlet" method="GET">
 
     <div class='container'>
 
@@ -80,7 +80,7 @@
         </fieldset>
     </div>
 </form>
-<form id="SubdealersTable" action="SubdealersMaint" method="POST">
+<form id="SubdealersTable" action="SubdealersMaint" method="GET">
     <div class='container'>
         <fieldset class="form-group">
             <legend><h2>SUB-DEALERS TABLE</h2></legend>
@@ -112,7 +112,7 @@
 
 </form>
 
-<form id="CylinderOptionsTable" action="CylinderOptionsMaint" method=POST">
+<form id="CylinderOptionsTable" action="CylinderOptionsMaint" method="GET"">
 
     <div class='container'>
 
@@ -146,13 +146,13 @@
 
 </form>
 
-<form id="CitiesTable" action="citiesMaint" method="POST">
+<form id="UsersTable" action="UsersMaint" method="GET">
 
     <div class='container'>
 
         <fieldset class="form-group">
-            <legend><h2>CITIES BY ZIP TABLE</h2></legend>
-            <div id="CitiesTablesContainer" class="form-group">
+            <legend><h2>USERS TABLE</h2></legend>
+            <div id="UsersTablesContainer" class="form-group">
 
                 <div class="radio-inline">
                     <label class="radio-inline">
@@ -173,12 +173,11 @@
                     </label>
                 </div>
             </div>
-            <input type="submit" value="Submit" id="CitiesMaintBtn"/>
+            <input type="submit" value="Submit" id="UsersMaintBtn"/>
         </fieldset>
 
     </div>
 
 </form>
-
 </body>
 </html>

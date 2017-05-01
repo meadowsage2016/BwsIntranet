@@ -16,26 +16,26 @@
 <div class="container-fluid bg-3 text-center">
     <div class="row">
 
-        <div class="col-sm-2" >
+        <div class="col-sm-3" >
             <a  href="EmployeeSearch" class="searchLink"><h3>EMPLOYEE DIRECTORY</h3></a>
         </div>
 
-        <div class="col-sm-2" class="searchLink">
+        <div class="col-sm-3" class="searchLink">
             <a  href="DeliveryRouteSearch" class="searchLink"><h3>DELIVERY ROUTES</h3></a>
         </div>
 
-        <div class="col-sm-2" class="searchLink">
+        <div class="col-sm-3" class="searchLink">
             <a  href="SubdealerSearch" class="searchLink"><h3>SUBDEALERS DIRECTORY</h3></a>
         </div>
 
-        <div class="col-sm-2" class="searchLink">
+        <div class="col-sm-3" class="searchLink">
             <a href="CylinderOptionsSearch" class="searchLink"><h3>CYLINDER LEASE/OWN OPTIONS</h3></a>
         </div>
-
+<!--
         <div class="col-sm-2" >
             <a  href="CitiesByZipSearch" class="searchLink"><h3>CITIES BY ZIPCODE</h3></a>
         </div>
-
+-->
     </div>
 </div>
 <div class="container-fluid bg-12" id="weather">

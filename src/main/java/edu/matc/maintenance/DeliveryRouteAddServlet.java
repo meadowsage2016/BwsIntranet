@@ -62,7 +62,7 @@ public class DeliveryRouteAddServlet extends HttpServlet {
 
 
         // Local variable to hold url of results page
-        String url = "/newDeliveryRouteJSP.jsp";
+        String url = "/maintenanceJSPs/newDeliveryRouteJSP.jsp";
 
 // Forward the request header to the JSP page
         RequestDispatcher dispatcher

@@ -10,24 +10,21 @@
 <html>
 <head>
     <c:import url="../include-headtag.jsp" />
-    <script type="text/javascript" src="../js/verifyDeleteCylOptions.js"></script>
     <c:import url="../include-navigation.jsp" />
 </head>
 <body>
-
+<div class="container">
 <form id="deleteCylOptForm" >
     <fieldset>
         <legend>Delete Cylinder Option</legend>
-        <p>
+        <div class="form-group">
             <label for="gasNumber">Gas Number to Remove</label>
-            <input id="gasNumber" name="gasNumber" id="gasNumber" minlength="2" type="text" required>
-        </p>
-        <p>
-            <input type="button" id="deleteBtn" value="Submit">
-        </p>
+            <input class="form-control" id="gasNumber" name="gasNumber" id="gasNumber" minlength="2" type="text" required>
+        </div>
+            <input class="form-control" type="button" id="deleteBtn" value="Submit">
     </fieldset>
 </form>
 <c:out value="${Message}"/>
-
+</div>
 </body>
 </html>
