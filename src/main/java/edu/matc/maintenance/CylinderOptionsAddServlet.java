@@ -69,8 +69,6 @@ public class CylinderOptionsAddServlet  extends HttpServlet{
 
         }
 
-        System.out.println("Cylinder Option id returned: " + id );
-
         if (id == 0) {
             sessionAdd.setAttribute("Message", message);
         } else {

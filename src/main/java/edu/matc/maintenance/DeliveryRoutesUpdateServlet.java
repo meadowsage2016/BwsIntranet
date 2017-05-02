@@ -54,6 +54,7 @@ import java.util.List;
                 throws ServletException, IOException {
 
             String message = "Update NOT Successful, see log file";
+            String deliveryRouteIdUpdate;
             String deliveryCityOrBusinessUpdate;
             String deliveryFrequencyUpdate;
             String deliveryDayUpdate;
@@ -65,12 +66,14 @@ import java.util.List;
             //  Take updated Search object and store in Sessio
             HttpSession sessionAdd = request.getSession();
 
-
+            deliveryRouteIdUpdate = request.getParameter("cityId");
             deliveryCityOrBusinessUpdate = request.getParameter("city");
             deliveryFrequencyUpdate = request.getParameter("frequency");
             deliveryDayUpdate = request.getParameter("day");
 
-            route = dao.getDeliveryRouteByCityOrBusiness(deliveryCityOrBusinessUpdate);
+            int routeId = Integer.parseInt("deliveryRouteIdUpdate");
+
+            route = dao.getDeliveryRouteById(routeId);
 
             route.setDeliveryFrequency(deliveryFrequencyUpdate);
             route.setDeliveryDay(deliveryDayUpdate);

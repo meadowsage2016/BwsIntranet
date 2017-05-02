@@ -25,6 +25,9 @@
 <c:forEach items="${UpdateResult}" var="route">
     <form id="updatCylOpts" action="/DeliveryRoutesUpdate" method="POST">
         <div class="form-group">
+            <input class="form-control" name="cityId" id="cityId" type="hidden" value="${route.deliveryRouteId}" />
+        </div>
+        <div class="form-group">
                     <label for="city"><b>City or Business</b></label><br />
                     <input class="form-control" name="city" id="city" type="text" value="${route.deliveryCityOrBusiness}" required />
         </div>
