@@ -36,8 +36,6 @@ import java.util.List;
             cyl = dao.getCylOptionByGasNumber(paramValue);
             cylAsList.add(cyl);
 
-                System.out.println(cyl.getCylinderCode());
-
             sessionAdd.setAttribute("UpdateResult", cylAsList);
 
             // Local variable to hold url of results page

@@ -37,7 +37,7 @@ public class Subdealers {
         super();
         this.customerNumber = customerNumber;
         this.customerName = customerName;
-        this.sdAddress1 = sbAddress1;
+        this.sdAddress1 = sdAddress1;
         this.sdAddress2 = sdAddress2;
         this.sdCity = sdCity;
         this.sdState = sdState;
