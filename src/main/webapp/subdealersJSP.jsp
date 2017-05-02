@@ -50,7 +50,7 @@
             <tr>
                 <td>${subdealer.customerNumber}</td>
                 <td>${subdealer.customerName}</td>
-                <td>${subdealer.sbAddress1}</td>
+                <td>${subdealer.sdAddress1}</td>
                 <td>${subdealer.sdAddress2}</td>
                 <td>${subdealer.sdCity}</td>
                 <td>${subdealer.sdState}</td>

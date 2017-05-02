@@ -28,17 +28,16 @@ import java.util.List;
             String message = "Add not Successful";
             int id = 0;
 
+            String newUserName;
             Users user = new Users();
             UsersDao dao = new UsersDao();
             Users newUser = new Users();
-
-            List<Users> results = new ArrayList<Users>();
 
             //  Take updated Search object and store in Sessio
             HttpSession sessionAdd = request.getSession();
 
             user.setUser_name(request.getParameter("userName"));
-            user.setUser_pass(request.getParameter("userPassword"));
+            user.setUser_pass(request.getParameter("pass1"));
 
             try {
                 id = dao.addUser(user);
@@ -50,9 +49,9 @@ import java.util.List;
             } else {
                 newUser = dao.getUserById(id);
                 message = "Successful Add: ";
-                results.add(newUser);
+                newUserName = "New User Added: " + newUser.getUser_name();
 
-                sessionAdd.setAttribute("MaintResult", results);
+                sessionAdd.setAttribute("MaintResult", newUserName);
                 sessionAdd.setAttribute("Message", message);
             }
 

@@ -40,6 +40,7 @@ public class SubdealerUpdateServlet extends HttpServlet {
             subAsList.add(sub);
 
             sessionAdd.setAttribute("UpdateResult", subAsList);
+            sessionAdd.setAttribute("Message", "");
 
             // Local variable to hold url of results page
             String url = "/maintenanceJSPs/updateSubdealersJSP.jsp";
@@ -58,7 +59,7 @@ public class SubdealerUpdateServlet extends HttpServlet {
             int customerId;
             String customerNumberUpdate;
             String customerNameUpdate;
-            String sbAddress1Update;
+            String sdAddress1Update;
             String sdAddress2Update;
             String sdCityUpdate;
             String sdStateUpdate;
@@ -77,8 +78,8 @@ public class SubdealerUpdateServlet extends HttpServlet {
             customerIdString = request.getParameter("customerId");
             customerNumberUpdate = request.getParameter("customerNumber");
             customerNameUpdate = request.getParameter("customerName");
-            sbAddress1Update = request.getParameter("sbAddress1");
-            sdAddress2Update = request.getParameter("sbAddress2");
+            sdAddress1Update = request.getParameter("sdAddress1");
+            sdAddress2Update = request.getParameter("sdAddress2");
             sdCityUpdate = request.getParameter("city");
             sdStateUpdate = request.getParameter("state");
             sdZipCodeUpdate = request.getParameter("ZipCode");
@@ -90,7 +91,7 @@ public class SubdealerUpdateServlet extends HttpServlet {
 
             sub.setCustomerNumber(customerNumberUpdate);
             sub.setCustomerName(customerNameUpdate);
-            sub.setSbAddress1(sbAddress1Update);
+            sub.setSdAddress1(sdAddress1Update);
             sub.setSdAddress2(sdAddress2Update);
             sub.setSdCity(sdCityUpdate);
             sub.setSdState(sdStateUpdate);

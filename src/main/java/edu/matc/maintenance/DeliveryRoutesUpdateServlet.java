@@ -38,6 +38,7 @@ import java.util.List;
             routeAsList.add(route);
 
             sessionAdd.setAttribute("UpdateResult", routeAsList);
+            sessionAdd.setAttribute("Message", "");
 
             // Local variable to hold url of results page
             String url = "/maintenanceJSPs/updateDeliveryRoutesJSP.jsp";

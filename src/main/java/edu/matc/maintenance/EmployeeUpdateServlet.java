@@ -38,6 +38,7 @@ import java.util.List;
             empAsList.add(emp);
 
             sessionAdd.setAttribute("UpdateResult", empAsList);
+            sessionAdd.setAttribute("Message", "");
 
             // Local variable to hold url of results page
             String url = "/maintenanceJSPs/updateEmployeeJSP.jsp";

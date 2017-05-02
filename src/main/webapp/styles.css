@@ -24,3 +24,23 @@ table {
 
     font-size: 2em;
 }
+
+.container {
+    background-color: #efefef;
+}
+
+.myforms {
+    background-color: #caebf2;
+}
+
+.navbar {
+    background-color: #a9a9a9;
+}
+
+footer {
+    background-color: #a9a9a9;
+}
+
+.radio-inline {
+    padding-right: 5px;
+}

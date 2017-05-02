@@ -29,27 +29,27 @@
         </div>
         <div class="form-group">
             <label for="firstName"><b>First Name</b></label><br />
-            <input class="form-control" name="firstName" id="firstName" type="text" value="${emp.firstName}" maxlength="40" style="width: 260px" />
+            <input class="form-control" name="firstName" id="firstName" type="text" value="${emp.firstName}" required />
         </div>
         <div class="form-group">
             <label for="lastName"><b>Last Name</b></label><br />
-            <input class="form-control" name="lastName" id="lastName" type="text" value="${emp.lastName}" maxlength="20" style="width: 535px" />
+            <input class="form-control" name="lastName" id="lastName" type="text" value="${emp.lastName}" required />
         </div>
         <div class="form-group">
             <label for="department"><b>Department</b></label><br />
-            <input class="form-control" name="department" id="department" type="text" value="${emp.department}" maxlength="20" style="width: 260px" />
+            <input class="form-control" name="department" id="department" type="text" value="${emp.department}" required />
         </div>
         <div class="form-group">
             <label for="phoneExtension"><b>Phone Extension</b></label><br />
-            <input class="form-control" name="phoneExtension" id="phoneExtension" type="text" value="${emp.phoneExtension}" maxlength="40" style="width: 260px" />
+            <input class="form-control" name="phoneExtension" id="phoneExtension" type="text" value="${emp.phoneExtension}" required />
         </div>
         <div class="form-group">
             <label for="cellPhone"><b>Cell Phone</b></label><br />
-            <input class="form-control" name="cellPhone" id="cellPhone" type="text" value="${emp.cellPhone}" maxlength="20" style="width: 535px" />
+            <input class="form-control" name="cellPhone" id="cellPhone" type="text" value="${emp.cellPhone}" required />
         </div>
         <div class="form-group">
             <label for="emailAddress"><b>Email Address</b></label><br />
-            <input class="form-control" name="emailAddress" id="emailAddress" type="text" value="${emp.emailAddress}" maxlength="60" style="width: 260px" />
+            <input class="form-control" name="emailAddress" id="emailAddress" type="text" value="${emp.emailAddress}" required/>
         </div>
         <input type="submit" value="Submit">
     </form>

@@ -26,15 +26,15 @@
     <form id="updatCylOpts" action="/DeliveryRoutesUpdate" method="POST">
         <div class="form-group">
                     <label for="city"><b>City or Business</b></label><br />
-                    <input class="form-control" name="city" id="city" type="text" value="${route.deliveryCityOrBusiness}" maxlength="40" style="width: 260px" />
+                    <input class="form-control" name="city" id="city" type="text" value="${route.deliveryCityOrBusiness}" required />
         </div>
         <div class="form-group">
                     <label for="day"><b>Delivery Day</b></label><br />
-                    <input class="form-control" name="day" id="day" type="text" value="${route.deliveryDay}" maxlength="20" style="width: 535px" />
+                    <input class="form-control" name="day" id="day" type="text" value="${route.deliveryDay}" required />
         </div>
         <div class="form-group">
                 <label for="frequency"><b>Delivery Frequency (day or week, blue or pink)</b></label><br />
-                <input class="form-control" name="frequency" id="frequency" type="text" value="${route.deliveryFrequency}" maxlength="20" style="width: 260px" />
+                <input class="form-control" name="frequency" id="frequency" type="text" value="${route.deliveryFrequency}" required />
         </div>
         <input type="submit" value="Submit">
     </form>

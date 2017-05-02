@@ -40,6 +40,7 @@ public class UserUpdateServlet extends HttpServlet {
         users.add(user);
 
         sessionAdd.setAttribute("UpdateResult", users);
+        sessionAdd.setAttribute("Message", "");
 
         // Local variable to hold url of results page
         String url = "/maintenanceJSPs/updateUserJSP.jsp";

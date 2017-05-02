@@ -24,35 +24,35 @@
 </header>
 
 <c:forEach items="${UpdateResult}" var="cylinder">
-<form id="updatCylOpts" action="/CylinderOptionsUpdate" method="POST">
+<form class="myforms" id="updatCylOpts" action="/CylinderOptionsUpdate" method="POST">
     <legend>Update Cylinder Options by Gas Number</legend>
     <div class="form-group">
         <label for="gasNumber"><b>Gas Number</b></label><br />
-        <input class="form-control" name="gasNumber" id="gasNumber" type="text" value="${cylinder.gasNumber}" maxlength="20" style="width: 260px" />
+        <input class="form-control" name="gasNumber" id="gasNumber" type="text" value="${cylinder.gasNumber}"  required/>
     </div>
     <div class="form-group">
         <label for="gasDescription"><b>Gas Description</b></label><br />
-        <input class="form-control" name="gasDescription" id="gasDescription" type="text" value="${cylinder.gasDescription}" maxlength="40" style="width: 535px" />
+        <input class="form-control" name="gasDescription" id="gasDescription" type="text" value="${cylinder.gasDescription}"  required/>
     </div>
     <div class="form-group">
         <label for="cylinderCode"><b>Cylinder Code</b></label><br />
-        <input class="form-control" name="cylinderCode" id="cylinderCode" type="text" value="${cylinder.cylinderCode}" maxlength="10" style="width: 260px" />
+        <input class="form-control" name="cylinderCode" id="cylinderCode" type="text" value="${cylinder.cylinderCode}"  required/>
     </div>
     <div class="form-group">
         <label for="cylinderRent"><b>Cylinder Daily Rent</b></label><br />
-        <input class="form-control" name="cylinderRent" id="cylinderRent" type="text" value="${cylinder.cylinderRent}" maxlength="10" style="width: 535px" />
+        <input class="form-control" name="cylinderRent" id="cylinderRent" type="text" value="${cylinder.cylinderRent}" required/>
     </div>
     <div class="form-group">
         <label for="cylinderOnePPRent"><b>One Year PrePaid Rent</b></label><br />
-        <input class="form-control" name="cylinderOnePPRent" id="cylinderOnePPRent" type="text" value="${cylinder.cylinderOnePPRent}" maxlength="10" style="width: 535px" />
+        <input class="form-control" name="cylinderOnePPRent" id="cylinderOnePPRent" type="text" value="${cylinder.cylinderOnePPRent}"  required/>
     </div>
     <div class="form-group">
         <label for="cylinderFiveYearLease"><b>5 Year Lease</b></label><br />
-        <input class="form-control" name="cylinderFiveYearLease"  id="cylinderFiveYearLease" type="text" value="${cylinder.cylinderFiveYearLease}" maxlength="10" style="width: 260px" />
+        <input class="form-control" name="cylinderFiveYearLease"  id="cylinderFiveYearLease" type="text" value="${cylinder.cylinderFiveYearLease}" required/>
     </div>
     <div class="form-group">
-        <label for="cylinderPurchase"><b>Cylinder Daily Rent</b></label><br />
-        <input class="form-control" name="cylinderPurchase" id="cylinderPurchase" type="text" value="${cylinder.cylinderPurchase}" maxlength="10" style="width: 535px" />
+        <label for="cylinderPurchase"><b>Cylinder Purchase Price (not Required)</b></label><br />
+        <input class="form-control" name="cylinderPurchase" id="cylinderPurchase" type="text" value="${cylinder.cylinderPurchase}" />
         </div>
         <input type="submit" value="Submit">
     </form>

@@ -25,8 +25,8 @@ public class UsersDaoTest extends UsersDao {
 
     @Test  // GET BY ID                                                                                               3
     public void testGetUserById() throws Exception {
-        Users user = dao.getUserById(3);
-        assertEquals("Return wrong User", "Sue", user.getUser_name());
+        Users user = dao.getUserById(1);
+        assertEquals("Return wrong User", "admin", user.getUser_name());
 
     }
 
@@ -61,7 +61,7 @@ public class UsersDaoTest extends UsersDao {
 
     @Test  // UPDATE  *************CHANGE - MUST EXISTS **********                                    3
     public void testUpdateUser() throws Exception {
-        Users userToEdit = dao.getUserById(3);
+        Users userToEdit = dao.getUserById(2);
         String passwordChange = "password";
         userToEdit.setUser_pass(passwordChange);
         dao.updateUser(userToEdit);

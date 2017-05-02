@@ -12,26 +12,23 @@
 <head>
 <c:import url="include-headtag.jsp" />
 </head>
-<div>
-    <h3>Cylinder Images</h3>
-    <a href="images/cylinders/acetylene.jpg">Acetylene</a>
-    <a href="images/cylinders/ag90.jpg">AG90</a>
-    <a href="images/agx03%20-%20agx04.jpg">AGX03 & AGX04</a>
-    <a href="images/cylinders/argon.jpg">Argon</a>
-    <a href="images/argon-co2%20%2075-25.jpg">Argon-Co2 75-25</a>
-    <a href="images/cylinders/co2.jpg">Carbon Dioxide</a>
-    <a href="images/compressed%20air.jpg">Compress Air</a>
-    <a href="images/HELIUM%20CYL'S..BMP">Helium</a>
-    <a href="images/medical%20ox.jpg">Medical Oxygen</a>
-    <a href="images/cylinders/ni100.jpg">Nitrogen 100 cf</a>
-    <a href="images/cylinders/ni200.jpg">Nitrogen 200 cf</a>
-    <a href="images/cylinders/nitrous.jpg">Nitrous Oxide</a>
-    <a href="images/cylinders/oxygen.jpg">Oxygen</a>
-</div>
+
 <body>
 
 <%@ include file="include-navigation.jsp" %>
+<div class="container">
 
+    <h2>Safety Data Sheets</h2>
+    <ul>
+        <li><a href="documents/acetyleneSDS.pdf">Acetylene</a></li>
+        <li><a href="documents/Compressedoxygen.pdf">Oxygen-compressed</a></li>
+    </ul>
+
+    <h2>Sales Tax Forms</h2>
+    <ul>
+        <li><a href="documents/s-211.pdf">Wisconsin Sales an Use Tax </a></li>
+    </ul>
+</div>
 
 
 <%@ include file="include-footer.jsp" %>

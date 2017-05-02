@@ -28,6 +28,7 @@ public class CylinderOptionsAddServlet  extends HttpServlet{
 
         String message = "Add not Successful";
         int id = 0;
+        double dpurchase = 0;
 
         CylinderOptions cyl = new CylinderOptions();
         CylinderOptions newCyl = new CylinderOptions();
@@ -48,12 +49,16 @@ public class CylinderOptionsAddServlet  extends HttpServlet{
         double ddaily = Double.parseDouble(daily);
         double dlease = Double.parseDouble(lease);
         double drent = Double.parseDouble(rent);
-        double dpurchase = Double.parseDouble(purchase);
+
+        if (purchase.length()>0) {
+            dpurchase = Double.parseDouble(purchase);
+            cyl.setCylinderPurchase(dpurchase);
+        }
+
 
         cyl.setCylinderCode(request.getParameter("cylinderCode"));
         cyl.setCylinderFiveYearLease(dlease);
         cyl.setCylinderOnePPRent(drent);
-        cyl.setCylinderPurchase(dpurchase);
         cyl.setGasDescription(request.getParameter("gasDescription"));
         cyl.setGasNumber(request.getParameter("gasNumber"));
         cyl.setCylinderRent(ddaily);

@@ -42,7 +42,7 @@ public class SubdealerAddServlet extends HttpServlet {
 
             sub.setCustomerName(request.getParameter("customerName"));
             sub.setCustomerNumber(request.getParameter("customerNumber"));
-            sub.setSbAddress1(request.getParameter("sbAddress1"));
+            sub.setSdAddress1(request.getParameter("sdAddress1"));
             sub.setSdAddress2(request.getParameter("sdAddress2"));
             sub.setSdCity(request.getParameter("sdCity"));
             sub.setSdCity(request.getParameter("sdState"));

@@ -62,9 +62,9 @@ public class SubdealersDaoTest extends SubdealersDao {
     public void testUpdateEmployee() throws Exception {
         Subdealers subdealerToEdit = dao.getSubdealerById(2);
         String newAddress1 = "123 Johnson St";
-        subdealerToEdit.setSbAddress1(newAddress1);
+        subdealerToEdit.setSdAddress1(newAddress1);
         dao.updateSubdealer(subdealerToEdit);
-        assertEquals("Address1 change not made", "123 Johnson St", subdealerToEdit.getSbAddress1());
+        assertEquals("Address1 change not made", "123 Johnson St", subdealerToEdit.getSdAddress1());
 
     }
 

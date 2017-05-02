@@ -33,11 +33,11 @@ public class Subdealers {
 
     }
 
-    public Subdealers(String customerNumber, String customerName, String sbAddress1, String sdAddress2, String sdCity, String sdState, String sdZipCode, String sdCounty, String subdealerNotes) {
+    public Subdealers(String customerNumber, String customerName, String sdAddress1, String sdAddress2, String sdCity, String sdState, String sdZipCode, String sdCounty, String subdealerNotes) {
         super();
         this.customerNumber = customerNumber;
         this.customerName = customerName;
-        this.sdAddress1 = sbAddress1;
+        this.sdAddress1 = sdAddress1;
         this.sdAddress2 = sdAddress2;
         this.sdCity = sdCity;
         this.sdState = sdState;
@@ -69,12 +69,12 @@ public class Subdealers {
         this.customerName = customerName;
     }
 
-    public String getSbAddress1() {
+    public String getSdAddress1() {
         return sdAddress1;
     }
 
-    public void setSbAddress1(String sbAddress1) {
-        this.sdAddress1 = sbAddress1;
+    public void setSdAddress1(String sdAddress1) {
+        this.sdAddress1 = sdAddress1;
     }
 
     public String getSdAddress2() {
@@ -132,7 +132,7 @@ public class Subdealers {
                 "subdealerId=" + subdealerId +
                 ", customerNumber='" + customerNumber + '\'' +
                 ", customerName='" + customerName + '\'' +
-                ", sbAddress1='" + sdAddress1 + '\'' +
+                ", sdAddress1='" + sdAddress1 + '\'' +
                 ", sdAddress2='" + sdAddress2 + '\'' +
                 ", sdCity='" + sdCity + '\'' +
                 ", sdState='" + sdState + '\'' +

@@ -26,6 +26,8 @@ import java.util.List;
         public void doGet(HttpServletRequest request, HttpServletResponse response)
                 throws ServletException, IOException {
 
+
+
             List<CylinderOptions> cylAsList = new ArrayList<CylinderOptions>();
             CylinderOptions cyl = new CylinderOptions();
             CylinderOptionsDao dao = new CylinderOptionsDao();
@@ -36,9 +38,8 @@ import java.util.List;
             cyl = dao.getCylOptionByGasNumber(paramValue);
             cylAsList.add(cyl);
 
-                System.out.println(cyl.getCylinderCode());
-
             sessionAdd.setAttribute("UpdateResult", cylAsList);
+            sessionAdd.setAttribute("Message", "");
 
             // Local variable to hold url of results page
             String url = "/maintenanceJSPs/updateCylinderOptionsJSP.jsp";

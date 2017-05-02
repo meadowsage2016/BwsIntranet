@@ -12,7 +12,7 @@
 <c:import url="include-headtag.jsp" />
     <c:import url="include-navigation.jsp"/>
 </head>
-<h2>Administrator Console</h2>
+<h1>Administrator Console</h1>
 
 <form id="EmployeesTable" method="GET" action="EmployeesMaintServlet">
 
@@ -23,23 +23,17 @@
 
             <legend><h2>EMPLOYEES TABLE</h2></legend>
             <div id="EmpTableContainer" class="form-group">
-                <div class="radio-inline">
-                    <label class="radio-inline">
-                        <input type="radio" class="form-check-input" name="maint" id="edt1" value="1">
-                        ADD
-                    </label>
+                <div>
+                    <label >ADD</label>
+                    <input type="radio" class="form-check-input" name="maint" id="edt1" value="1">
                 </div>
-                <div class="radio-inline">
-                    <label class="radio-inline">
-                        <input type="radio" class="form-check-input" name="maint" id="edt2" value="2">
-                        UPDATE
-                    </label>
+                <div >
+                    <label >UPDATE</label>
+                    <input type="radio" class="form-check-input" name="maint" id="edt2" value="2">
                 </div>
-                <div class="radio-inline">
-                    <label class="radio-inline">
-                        <input type="radio" class="form-check-input" name="maint" id="edt3" value="3">
-                        DELETE
-                    </label>
+                <div >
+                    <label>DELETE</label>
+                    <input type="radio" class="form-check-input" name="maint" id="edt3" value="3">
                 </div>
                 <input type="submit" value="Submit" id="EmployeesMaintBtn"/>
             </div>
@@ -57,23 +51,17 @@
             <legend><h2>DELIVERY ROUTES TABLE</h2></legend>
             <div id="RoutesTablesContainer" class="form-group">
 
-                <div class="radio-inline">
-                    <label class="radio-inline">
-                        <input type="radio" class="form-check-input" name="maint" id="rdt1" value="1">
-                        ADD
-                    </label>
+                <div >
+                    <label >ADD</label>
+                    <input type="radio" class="form-check-input" name="maint" id="rdt1" value="1">
                 </div>
-                <div class="radio-inline">
-                    <label class="radio-inline">
-                        <input type="radio" class="form-check-input" name="maint" id="rdt2" value="2">
-                        UPDATE
-                    </label>
+                <div ">
+                    <label>UPDATE</label>
+                    <input type="radio" class="form-check-input" name="maint" id="rdt2" value="2">
                 </div>
-                <div class="radio-inline">
-                    <label class="radio-inline">
-                        <input type="radio" class="form-check-input" name="maint" id="rdt3" value="3">
-                        DELETE
-                    </label>
+                <div >
+                    <label>DELETE</label>
+                    <input type="radio" class="form-check-input" name="maint" id="rdt3" value="3">
                 </div>
                 <input type="submit" value="Submit" id="RoutesMaintBtn"/>
             </div>
@@ -86,23 +74,17 @@
             <legend><h2>SUB-DEALERS TABLE</h2></legend>
             <div id="SubdealersTableContainer" class="form-group">
 
-                <div class="radio-inline">
-                    <label class="radio-inline">
-                        <input type="radio" class="form-check-input" name="maint" id="sdt1" value="1">
-                        ADD
-                    </label>
+                <div>
+                    <label>ADD</label>
+                    <input type="radio" class="form-check-input" name="maint" id="sdt1" value="1">
                 </div>
-                <div class="radio-inline">
-                    <label class="radio-inline">
-                        <input type="radio" class="form-check-input" name="maint" id="sdt2" value="2">
-                        UPDATE
-                    </label>
+                <div>
+                    <label>UPDATE</label>
+                    <input type="radio" class="form-check-input" name="maint" id="sdt2" value="2">
                 </div>
-                <div class="radio-inline">
-                    <label class="radio-inline">
-                        <input type="radio" class="form-check-input" name="maint" id="sdt3" value="3">
-                        DELETE
-                    </label>
+                <div >
+                    <label>DELETE</label>
+                    <input type="radio" class="form-check-input" name="maint" id="sdt3" value="3">
                 </div>
                 <input type="submit" value="Submit" id="SubdealersMaintBtn"/>
             </div>
@@ -120,23 +102,17 @@
             <legend><h2>CYLINDER OPTIONS TABLE</h2></legend>
             <div id="CylinderOptionsTablesContainer" class="form-group">
 
-                <div class="radio-inline">
-                    <label class="radio-inline">
-                        <input type="radio" class="form-check-input" name="maint" id="cdt1" value="1">
-                        ADD
-                    </label>
+                <div>
+                    <label>ADD</label>
+                    <input type="radio" class="form-check-input" name="maint" id="cdt1" value="1">
                 </div>
-                <div class="radio-inline">
-                    <label class="radio-inline">
-                        <input type="radio" class="form-check-input" name="maint" id="cdt2" value="2">
-                        UPDATE
-                    </label>
+                <div>
+                    <label>UPDATE</label>
+                    <input type="radio" class="form-check-input" name="maint" id="cdt2" value="2">
                 </div>
-                <div class="radio-inline">
-                    <label class="radio-inline">
-                        <input type="radio" class="form-check-input" name="maint" id="cdt3" value="3">
-                        DELETE
-                    </label>
+                <div>
+                    <label>DELETE</label>
+                    <input type="radio" class="form-check-input" name="maint" id="cdt3" value="3">
                 </div>
                 <input type="submit" value="Submit" id="CylOptMaintBtn"/>
             </div>
@@ -154,23 +130,17 @@
             <legend><h2>USERS TABLE</h2></legend>
             <div id="UsersTablesContainer" class="form-group">
 
-                <div class="radio-inline">
-                    <label class="radio-inline">
-                        <input type="radio" class="form-check-input" name="maint" id="zdt1" value="1">
-                        ADD
-                    </label>
+                <div>
+                    <label>ADD</label>
+                    <input type="radio" class="form-check-input" name="maint" id="zdt1" value="1">
                 </div>
-                <div class="radio-inline">
-                    <label class="radio-inline">
-                        <input type="radio" class="form-check-input" name="maint" id="zdt2" value="2">
-                        UPDATE
-                    </label>
+                <div>
+                    <label>UPDATE</label>
+                    <input type="radio" class="form-check-input" name="maint" id="zdt2" value="2">
                 </div>
-                <div class="radio-inline">
-                    <label class="radio-inline">
-                        <input type="radio" class="form-check-input" name="maint" id="zdt3" value="3">
-                        DELETE
-                    </label>
+                <div>
+                    <label>DELETE</label>
+                    <input type="radio" class="form-check-input" name="maint" id="zdt3" value="3">
                 </div>
             </div>
             <input type="submit" value="Submit" id="UsersMaintBtn"/>

@@ -29,8 +29,8 @@
             <input class="form-control" id="customerName" type="text" name="customerName" minlength="2" maxlength="40" required>
         </div>
         <div class="form-group">
-            <label for="sbAddress1">Address Field 1 (required)</label>
-            <input class="form-control" id="sbAddress1" type="text" minlength="2" maxlength="40" name="sbAddress1" required>
+            <label for="sdAddress1">Address Field 1 (required)</label>
+            <input class="form-control" id="sdAddress1" type="text" minlength="2" maxlength="40" name="sdAddress1" required>
         </div>
         <div class="form-group">
             <label for="sdAddress2">Address Field 2 (optional)</label>
