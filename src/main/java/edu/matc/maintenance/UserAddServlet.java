@@ -13,7 +13,13 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * Created by student on 3/17/17.
+ */
+@WebServlet(
+        name = "UserAdd",
+        urlPatterns = { "/UserAdd" }
+)
 
     public class UserAddServlet extends HttpServlet {
 

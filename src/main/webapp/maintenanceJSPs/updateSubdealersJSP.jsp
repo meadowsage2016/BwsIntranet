@@ -47,11 +47,11 @@ To change this template use File | Settings | File Templates.
         </div>
         <div class="form-group">
                 <label for="state"><b>State</b></label><br />
-                <input class="form-control" name="state"  id="state" type="text" value="${sub.sbState}" maxlength="10" style="width: 260px" />
+                <input class="form-control" name="state"  id="state" type="text" value="${sub.sdState}" maxlength="10" style="width: 260px" />
         </div>
         <div class="form-group">
                     <label for="zipCode"><b>Zip Code</b></label><br />
-                    <input class="form-control" name="zipCode" id="zipCode" type="text" value="${sub.sbZipCode}" maxlength="10" style="width: 535px" />
+                    <input class="form-control" name="zipCode" id="zipCode" type="text" value="${sub.sdZipCode}" maxlength="10" style="width: 535px" />
         </div>
         <div class="form-group">
                     <label for="county"><b>County</b></label><br />
