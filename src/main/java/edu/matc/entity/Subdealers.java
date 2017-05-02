@@ -21,7 +21,7 @@ public class Subdealers {
     private int subdealerId;
     private String customerNumber;
     private String customerName;
-    private String sbAddress1;
+    private String sdAddress1;
     private String sdAddress2;
     private String sdCity;
     private String sdState;
@@ -37,7 +37,7 @@ public class Subdealers {
         super();
         this.customerNumber = customerNumber;
         this.customerName = customerName;
-        this.sbAddress1 = sbAddress1;
+        this.sdAddress1 = sbAddress1;
         this.sdAddress2 = sdAddress2;
         this.sdCity = sdCity;
         this.sdState = sdState;
@@ -70,11 +70,11 @@ public class Subdealers {
     }
 
     public String getSbAddress1() {
-        return sbAddress1;
+        return sdAddress1;
     }
 
     public void setSbAddress1(String sbAddress1) {
-        this.sbAddress1 = sbAddress1;
+        this.sdAddress1 = sbAddress1;
     }
 
     public String getSdAddress2() {
@@ -132,7 +132,7 @@ public class Subdealers {
                 "subdealerId=" + subdealerId +
                 ", customerNumber='" + customerNumber + '\'' +
                 ", customerName='" + customerName + '\'' +
-                ", sbAddress1='" + sbAddress1 + '\'' +
+                ", sbAddress1='" + sdAddress1 + '\'' +
                 ", sdAddress2='" + sdAddress2 + '\'' +
                 ", sdCity='" + sdCity + '\'' +
                 ", sdState='" + sdState + '\'' +

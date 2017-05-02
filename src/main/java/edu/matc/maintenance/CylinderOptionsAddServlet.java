@@ -78,7 +78,7 @@ public class CylinderOptionsAddServlet  extends HttpServlet{
         }
 
         // Local variable to hold url of results page
-        String url = "/maintenanceJSP/newCylinderOptionsJSP.jsp";
+        String url = "/maintenanceJSPs/newCylinderOptionsJSP.jsp";
 
         // Forward the request header to the JSP page
         RequestDispatcher dispatcher

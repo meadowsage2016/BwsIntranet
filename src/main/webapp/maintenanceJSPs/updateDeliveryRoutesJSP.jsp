@@ -26,7 +26,7 @@
     <form id="updatCylOpts" action="/DeliveryRoutesUpdate" method="POST">
         <div class="form-group">
                     <label for="city"><b>City or Business</b></label><br />
-                    <input class="form-control" name="city" id="city" type="text" value="${route.deliveryCityOrBuiness}" maxlength="40" style="width: 260px" />
+                    <input class="form-control" name="city" id="city" type="text" value="${route.deliveryCityOrBusiness}" maxlength="40" style="width: 260px" />
         </div>
         <div class="form-group">
                     <label for="day"><b>Delivery Day</b></label><br />

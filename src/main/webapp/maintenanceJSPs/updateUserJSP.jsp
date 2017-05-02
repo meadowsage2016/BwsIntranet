@@ -26,11 +26,11 @@
     <form id="updateUser" action="/UsersUpdate" method="POST">
         <div class="form-group">
                     <label for="userName"><b>User Name</b></label><br />
-                    <input class="form-control" name="userName" id="userName" type="text" value="${user.user_name}" maxlength="40" style="width: 260px" />
+                    <input class="form-control" name="userName" id="userName" type="text" value="${users.user_name}" maxlength="40" style="width: 260px" />
         </div>
         <div class="form-group">
                     <label for="userPassword"><b>Delivery Day</b></label><br />
-                    <input class="form-control" name="userPassword" id="userPassword" type="text" value="${user.user_pass}" maxlength="20" style="width: 535px" />
+                    <input class="form-control" name="userPassword" id="userPassword" type="text" value="${users.user_pass}" maxlength="20" style="width: 535px" />
         </div>
         <input type="submit" value="Submit">
     </form>

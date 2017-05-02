@@ -37,7 +37,7 @@ public class UsersMaintServlet extends HttpServlet {
 
         if (paramValue.matches("2")) {
             // Local variable to hold url of results page
-            String url = "/maintenanceJSPs/updateUserJSP.jsp";
+            String url = "/maintenanceJSPs/updateUserSelectJSP.jsp";
 
             // Forward the request header to the JSP page
             RequestDispatcher dispatcher
