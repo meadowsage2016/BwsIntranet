@@ -10,7 +10,7 @@
 <html>
 <head>
     <c:import url="../include-headtag.jsp" />
-    <script type="text/javascript" src="../js/verifyDeleteSubdealers.js"></script>
+    <script type="text/javascript" src="../js/verifySubdealers.js"></script>
     <c:import url="../include-navigation.jsp" /></head>
 <body>
 <div class="container">

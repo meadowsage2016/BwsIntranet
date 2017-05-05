@@ -30,6 +30,32 @@ import java.util.TreeSet;
  */
 public class EmployeeDeleteServlet extends HttpServlet  {
 
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        Employee emp = new Employee();
+        EmployeeDao dao = new EmployeeDao();
+        List<Employee> empAsList = new ArrayList<Employee>();
+
+        //  Take updated Search object and store in Sessio
+        HttpSession sessionDelete = request.getSession();
+        String paramValue = request.getParameter("emailAddress");
+
+        emp = dao.getEmployeeByEmailAddress(paramValue);
+        empAsList.add(emp);
+
+        sessionDelete.setAttribute("DeleteResult", empAsList);
+        sessionDelete.setAttribute("Message", "");
+
+        // Local variable to hold url of results page
+        String url = "/maintenanceJSPs/deleteEmployeesJSP.jsp";
+
+        // Forward the request header to the JSP page
+        RequestDispatcher dispatcher
+                = getServletContext().getRequestDispatcher(url);
+        dispatcher.forward(request, response);
+
+    }
         public void doPost(HttpServletRequest request, HttpServletResponse response)
                 throws ServletException, IOException {
 
@@ -52,7 +78,7 @@ public class EmployeeDeleteServlet extends HttpServlet  {
                 message="Successful delete.";
                 sessionDelete.setAttribute("Message", message);
                 // Local variable to hold url of results page
-                String url = "/maintenanceJSPs/deleteEmployeeJSP.jsp";
+                String url = "/maintenanceJSPs/deleteEmployeeSelectJSP.jsp";
 
                 // Forward the request header to the JSP page
                 RequestDispatcher dispatcher

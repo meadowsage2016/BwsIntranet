@@ -23,7 +23,7 @@
         </div><!--close strapline-->
     </header>
     <c:forEach items="${DeleteResult}" var="route">
-        <form id="deletetCylOpts" action="/DeliveryRoutesDelete" method="POST">
+        <form id="deleteDeleteDeliveryRoute" action="/DeliveryRoutesDelete" method="POST">
             <div class="form-group">
                 <input class="form-control" name="cityId" id="cityId" type="hidden" value="${route.deliveryRouteId}" />
             </div>

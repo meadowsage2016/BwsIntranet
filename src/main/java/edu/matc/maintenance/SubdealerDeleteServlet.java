@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -23,6 +25,31 @@ import java.io.IOException;
         urlPatterns = { "/SubdealerDelete" }
 )
 public class SubdealerDeleteServlet extends HttpServlet  {
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        List<Subdealers> subAsList = new ArrayList<Subdealers>();
+        Subdealers cyl = new Subdealers();
+        SubdealersDao dao = new SubdealersDao();
+        //  Take updated Search object and store in Sessio
+        HttpSession sessionDelete = request.getSession();
+        String paramValue = request.getParameter("customerNumber");
+
+        Subdealers sub = dao.getsubdealerByCustomerNumber(paramValue);
+        subAsList.add(sub);
+
+        sessionDelete.setAttribute("UpdateResult", subAsList);
+        sessionDelete.setAttribute("Message", "");
+
+        // Local variable to hold url of results page
+        String url = "/maintenanceJSPs/deleteSubdealersJSP.jsp";
+
+        // Forward the request header to the JSP page
+        RequestDispatcher dispatcher
+                = getServletContext().getRequestDispatcher(url);
+        dispatcher.forward(request, response);
+
+    }
 
 
         public void doPost(HttpServletRequest request, HttpServletResponse response)

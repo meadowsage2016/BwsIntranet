@@ -10,6 +10,8 @@ package edu.matc.maintenance;
         import javax.servlet.http.HttpServletResponse;
         import javax.servlet.http.HttpSession;
         import java.io.IOException;
+        import java.util.ArrayList;
+        import java.util.List;
 
 
 /**
@@ -20,7 +22,33 @@ package edu.matc.maintenance;
         urlPatterns = { "/CylinderOptionsDelete" }
 )
 public class CylinderOptionsDelete  extends HttpServlet {
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
 
+
+
+        List<CylinderOptions> cylAsList = new ArrayList<CylinderOptions>();
+        CylinderOptions cyl = new CylinderOptions();
+        CylinderOptionsDao dao = new CylinderOptionsDao();
+        //  Take updated Search object and store in Sessio
+        HttpSession sessionDelete = request.getSession();
+        String paramValue = request.getParameter("gasNumber");
+
+        cyl = dao.getCylOptionByGasNumber(paramValue);
+        cylAsList.add(cyl);
+
+        sessionDelete.setAttribute("UpdateResult", cylAsList);
+        sessionDelete.setAttribute("Message", "");
+
+        // Local variable to hold url of results page
+        String url = "/maintenanceJSPs/deleteCylinderOptionsJSP.jsp";
+
+        // Forward the request header to the JSP page
+        RequestDispatcher dispatcher
+                = getServletContext().getRequestDispatcher(url);
+        dispatcher.forward(request, response);
+
+    }
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
@@ -42,7 +70,7 @@ public class CylinderOptionsDelete  extends HttpServlet {
                 message="Successful delete.";
                 sessionDelete.setAttribute("Message", message);
                 // Local variable to hold url of results page
-                String url = "/maintenance/deleteCylinderOptionsJSP.jsp";
+                String url = "/maintenanceJSPs/deleteCylinderOptionsSelectJSP.jsp";
 
                 // Forward the request header to the JSP page
                 RequestDispatcher dispatcher
