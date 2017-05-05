@@ -21,13 +21,5 @@
     </form-login-config>
   </login-config>
 
-  <security-constraint>
-    <web-resource-collection>
-      <web-resource-name>edit</web-resource-name>
-      <url-pattern>/adminJSP.jsp</url-pattern>
-    </web-resource-collection>
-    <auth-constraint>
-      <role-name>administrator</role-name>
-    </auth-constraint>
-  </security-constraint>
+
 </web-app>
