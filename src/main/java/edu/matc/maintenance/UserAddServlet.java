@@ -37,11 +37,8 @@ import java.util.List;
             HttpSession sessionAdd = request.getSession();
 
             user.setUser_name(request.getParameter("userName"));
-<<<<<<< HEAD
+
             user.setUser_pass(request.getParameter("pass1"));
-=======
-            user.setUser_pass(request.getParameter("userPassword1"));
->>>>>>> 09a9f261724ad27af42fef2460e2c95d3c3688ea
 
             try {
                 id = dao.addUser(user);
