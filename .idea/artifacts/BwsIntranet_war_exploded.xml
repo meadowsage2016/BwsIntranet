@@ -37,9 +37,9 @@
           <element id="library" level="project" name="Maven: org.glassfish.hk2:hk2-locator:2.5.0-b05" />
           <element id="library" level="project" name="Maven: org.webjars:jquery-ui:1.9.2" />
           <element id="library" level="project" name="Maven: org.webjars:jquery:1.8.2" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.8.3" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.8.3" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.8.3" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.8.5" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.8.5" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.8.0" />
         </element>
       </element>
       <element id="directory" name="META-INF">

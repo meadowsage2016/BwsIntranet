@@ -31,29 +31,20 @@
         <div class="col-sm-3" class="searchLink">
             <a href="CylinderOptionsSearch" class="searchLink"><h3>CYLINDER LEASE/OWN OPTIONS</h3></a>
         </div>
-<!--
-        <div class="col-sm-2" >
-            <a  href="CitiesByZipSearch" class="searchLink"><h3>CITIES BY ZIPCODE</h3></a>
-        </div>
--->
     </div>
 </div>
 <div class="container-fluid bg-12" id="weather">
     <div class="row">
         <div class="col-sm-12">
-            <!--
             <c:import url="WundergroundApi" />
-            -->
         </div>
     </div>
 </div>
 <div class="container-fluid bg-12">
     <div class="row">
         <div class="col-sm-12">
-            <!--
             <h3>Breaking News...</h3>
             <c:import url="NewsApi" />
-            -->
         </div>
     </div>
 </div>

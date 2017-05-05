@@ -37,7 +37,6 @@ import java.util.List;
             HttpSession sessionAdd = request.getSession();
 
             user.setUser_name(request.getParameter("userName"));
-
             user.setUser_pass(request.getParameter("pass1"));
 
             try {
@@ -61,7 +60,7 @@ import java.util.List;
             // Local variable to hold url of results page
             String url = "/maintenanceJSPs/newUserJSP.jsp";
 
-// Forward the request header to the JSP page
+            // Forward the request header to the JSP page
             RequestDispatcher dispatcher
                     = getServletContext().getRequestDispatcher(url);
             dispatcher.forward(request, response);
