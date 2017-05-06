@@ -25,6 +25,7 @@ import java.util.List;
         urlPatterns = { "/SubdealerDelete" }
 )
 public class SubdealerDeleteServlet extends HttpServlet  {
+
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
@@ -38,7 +39,7 @@ public class SubdealerDeleteServlet extends HttpServlet  {
         Subdealers sub = dao.getsubdealerByCustomerNumber(paramValue);
         subAsList.add(sub);
 
-        sessionDelete.setAttribute("UpdateResult", subAsList);
+        sessionDelete.setAttribute("DeleteResult", subAsList);
         sessionDelete.setAttribute("Message", "");
 
         // Local variable to hold url of results page
@@ -72,7 +73,7 @@ public class SubdealerDeleteServlet extends HttpServlet  {
                 message="Successful delete.";
                 sessionDelete.setAttribute("Message", message);
                 // Local variable to hold url of results page
-                String url = "/maintenanceJSPs/deleteSubdealersJSP.jsp";
+                String url = "/maintenanceJSPs/deleteSubdealersSelectJSP.jsp";
 
                 // Forward the request header to the JSP page
                 RequestDispatcher dispatcher

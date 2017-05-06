@@ -78,7 +78,7 @@ public class EmployeeDeleteServlet extends HttpServlet  {
                 message="Successful delete.";
                 sessionDelete.setAttribute("Message", message);
                 // Local variable to hold url of results page
-                String url = "/maintenanceJSPs/deleteEmployeeSelectJSP.jsp";
+                String url = "/maintenanceJSPs/deleteEmployeesSelectJSP.jsp";
 
                 // Forward the request header to the JSP page
                 RequestDispatcher dispatcher

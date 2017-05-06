@@ -14,7 +14,7 @@
 </head>
 <body>
 <div class="container">
-    <form id="deleteSubdealersForm" action="/SubdealersDelete" method="GET">
+    <form id="deleteSubdealersForm" action="/SubdealerDelete" method="GET">
         <fieldset>
             <legend>Customer Number of Subdealer to Delete</legend>
             <div class="form-group">

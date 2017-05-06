@@ -19,7 +19,7 @@
             <legend>Select Employee to Delete</legend>
             <div class="form-group">
                 <label for="emailAddress">Email Address of Employee to Delete</label>
-                <input class="form-control" id="emailAddress" name="emailAddress" id="emailAddress" minlength="2" type="text" required>
+                <input class="form-control" id="emailAddress" name="emailAddress" id="emailAddress" type="text" required>
             </div>
             <input type="submit" id="update" value="Submit">
         </fieldset>

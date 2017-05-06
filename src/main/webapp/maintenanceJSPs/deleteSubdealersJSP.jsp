@@ -24,7 +24,7 @@ To change this template use File | Settings | File Templates.
     </header>
 
     <c:forEach items="${DeleteResult}" var="sub">
-        <form id="deleteSubdealerForm" action="/SubdealersDelete" method="POST">
+        <form id="deleteSubdealerForm" action="/SubdealerDelete" method="POST">
             <div class="form-group">
                 <label for="customerNumber"><b>Customer Number</b></label><br />
                 <input class="form-control" name="customerNumber" id="customerNumber" type="text" value="${sub.customerNumber}" readonly />
