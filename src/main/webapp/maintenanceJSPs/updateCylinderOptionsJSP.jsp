@@ -57,7 +57,9 @@
         <input type="submit" value="Submit">
     </form>
 </c:forEach>
-<h3><c:out value="${Message}" /></h3>
+<div class="maintenanceMessage">
+    <c:out value="${Message}"/>
+</div>
 </div>
 </body>
 </html>

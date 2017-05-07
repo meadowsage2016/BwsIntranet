@@ -24,6 +24,8 @@
             <input type="submit" id="update" value="Submit">
         </fieldset>
     </form>
-    <c:out value="${Message}"/>
+    <div class="maintenanceMessage">
+        <c:out value="${Message}"/>
+    </div>
 </div>
 </body>

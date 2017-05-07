@@ -29,20 +29,29 @@ import java.util.List;
             Employee emp = new Employee();
             EmployeeDao dao = new EmployeeDao();
             List<Employee> empAsList = new ArrayList<Employee>();
+            String url = "";
 
             //  Take updated Search object and store in Sessio
             HttpSession sessionAdd = request.getSession();
             String paramValue = request.getParameter("emailAddress");
 
             emp = dao.getEmployeeByEmailAddress(paramValue);
-            empAsList.add(emp);
 
-            sessionAdd.setAttribute("UpdateResult", empAsList);
-            sessionAdd.setAttribute("Message", "");
+            if (emp == null) {
 
-            // Local variable to hold url of results page
-            String url = "/maintenanceJSPs/updateEmployeeJSP.jsp";
+                sessionAdd.setAttribute("Message", "Employee Email not found : " + paramValue);
 
+                // Local variable to hold url of results page
+                url = "/maintenanceJSPs/updateEmployeeSelectJSP.jsp";
+            } else {
+                empAsList.add(emp);
+
+                sessionAdd.setAttribute("UpdateResult", empAsList);
+                sessionAdd.setAttribute("Message", "");
+
+                // Local variable to hold url of results page
+                url = "/maintenanceJSPs/updateEmployeeJSP.jsp";
+            }
             // Forward the request header to the JSP page
             RequestDispatcher dispatcher
                     = getServletContext().getRequestDispatcher(url);
@@ -54,7 +63,7 @@ import java.util.List;
                 throws ServletException, IOException {
 
             String message = "Update NOT Successful, see log file";
-           Employee emp;
+            Employee emp;
 
             EmployeeDao dao = new EmployeeDao();
 
@@ -90,7 +99,7 @@ import java.util.List;
 
             try {
                 dao.updateEmployee(emp);
-                message = "Update Successful";
+                message = "Update Successful for : " + emailAddressUpdate;
                 sessionAdd.setAttribute("Message", message);
             } catch (Exception ex) {
                 sessionAdd.setAttribute("Message", message);

@@ -42,7 +42,7 @@
         </div>
         <div class="form-group">
             <label for="emailAddress">Email Address</label>
-            <input class="form-control" id="emailAddress" type="text" minlength="2" maxlength="40"  name="emailAddress" >
+            <input class="form-control" id="emailAddress" type="text" minlength="2" maxlength="40"  name="emailAddress" required>
         </div>
         <div class="form-group">
             <input class="form-control" type="hidden" name="maintType" value="1">
@@ -50,7 +50,7 @@
             <input class="submit" type="submit" value="Submit">
     </fieldset>
 </form>
-<c:out value="${MaintResult}"/>
+<c:out value="${Message}"/>
 
 </c>
 </c>

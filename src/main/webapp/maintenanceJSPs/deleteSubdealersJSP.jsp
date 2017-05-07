@@ -61,7 +61,7 @@ To change this template use File | Settings | File Templates.
                 <label for="notes"><b>Notes</b></label><br />
                 <input class="form-control" name="notes"  id="notes" type="text" value="${sub.subdealerNotes}" readonly />
             </div>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Verify Delete">
         </form>
     </c:forEach>
     <h3><c:out value="${Message}" /></h3>

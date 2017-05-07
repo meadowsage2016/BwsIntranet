@@ -1,4 +1,4 @@
-%--
+<%--
 Created by IntelliJ IDEA.
 User: student
 Date: 3/17/17
@@ -25,6 +25,9 @@ To change this template use File | Settings | File Templates.
 
 <c:forEach items="${UpdateResult}" var="sub">
     <form id="updatCylOpts" action="/SubdealersUpdate" method="POST">
+        <div class="form-group">
+            <input class="form-control" name="customerId" id="customerId" type="hidden" value="${sub.customerId}" >
+        </div>
         <div class="form-group">
                     <label for="customerNumber"><b>Customer Number</b></label><br />
                     <input class="form-control" name="customerNumber" id="customerNumber" type="text" value="${sub.customerNumber}" required />
@@ -61,7 +64,7 @@ To change this template use File | Settings | File Templates.
                 <label for="notes"><b>Notes</b></label><br />
                 <input class="form-control" name="notes"  id="notes" type="text" value="${sub.subdealerNotes}" required />
         </div>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit Update">
     </form>
 </c:forEach>
 <h3><c:out value="${Message}" /></h3>

@@ -1,4 +1,4 @@
-<<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: student
@@ -24,7 +24,9 @@
             <input type="submit" id="update" value="Submit">
     </fieldset>
 </form>
-<c:out value="${Message}"/>
+    <div class="maintenanceMessage">
+        <c:out value="${Message}"/>
+    </div>
 </div>
 </body>
 </html>

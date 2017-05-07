@@ -51,7 +51,7 @@
                 <label for="emailAddress"><b>Email Address</b></label><br />
                 <input class="form-control" name="emailAddress" id="emailAddress" type="text" value="${emp.emailAddress}" readonly/>
             </div>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Verify Delete">
         </form>
     </c:forEach>
     <h3><c:out value="${Message}" /></h3>

@@ -36,6 +36,7 @@ public class EmployeeDeleteServlet extends HttpServlet  {
         Employee emp = new Employee();
         EmployeeDao dao = new EmployeeDao();
         List<Employee> empAsList = new ArrayList<Employee>();
+        String url = "";
 
         //  Take updated Search object and store in Sessio
         HttpSession sessionDelete = request.getSession();
@@ -44,11 +45,19 @@ public class EmployeeDeleteServlet extends HttpServlet  {
         emp = dao.getEmployeeByEmailAddress(paramValue);
         empAsList.add(emp);
 
-        sessionDelete.setAttribute("DeleteResult", empAsList);
-        sessionDelete.setAttribute("Message", "");
+        if (emp == null) {
+            sessionDelete.setAttribute("Message", "Employee not found for emaill address: " + paramValue);
+            url = "/maintenanceJSPs/deleteEmployeesSelectJSP.jsp";
+        }
+        else {
 
-        // Local variable to hold url of results page
-        String url = "/maintenanceJSPs/deleteEmployeesJSP.jsp";
+            sessionDelete.setAttribute("DeleteResult", empAsList);
+            sessionDelete.setAttribute("Message", "");
+
+            // Local variable to hold url of results page
+            url = "/maintenanceJSPs/deleteEmployeesJSP.jsp";
+        }
+
 
         // Forward the request header to the JSP page
         RequestDispatcher dispatcher
@@ -75,7 +84,7 @@ public class EmployeeDeleteServlet extends HttpServlet  {
 
             try {
                 dao.deleteEmployee(selected);
-                message="Successful delete.";
+                message="Successful delete of: " + emailAddressToDelete;
                 sessionDelete.setAttribute("Message", message);
                 // Local variable to hold url of results page
                 String url = "/maintenanceJSPs/deleteEmployeesSelectJSP.jsp";

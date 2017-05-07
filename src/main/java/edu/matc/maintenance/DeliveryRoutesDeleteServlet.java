@@ -32,25 +32,35 @@ public class DeliveryRoutesDeleteServlet extends HttpServlet  {
         List<DeliveryRoute> routeAsList = new ArrayList<DeliveryRoute>();
         DeliveryRoute route = new DeliveryRoute();
         DeliveryRouteDao dao = new DeliveryRouteDao();
+        String url = "";
 
         //  Take updated Search object and store in Sessio
         HttpSession sessionDelete = request.getSession();
         String paramValue = request.getParameter("city");
 
         route = dao.getDeliveryRouteByCityOrBusiness(paramValue);
-        routeAsList.add(route);
 
-        sessionDelete.setAttribute("DeleteResult", routeAsList);
-        sessionDelete.setAttribute("Message", "");
+        if (route == null) {
 
-        // Local variable to hold url of results page
-        String url = "/maintenanceJSPs/deleteDeliveryRoutesJSP.jsp";
+            sessionDelete.setAttribute("Message", "City or Business not found: " + paramValue);
+            // Local variable to hold url of results page
+            url = "/maintenanceJSPs/deleteDeliveryRoutesSelectJSP.jsp";
+
+        } else {
+
+            routeAsList.add(route);
+
+            sessionDelete.setAttribute("DeleteResult", routeAsList);
+            sessionDelete.setAttribute("Message", "");
+            // Local variable to hold url of results page
+            url = "/maintenanceJSPs/deleteDeliveryRoutesJSP.jsp";
+
+        }
 
         // Forward the request header to the JSP page
         RequestDispatcher dispatcher
                 = getServletContext().getRequestDispatcher(url);
         dispatcher.forward(request, response);
-
     }
 
         public void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -71,7 +81,7 @@ public class DeliveryRoutesDeleteServlet extends HttpServlet  {
 
             try {
                 dao.deleteDeliveryRoute(routeIdToDelete);
-                message="Successful delete.";
+                message="Successful delete of : " + routeToDelete;
                 sessionDelete.setAttribute("Message", message);
                 // Local variable to hold url of results page
                 String url = "/maintenanceJSPs/deleteDeliveryRoutesSelectJSP.jsp";
