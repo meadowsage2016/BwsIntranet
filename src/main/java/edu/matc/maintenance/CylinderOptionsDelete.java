@@ -48,7 +48,7 @@ public class CylinderOptionsDelete  extends HttpServlet {
 
             cylAsList.add(cyl);
 
-            sessionDelete.setAttribute("UpdateResult", cylAsList);
+            sessionDelete.setAttribute("DeleteResult", cylAsList);
             sessionDelete.setAttribute("Message", "");
             // Local variable to hold url of results page
             url = "/maintenanceJSPs/deleteCylinderOptionsJSP.jsp";
@@ -67,20 +67,21 @@ public class CylinderOptionsDelete  extends HttpServlet {
 
         String message = "Delete not Successful";
         int id = 0;
+        String paramValue;
 
         CylinderOptions cyl = new CylinderOptions();
         CylinderOptionsDao dao = new CylinderOptionsDao();
 
         //  Take updated Search object and store in Session
         HttpSession sessionDelete = request.getSession();
-        String cylToDelete = request.getParameter("gasNumber");
+        paramValue = request.getParameter("gasNumber");
 
-        cyl = dao.getCylOptionByGasNumber(cylToDelete);
+        cyl = dao.getCylOptionByGasNumber(paramValue);
         int cylIdToDelete = cyl.getCylinderOptionId();
 
             try {
                 dao.deleteCylOption(cylIdToDelete);
-                message="Successful delete.";
+                message="Successful delete of Gas Number: " + paramValue;
                 sessionDelete.setAttribute("Message", message);
                 // Local variable to hold url of results page
                 String url = "/maintenanceJSPs/deleteCylinderOptionsSelectJSP.jsp";

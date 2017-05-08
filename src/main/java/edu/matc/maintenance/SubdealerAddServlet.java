@@ -42,22 +42,18 @@ public class SubdealerAddServlet extends HttpServlet {
 
             // Local variables used to test for duplicate record by customer number
             Subdealers duplicateSubdealer = new Subdealers();
-            String duplicateCustomerNumber;
+            String paramValue;
 
 
             SubdealersDao dao = new SubdealersDao();
             List<Subdealers> results = new ArrayList<Subdealers>();
 
-            //  TCreate Session
+            //  Create Session
             HttpSession sessionAdd = request.getSession();
 
             // test for duplicate account
-            duplicateCustomerNumber = request.getParameter("customerNumber");
-            duplicateSubdealer = dao.getsubdealerByCustomerNumber(duplicateCustomerNumber);
-
-
-
-
+            paramValue = request.getParameter("customerNumber");
+            duplicateSubdealer = dao.getsubdealerByCustomerNumber(paramValue);
 
             if (duplicateSubdealer == null) {
 
@@ -73,31 +69,28 @@ public class SubdealerAddServlet extends HttpServlet {
 
                 try {
                     id = dao.addSubdealer(sub);
+                    if (id == 0) {
+
+                        sessionAdd.setAttribute("Message", message);
+
+                    } else {
+
+                        sessionAdd.setAttribute("Message", "Successful Add of Customer Number:  " + paramValue);
+
+                    }
 
                 } catch (Exception ex) {
-
                     log("Exception found attempting Subdealer Add:  " + ex);
-
                 }
 
-                if (id == 0) {
 
-                    sessionAdd.setAttribute("Message", message);
-
-                } else {
-
-                    newSub = dao.getSubdealerById(id);
-                    message = "Successful Add ";
-                    results.add(newSub);
-                }
 
             } else {
+
                 log("Duplicate found: " + duplicateSubdealer.getCustomerNumber());
-                sessionAdd.setAttribute("Message", "Duplicate Record found for Customer Number: " + duplicateCustomerNumber);
+                sessionAdd.setAttribute("Message", "Duplicate Record found for Customer Number: " + paramValue);
 
             }
-
-            sessionAdd.setAttribute("MaintResult", results);
 
             // Local variable to hold url of results page
             String url = "/maintenanceJSPs/newSubdealerJSP.jsp";

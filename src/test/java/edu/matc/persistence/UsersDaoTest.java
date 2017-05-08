@@ -45,7 +45,7 @@ public class UsersDaoTest extends UsersDao {
     @Test  // ADD  ***CHANGE - MUST BE UNIQUE ****
     public void testAddUser() throws Exception {
         int before = dao.getAllUsers().size();
-        Users newSubdealer = new Users("Maggie4", "maggie");
+        Users newSubdealer = new Users("Maggie5", "maggie");
         dao.addUser(newSubdealer);
         int after = dao.getAllUsers().size();
         assertEquals("User not added correctly", before + 1, after);
@@ -54,14 +54,14 @@ public class UsersDaoTest extends UsersDao {
     @Test  //  DELETE   *** CHANGE - MUST EXISTS  ***                                              7
     public void testDeleteUser() throws Exception {
         int before = dao.getAllUsers().size();
-        dao.deleteUser(7);
+        dao.deleteUser(6);
         int after = dao.getAllUsers().size();
         assertEquals("Delete not made", before -1, after);
     }
 
     @Test  // UPDATE  *************CHANGE - MUST EXISTS **********                                    3
     public void testUpdateUser() throws Exception {
-        Users userToEdit = dao.getUserById(2);
+        Users userToEdit = dao.getUserById(5);
         String passwordChange = "password";
         userToEdit.setUser_pass(passwordChange);
         dao.updateUser(userToEdit);

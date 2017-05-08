@@ -103,7 +103,10 @@ import java.util.List;
             cyl.setCylinderRent(cylinderRent);
             cyl.setCylinderOnePPRent(cylinderOnePPRent);
             cyl.setCylinderFiveYearLease(cylinderFiveYearLease);
-            if (cylinderPurchaseString != null) {
+            if (cylinderPurchaseString == null) {
+                cyl.setCylinderPurchase(null);
+            }
+            else {
                 cylinderPurchase = Double.parseDouble(cylinderPurchaseString);
                 cyl.setCylinderPurchase(cylinderPurchase);
             }

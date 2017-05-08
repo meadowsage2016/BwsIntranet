@@ -15,7 +15,7 @@
 </head>
 <body>
 <div class="container">
-<form class="cmxform" id="newCylOptForm" name="newCylOptForm" method="POST" action="CylinderOptionsAdd">
+<form class="myforms" id="newCylOptForm" name="newCylOptForm" method="POST" action="CylinderOptionsAdd">
     <fieldset>
         <legend>New Cylinder Option</legend>
         <div class="form-group">
@@ -43,8 +43,8 @@
             <input class="form-control" id="cylinderFiveYearLease" type="text" name="cylinderFiveYearLease" required>
         </div>
         <div class="form-group">
-            <label for="cylinderPurchase">Purchase Price (optional)</label>
-            <input class="form-control" id="cylinderPurchase" type="text" name="cylinderPurchase">
+            <label for="cylinderPurchase">Purchase Price (enter .00 if not for sale)</label>
+            <input class="form-control" id="cylinderPurchase" type="text" name="cylinderPurchase" required>
         </div>
         <div class="form-group">
             <input class="form-control" type="hidden" name="maintType" value="1">
@@ -52,20 +52,9 @@
             <input class="submit" type="submit" value="Submit">
     </fieldset>
 </form>
-
-<c:out value="${Message}"/>
-<c:forEach items="${MaintResult}" var="cyl">
-    <tr>
-        <td>${cyl.gasNumber}</td>
-        <td>${cyl.gasDescription}</td>
-        <td>${cyl.cylinderCode}</td>
-        <td>${cyl.cylinderRent}</td>
-        <td>${cyl.cylinderOnePPRent}</td>
-        <td>${cyl.cylinderFiveYearLease}</td>
-        <td>${cyl.cylinderPurchase}</td>
-
-    </tr>
-</c:forEach>
+    <div class="maintenanceMessage">
+        <c:out value="${Message}"/>
+    </div>
 </div>
 </body>
 </html>

@@ -26,7 +26,7 @@
         <mapping class="edu.matc.entity.CylinderOptions"/>
         <mapping class="edu.matc.entity.DeliveryRoute"/>
         <mapping class="edu.matc.entity.Subdealers"/>
-        <mapping class="edu.matc.entity.BwsBlog"/>
+        <mapping class="edu.matc.underconstruction.BwsBlog"/>
         <mapping class="edu.matc.entity.Users"/>
         <mapping class="edu.matc.entity.UserRoles"/>
         <mapping class="edu.matc.underconstruction.CitiesByZip"/>

@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by student on 3/17/17.
@@ -20,6 +22,43 @@ import java.io.IOException;
         urlPatterns = { "/UserDelete" }
 )
 public class UserDeleteServlet extends HttpServlet {
+
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        Users user = new Users();
+        UsersDao dao = new UsersDao();
+        List<Users> userAsList = new ArrayList<Users>();
+        String url = "";
+
+        //  Take updated Search object and store in Sessio
+        HttpSession sessionDelete = request.getSession();
+        String paramValue = request.getParameter("userName");
+
+        user = dao.getUserByUserName(paramValue);
+        userAsList.add(user);
+
+        if (user == null) {
+            sessionDelete.setAttribute("Message", "User not found for: " + paramValue);
+            url = "/maintenanceJSPs/deleteUsersSelectJSP.jsp";
+        }
+        else {
+
+            sessionDelete.setAttribute("DeleteResult", userAsList);
+            sessionDelete.setAttribute("Message", "");
+
+            // Local variable to hold url of results page
+            url = "/maintenanceJSPs/deleteUsersJSP.jsp";
+        }
+
+
+        // Forward the request header to the JSP page
+        RequestDispatcher dispatcher
+                = getServletContext().getRequestDispatcher(url);
+        dispatcher.forward(request, response);
+
+    }
+
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
@@ -31,18 +70,17 @@ public class UserDeleteServlet extends HttpServlet {
 
         //  Take updated Search object and store in Session
         HttpSession sessionDelete = request.getSession();
-        String userNameToDelete = request.getParameter("userName");
+        String userIdToDelete = request.getParameter("userId");
+        String userName = request.getParameter("userName");
 
-        user = dao.getUserByUserName(userNameToDelete);
-
-        int selected = user.getUser_id();
+        int selected = Integer.parseInt(userIdToDelete);
 
         try {
             dao.deleteUser(selected);
-            message="Successful delete.";
+            message="Successful delete of user: " + userName;
             sessionDelete.setAttribute("Message", message);
             // Local variable to hold url of results page
-            String url = "/maintenanceJSPs/deleteUserJSP.jsp";
+            String url = "/maintenanceJSPs/deleteUsersJSP.jsp";
 
             // Forward the request header to the JSP page
             RequestDispatcher dispatcher

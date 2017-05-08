@@ -1,11 +1,11 @@
 package edu.matc.persistence;
 
+import edu.matc.underconstruction.BwsBlogDao;
 import org.apache.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
-import edu.matc.entity.BwsBlog;
+import edu.matc.underconstruction.BwsBlog;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import static org.junit.Assert.*;

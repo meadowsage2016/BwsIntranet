@@ -129,7 +129,10 @@
         <fieldset class="form-group">
             <legend><h2>USERS TABLE</h2></legend>
             <div id="UsersTablesContainer" class="form-group">
-
+                <div>
+                    <label>View All Users</label>
+                    <input type="radio" class="form-check-input" name="maint" id="zdt0" value="0">
+                </div>
                 <div>
                     <label>ADD</label>
                     <input type="radio" class="form-check-input" name="maint" id="zdt1" value="1">

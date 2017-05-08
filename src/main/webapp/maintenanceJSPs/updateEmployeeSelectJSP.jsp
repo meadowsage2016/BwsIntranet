@@ -14,12 +14,12 @@
 </head>
 <body>
 <div class="container">
-<form id="updateEmployeeForm" action="/EmployeeUpdate" method="GET">
+<form class="myforms" id="updateEmployeeForm" action="/EmployeeUpdate" method="GET">
     <fieldset>
         <legend>Select Employee to Update</legend>
         <div class="form-group">
             <label for="emailAddress">Email Address of Employee to Update</label>
-            <input class="form-control" id="emailAddress" name="emailAddress" id="emailAddress" minlength="2" type="text" required>
+            <input class="form-control" id="emailAddress" name="emailAddress" id="emailAddress"  type="email" required>
         </div>
             <input type="submit" id="update" value="Submit">
     </fieldset>

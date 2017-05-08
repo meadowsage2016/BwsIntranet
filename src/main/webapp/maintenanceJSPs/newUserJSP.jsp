@@ -44,7 +44,7 @@
 </head>
 <body>
 <div class="container">
-<form class="cmxform" id="newUserForm" method="POST" action="UserAdd">
+<form class="myforms" id="newUserForm" method="POST" action="UserAdd">
     <fieldset>
         <legend>New User</legend>
         <div class="form-group">
@@ -66,9 +66,9 @@
             <input class="submit" type="submit" value="Submit">
     </fieldset>
 </form>
-<c:out value="${MaintResult}"/>
-
-</c>
+    <div class="maintenanceMessage">
+        <c:out value="${Message}"/>
+    </div>
 </div>
 </body>
 </html>

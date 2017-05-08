@@ -14,7 +14,7 @@
 </head>
 <body>
 <div class="container">
-<form id="updateUserForm" action="/UserUpdate" method="GET">
+<form class="myforms" id="updateUserForm" action="/UserUpdate" method="GET">
     <fieldset>
         <legend>Update User</legend>
         <div class="form-group">

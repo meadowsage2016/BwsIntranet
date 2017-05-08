@@ -23,19 +23,21 @@
     </div><!--close strapline-->
 </header>
 <c:forEach items="${UpdateResult}" var="user">
-    <form id="updateUser" action="/UsersUpdate" method="POST">
+    <form class="myforms" id="updateUser" action="/UserUpdate" method="POST">
         <div class="form-group">
                     <label for="userName"><b>User Name</b></label><br />
-                    <input class="form-control" name="userName" id="userName" type="text" value="${users.user_name}" required/>
+                    <input class="form-control" name="userName" id="userName" type="text" value="${user.user_name}" readonly/>
         </div>
         <div class="form-group">
-                    <label for="userPassword"><b>Delivery Day</b></label><br />
-                    <input class="form-control" name="userPassword" id="userPassword" type="text" value="${users.user_pass}" required/>
+                    <label for="userPassword"><b>Password</b></label><br />
+                    <input class="form-control" name="userPassword" id="userPassword" type="text" value="${user.user_pass}" required/>
         </div>
         <input type="submit" value="Submit">
     </form>
 </c:forEach>
-<h3><c:out value="${Message}" /></h3>
+    <div class="maintenanceMessage">
+        <c:out value="${Message}"/>
+    </div>
 </div>
 </body>
 </html>

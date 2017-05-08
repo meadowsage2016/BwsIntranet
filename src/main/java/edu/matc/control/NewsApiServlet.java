@@ -35,15 +35,24 @@ public class NewsApiServlet  extends HttpServlet {
     List<ArticlesItem> newSportsHeadlineNews = new ArrayList<ArticlesItem>();
 
 
+    /**
+     *   doGet Creates call to API for Breaking news from 3 Stations, Cnn, WSJ & Fox Sports
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        //  Create new Client (CNN), use new WebTarget to get response from Client
         Client cnnClient = ClientBuilder.newClient();
         WebTarget cnnTarget =
                 cnnClient.target("https://newsapi.org/v1/articles?source=cnn&sortBy=top&apiKey=4e50f2b2b7f441cfaf895d1d91e31a5c");
         String newsCNNApiResponse = cnnTarget.request(MediaType.APPLICATION_JSON).get(String.class);
         log.info("************************" + newsCNNApiResponse + "********************************");
 
+        // Map the response from the API
         ObjectMapper cnnMapper = new ObjectMapper();
 
         try {
@@ -56,12 +65,14 @@ public class NewsApiServlet  extends HttpServlet {
 
         }
 
+        //  Create new Client(Fox Sports), use new WebTarget to get response from Client
         Client sportsClient = ClientBuilder.newClient();
         WebTarget sportsTarget =
                 sportsClient.target("https://newsapi.org/v1/articles?source=fox-sports&sortBy=top&apiKey=4e50f2b2b7f441cfaf895d1d91e31a5c");
         String newSportsApiResponse = sportsTarget.request(MediaType.APPLICATION_JSON).get(String.class);
         log.info("************************" + newSportsApiResponse + "********************************");
 
+        // Map the response from the API
         ObjectMapper mapper = new ObjectMapper();
 
         try {
@@ -74,18 +85,19 @@ public class NewsApiServlet  extends HttpServlet {
 
         }
 
-        //  Take updated Sea        Client cnnClient = ClientBuilder.newClient();
+        //  Create new Client(Wall Street Journal), use new WebTarget to get response from Client
         Client client = ClientBuilder.newClient();
         WebTarget target =
                 client.target("https://newsapi.org/v1/articles?source=the-wall-street-journal&sortBy=top&apiKey=4e50f2b2b7f441cfaf895d1d91e31a5c");
-        String newApiResponse = target.request(MediaType.APPLICATION_JSON).get(String.class);
-        log.info("************************" + newApiResponse + "********************************");
+        String newApiWSJResponse = target.request(MediaType.APPLICATION_JSON).get(String.class);
+        log.info("************************" + newApiWSJResponse + "********************************");
 
+        // Map the response from the API
         ObjectMapper WSJmapper = new ObjectMapper();
 
         try {
 
-            org.newsapi.newsheadlines.Response apiMapped = WSJmapper.readValue(newApiResponse, org.newsapi.newsheadlines.Response.class);
+            org.newsapi.newsheadlines.Response apiMapped = WSJmapper.readValue(newApiWSJResponse, org.newsapi.newsheadlines.Response.class);
             newWSJHeadlineNews = apiMapped.getArticles();
         }
         catch (Exception ex) {
@@ -93,6 +105,7 @@ public class NewsApiServlet  extends HttpServlet {
 
         }
 
+        // Set Attributes to pass to JSP
         HttpSession sessionNewsApi = request.getSession();
         sessionNewsApi.setAttribute("noNewsFoundMessage", "");
         sessionNewsApi.setAttribute("CNNNewsResult", newCNNHeadlineNews);

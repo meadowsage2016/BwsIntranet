@@ -66,7 +66,7 @@ public class DeliveryRouteAddServlet extends HttpServlet {
                 sessionAdd.setAttribute("Message", message);
             }
         } else {
-            message = "City or Business already exists for: " + duplicateRoute;
+            message = "City or Business already exists for: " + duplicateRoute.getDeliveryCityOrBusiness();
             sessionAdd.setAttribute("Message", message);
         }
 

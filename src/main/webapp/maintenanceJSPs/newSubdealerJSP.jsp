@@ -17,7 +17,7 @@
 </head>
 <body>
 <div class="container">
-<form class="cmxform" id="newSubdealerForm" method="POST" action="SubdealersAdd">
+<form class="myforms" id="newSubdealerForm" method="POST" action="SubdealersAdd">
     <fieldset>
         <legend>New Subdealer</legend>
         <div class="form-group">
@@ -49,6 +49,10 @@
             <input class="form-control" id="sdZipCode" type="text" minlength="2" maxlength="10" name="sdZipCode" required>
         </div>
         <div class="form-group">
+            <label for="sdCounty">County (required)</label>
+            <input class="form-control" id="sdCounty" type="text" minlength="2" maxlength="20" name="sdCounty" required>
+        </div>
+        <div class="form-group">
             <label for="subdealerNotes">Notes(optional)</label>
             <input class="form-control" id="subdealerNotes" type="text" maxlength="500" name="subdealerNotes" >
         </div>
@@ -59,20 +63,9 @@
     </fieldset>
 </form>
 
-<c:out value="${Message}"/>
-<c:forEach items="${MaintResult}" var="sub">
-    <tr>
-        <td>${sub.customerNumber}</td>
-        <td>${sub.customerName}</td>
-        <td>${sub.sdAddress1}</td>
-        <td>${sub.sdAddress2}</td>
-        <td>${sub.sdCity}</td>
-        <td>${sub.sdState}</td>
-        <td>${sub.sdZipCode}</td>
-        <td>${sub.sdCounty}</td>
-
-    </tr>
-</c:forEach>
+    <div class="maintenanceMessage">
+        <c:out value="${Message}"/>
+    </div>
 </div>
 </body>
 </html>

@@ -24,7 +24,7 @@ To change this template use File | Settings | File Templates.
     </header>
 
     <c:forEach items="${DeleteResult}" var="sub">
-        <form id="deleteSubdealerForm" action="/SubdealerDelete" method="POST">
+        <form class="myforms" id="deleteSubdealerForm" action="/SubdealerDelete" method="POST">
             <div class="form-group">
                 <label for="customerNumber"><b>Customer Number</b></label><br />
                 <input class="form-control" name="customerNumber" id="customerNumber" type="text" value="${sub.customerNumber}" readonly />
@@ -64,7 +64,9 @@ To change this template use File | Settings | File Templates.
             <input type="submit" value="Verify Delete">
         </form>
     </c:forEach>
-    <h3><c:out value="${Message}" /></h3>
+    <div class="maintenanceMessage">
+        <c:out value="${Message}"/>
+    </div>
 </div>
 </body>
 </html>

@@ -64,8 +64,8 @@ public class SubdealerUpdateServlet extends HttpServlet {
         public void doPost(HttpServletRequest request, HttpServletResponse response)
                 throws ServletException, IOException {
 
-            String customerIdString;
-            int customerId;
+            String subdealerIdString;
+            int subdealerId;
             String customerNumberUpdate;
             String customerNameUpdate;
             String sdAddress1Update;
@@ -84,7 +84,7 @@ public class SubdealerUpdateServlet extends HttpServlet {
             //  Take updated Search object and store in Sessio
             HttpSession sessionAdd = request.getSession();
 
-            customerIdString = request.getParameter("customerId");
+            subdealerIdString = request.getParameter("subdealerId");
             customerNumberUpdate = request.getParameter("customerNumber");
             customerNameUpdate = request.getParameter("customerName");
             sdAddress1Update = request.getParameter("sdAddress1");
@@ -95,8 +95,8 @@ public class SubdealerUpdateServlet extends HttpServlet {
             sdCountyUpdate = request.getParameter("county");
             subdealerNotesUpdate = request.getParameter("subdealerNotes");
 
-            customerId = Integer.parseInt(customerIdString);
-            sub = dao.getSubdealerById(customerId);
+            subdealerId = Integer.parseInt(subdealerIdString);
+            sub = dao.getSubdealerById(subdealerId);
 
             sub.setCustomerNumber(customerNumberUpdate);
             sub.setCustomerName(customerNameUpdate);
@@ -110,7 +110,7 @@ public class SubdealerUpdateServlet extends HttpServlet {
 
             try {
                 dao.updateSubdealer(sub);
-                message = "Update Successful";
+                message = "Update Successful for Customer Number : " + customerNumberUpdate;
                 sessionAdd.setAttribute("Message", message);
             } catch (Exception ex) {
                 sessionAdd.setAttribute("Message", message);

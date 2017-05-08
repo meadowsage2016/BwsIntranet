@@ -39,16 +39,16 @@ public class CylinderOptionsAddServlet  extends HttpServlet{
 
 
         // local variables used to check for duplicate record by gas number
-        String dupGasNumber;
+        String paramValue;
         CylinderOptions dupCyl = new CylinderOptions();
 
 
         //  Take updated Search object and store in Sessio
         HttpSession sessionAdd = request.getSession();
 
-        dupGasNumber =  request.getParameter("gasNumber");
+        paramValue =  request.getParameter("gasNumber");
 
-        dupCyl = dao.getCylOptionByGasNumber(dupGasNumber);
+        dupCyl = dao.getCylOptionByGasNumber(paramValue);
 
         if (dupCyl == null) {
 
@@ -76,21 +76,21 @@ public class CylinderOptionsAddServlet  extends HttpServlet{
             try {
                 id = dao.addCylOptions(cyl);
             } catch (Exception ex) {
-                log("Exception found trying to add new Subdealer :" + ex);
+                log("Exception found trying to add new Cylinder Option :" + ex);
             }
 
             if (id == 0) {
                 sessionAdd.setAttribute("Message", message);
             } else {
                 newCyl = dao.getCylOptionById(id);
-                message = "Successful Add ";
+                message = "Successful Add of Cylinder: " + paramValue;
                 results.add(newCyl);
 
-                sessionAdd.setAttribute("MaintResult", results);
                 sessionAdd.setAttribute("Message", message);
             }
         } else {
-            sessionAdd.setAttribute("Message", "Duplicate record found for gas number: " + dupGasNumber);
+
+            sessionAdd.setAttribute("Message", "Duplicate record found for gas number: " + paramValue);
         }
 
         // Local variable to hold url of results page

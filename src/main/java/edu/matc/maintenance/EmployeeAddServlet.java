@@ -55,10 +55,7 @@ public class EmployeeAddServlet extends HttpServlet {
                 log("Exception found trying to add new Employee :" + ex);
             }
 
-
-
             if (id != 0) {
-
                 sessionAdd.setAttribute("Message", "New Employee Added: " + newEmployeeEmailAddress);
 
             } else {
@@ -67,10 +64,9 @@ public class EmployeeAddServlet extends HttpServlet {
 
         } else {
 
-            message = "Unsuccessful Add, Employee exists with email address: " + duplicateEmployee;
+            message = "Unsuccessful Add, Employee exists with email address: " + duplicateEmployee.getEmailAddress();
+            sessionAdd.setAttribute("Message", message);
         }
-
-        sessionAdd.setAttribute("Message", message);
 
         // Local variable to hold url of results page
         String url = "/maintenanceJSPs/newEmployeeJSP.jsp";

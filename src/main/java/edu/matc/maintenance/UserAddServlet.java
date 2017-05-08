@@ -25,6 +25,7 @@ import java.util.List;
 
         public void doPost(HttpServletRequest request, HttpServletResponse response)
                 throws ServletException, IOException {
+
             String message = "Add not Successful";
             int id = 0;
 
@@ -32,32 +33,42 @@ import java.util.List;
             Users user = new Users();
             UsersDao dao = new UsersDao();
             Users newUser = new Users();
+            Users duplicateUser = new Users();
 
             //  Take updated Search object and store in Sessio
             HttpSession sessionAdd = request.getSession();
 
-            user.setUser_name(request.getParameter("userName"));
-            user.setUser_pass(request.getParameter("pass1"));
+            newUserName = request.getParameter("userName");
+            duplicateUser = dao.getUserByUserName(newUserName);
 
-            try {
-                id = dao.addUser(user);
-            } catch (Exception ex) {
+            if (duplicateUser == null) {
 
-            }
-            if (id == 0) {
+                user.setUser_name(request.getParameter("userName"));
+                user.setUser_pass(request.getParameter("pass1"));
+
+                try {
+                    id = dao.addUser(user);
+                } catch (Exception ex) {
+                    log("Exception found during Add of new user: " + ex);
+                }
+
+
+                if (id == 0) {
+                    sessionAdd.setAttribute("Message", message);
+                } else {
+
+                    newUser = dao.getUserById(id);
+                    message = "New User Added: " + newUser.getUser_name();
+                    sessionAdd.setAttribute("Message", message);
+                }
+            } else  {
+
+                message = "Unsuccessful Add, User exists with user name: " + newUserName;
                 sessionAdd.setAttribute("Message", message);
-            } else {
-                newUser = dao.getUserById(id);
-                message = "Successful Add: ";
-                newUserName = "New User Added: " + newUser.getUser_name();
-
-                sessionAdd.setAttribute("MaintResult", newUserName);
-                sessionAdd.setAttribute("Message", message);
             }
 
 
-
-            // Local variable to hold url of results page
+        // Local variable to hold url of results page
             String url = "/maintenanceJSPs/newUserJSP.jsp";
 
             // Forward the request header to the JSP page
@@ -66,5 +77,5 @@ import java.util.List;
             dispatcher.forward(request, response);
 
         }
-    }
+}
 

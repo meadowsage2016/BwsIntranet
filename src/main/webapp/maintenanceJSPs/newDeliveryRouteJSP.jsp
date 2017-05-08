@@ -17,7 +17,7 @@
 </head>
 <body>
 <div class="container">
-<form class="cmxform" id="newRouteForm" method="POST" action="DeliveryRouteAdd">
+<form class="myforms" id="newRouteForm" method="POST" action="DeliveryRouteAdd">
     <fieldset>
         <legend>New Delivery Route</legend>
         <div class="form-group">
@@ -38,15 +38,9 @@
             <input class="submit" type="submit" value="Submit">
     </fieldset>
 </form>
-
-<c:out value="${Message}"/>
-<c:forEach items="${MaintResult}" var="route">
-    <tr>
-        <td>${route.deliveryCityOrBusiness}</td>
-        <td>${route.deliveryDay}</td>
-        <td>${route.deliveryFrequency}</td>
-    </tr>
-</c:forEach>
+    <div class="maintenanceMessage">
+        <c:out value="${Message}"/>
+    </div>
 </div>
 </body>
 </html>
