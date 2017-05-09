@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fde9b064-d912-42ad-bdff-fabd60a1d01e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/searches/UsersSearchServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteUsersSelectJSP.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/usersJSP.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/entity/BwsBlog.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/underconstruction/BwsBlog.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/persistence/BwsBlogDao.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/underconstruction/BwsBlogDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BwsIntranet.iml" afterPath="$PROJECT_DIR$/BwsIntranet.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Employee.sql" afterPath="$PROJECT_DIR$/Employee.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/control/CylinderOptionsMaintServlet.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/control/CylinderOptionsMaintServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/control/DeliveryMaintServlet.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/control/DeliveryMaintServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/control/EmployeeMaintServlet.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/control/EmployeeMaintServlet.java" />
@@ -32,40 +25,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/UserAddServlet.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/UserAddServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/UserDeleteServlet.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/UserDeleteServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/UserUpdateServlet.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/UserUpdateServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/persistence/EmployeeDao.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/persistence/EmployeeDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/persistence/SubdealersDao.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/persistence/SubdealersDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/adminJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/adminJSP.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/include-footer.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/include-footer.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteCylinderOptionsJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteCylinderOptionsJSP.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteCylinderOptionsSelectJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteCylinderOptionsSelectJSP.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteDeliveryRoutesJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteDeliveryRoutesJSP.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteDeliveryRoutesSelectJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteDeliveryRoutesSelectJSP.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteEmployeesJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteEmployeesJSP.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteEmployeesSelectJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteEmployeesSelectJSP.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteSubdealersJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteSubdealersJSP.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteSubdealersSelectJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteSubdealersSelectJSP.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteUsersJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteUsersJSP.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/newCylinderOptionsJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/newCylinderOptionsJSP.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/newDeliveryRouteJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/newDeliveryRouteJSP.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/newEmployeeJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/newEmployeeJSP.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/newSubdealerJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/newSubdealerJSP.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/newUserJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/newUserJSP.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateCylinderOptionsJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateCylinderOptionsJSP.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateCylinderOptionsSelectJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateCylinderOptionsSelectJSP.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateDeliveryRoutesJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateDeliveryRoutesJSP.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateDeliveryRoutesSelectJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateDeliveryRoutesSelectJSP.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateEmployeeJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateEmployeeJSP.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateEmployeeSelectJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateEmployeeSelectJSP.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateSubdealersJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateSubdealersJSP.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateSubdealersSelectJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateSubdealersSelectJSP.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateUserJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateUserJSP.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateUserSelectJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateUserSelectJSP.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/styles.css" afterPath="$PROJECT_DIR$/src/main/webapp/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/edu/matc/persistence/BwsBlogDaoTest.java" afterPath="$PROJECT_DIR$/src/test/java/edu/matc/persistence/BwsBlogDaoTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/edu/matc/persistence/SubdealersDaoTest.java" afterPath="$PROJECT_DIR$/src/test/java/edu/matc/persistence/SubdealersDaoTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/edu/matc/persistence/UsersDaoTest.java" afterPath="$PROJECT_DIR$/src/test/java/edu/matc/persistence/UsersDaoTest.java" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,18 +35,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="adminJSP.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/adminJSP.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -100,6 +49,29 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/webapp/adminJSP.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/matc/control/CylinderOptionsMaintServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/matc/control/DeliveryMaintServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/matc/control/EmployeeMaintServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/matc/control/NewsApiServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/matc/control/SubdealersMaintServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/matc/control/UsersMaintServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/matc/control/WundergroundApiServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/DeliveryRouteAddServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/EmployeeAddServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/CylinderOptionsAddServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateCylinderOptionsJSP.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/CylinderOptionsDelete.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/SubdealerAddServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/UserAddServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/UserUpdateServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/UserDeleteServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/SubdealerUpdateServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/SubdealerDeleteServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/CylinderOptionsUpdateServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/DeliveryRoutesDeleteServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/DeliveryRoutesUpdateServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/EmployeeDeleteServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/EmployeeUpdateServlet.java" />
       </list>
     </option>
   </component>
@@ -357,7 +329,67 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="persistence" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BwsIntranet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BwsIntranet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="matc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="maintenance" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BwsIntranet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BwsIntranet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="matc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -938,12 +970,12 @@
       <workItem from="1494347619659" duration="277000" />
       <workItem from="1494347934320" duration="38000" />
       <workItem from="1494348050602" duration="133000" />
-      <workItem from="1494348251330" duration="95000" />
+      <workItem from="1494348251330" duration="11956000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10342000" />
+    <option name="totallyTimeSpent" value="22203000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1298" height="994" extended-state="6" />
@@ -972,7 +1004,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4671875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37734374" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -993,7 +1025,22 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateCylinderOptionsJSP.jsp</url>
+          <line>48</line>
+          <properties />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/edu/matc/maintenance/SubdealerUpdateServlet.java</url>
+          <line>143</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1001,86 +1048,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/adminJSP.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/adminJSP.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteDeliveryRoutesJSP.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateCylinderOptionsJSP.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="52" column="6" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteCylinderOptionsJSP.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1132">
-          <caret line="57" column="16" lean-forward="true" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/maintenance/DeliveryRoutesDeleteServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="42" column="48" lean-forward="false" selection-start-line="28" selection-start-column="3" selection-end-line="42" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/maintenance/CylinderOptionsUpdateServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="40" column="5" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="51" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/maintenance/CylinderOptionsDelete.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateCylinderOptionsSelectJSP.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="15" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="29" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteCylinderOptionsSelectJSP.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateEmployeeSelectJSP.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
@@ -1130,20 +1097,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/maintenance/SubdealerDeleteServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-173">
-          <caret line="44" column="45" lean-forward="false" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/maintenance/EmployeeDeleteServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="87" column="36" lean-forward="true" selection-start-line="87" selection-start-column="36" selection-end-line="87" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteEmployeesJSP.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
@@ -1162,27 +1115,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="373">
           <caret line="52" column="5" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/maintenance/SubdealerUpdateServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="43" column="0" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="53" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/maintenance/EmployeeUpdateServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="46" column="24" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="50" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/control/DeliveryMaintServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1214,13 +1146,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/control/CylinderOptionsMaintServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="50" column="53" lean-forward="false" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/newCylinderOptionsJSP.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1246,7 +1171,7 @@
     <entry file="file://$PROJECT_DIR$/TimeLog.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
+          <first_editor relative-caret-position="-1764">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
             <folding />
           </first_editor>
@@ -1256,8 +1181,268 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/adminJSP.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="336">
+          <caret line="125" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/displayNewsApi.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="30" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/control/SubdealersMaintServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/control/UsersMaintServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="33" column="21" lean-forward="true" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/control/WundergroundApiServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1365">
+          <caret line="81" column="53" lean-forward="true" selection-start-line="81" selection-start-column="53" selection-end-line="81" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/control/CylinderOptionsMaintServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="18" column="15" lean-forward="true" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/control/DeliveryMaintServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/control/EmployeeMaintServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="49" column="4" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/control/NewsApiServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/entity/CylinderOptions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="23" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateCylinderOptionsJSP.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/maintenance/CylinderOptionsDelete.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="21" column="2" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="27" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/maintenance/CylinderOptionsAddServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="21" column="2" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="25" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/maintenance/CylinderOptionsUpdateServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2105">
+          <caret line="157" column="68" lean-forward="false" selection-start-line="157" selection-start-column="68" selection-end-line="157" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/maintenance/DeliveryRouteAddServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="20" column="2" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="26" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/maintenance/DeliveryRoutesDeleteServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2420">
+          <caret line="131" column="79" lean-forward="false" selection-start-line="131" selection-start-column="79" selection-end-line="131" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/maintenance/DeliveryRoutesUpdateServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2625">
+          <caret line="138" column="0" lean-forward="true" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/maintenance/EmployeeAddServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="33" column="9" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/maintenance/EmployeeDeleteServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2310">
+          <caret line="125" column="42" lean-forward="false" selection-start-line="125" selection-start-column="42" selection-end-line="125" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/maintenance/EmployeeUpdateServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="137" column="6" lean-forward="false" selection-start-line="137" selection-start-column="6" selection-end-line="137" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/maintenance/SubdealerAddServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="20" column="2" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="26" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/maintenance/SubdealerDeleteServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="22" column="19" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="29" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/maintenance/SubdealerUpdateServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="23" column="16" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="28" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/maintenance/UserAddServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="20" column="9" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="25" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/maintenance/UserDeleteServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="118" column="57" lean-forward="true" selection-start-line="118" selection-start-column="57" selection-end-line="118" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/maintenance/UserUpdateServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1790">
+          <caret line="128" column="58" lean-forward="false" selection-start-line="128" selection-start-column="58" selection-end-line="128" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/persistence/CylinderOptionsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/persistence/DeliveryRouteDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/persistence/EmployeeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/persistence/SessionFactoryProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/persistence/SubdealersDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/persistence/UserRolesDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/persistence/UsersDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
           <folding />
         </state>
       </provider>

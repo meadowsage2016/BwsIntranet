@@ -41,6 +41,8 @@ public class CylinderOptionsMaintServlet extends HttpServlet {
         session.removeAttribute("Message");
         String paramValue = request.getParameter("maint");
 
+        // Maintenance options are:  1 = Add,  2 = Update,  3 = Delete, 0 = View All
+
         if (paramValue.matches("1")) {
 
             // url of Add
@@ -53,6 +55,7 @@ public class CylinderOptionsMaintServlet extends HttpServlet {
         }
 
         if (paramValue.matches("2")) {
+
             // url of Update
             String url = "/maintenanceJSPs/updateCylinderOptionsSelectJSP.jsp";
 
@@ -64,6 +67,7 @@ public class CylinderOptionsMaintServlet extends HttpServlet {
 
 
         if (paramValue.matches("3")) {
+
             // url of Delete
             String url = "/maintenanceJSPs/deleteCylinderOptionsSelectJSP.jsp";
 

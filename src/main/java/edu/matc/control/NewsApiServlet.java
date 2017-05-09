@@ -24,17 +24,23 @@ import java.util.List;
         urlPatterns = { "/NewsApi" }
 )
 /**
- * Created by Sue Hundt on 3/9/17.
+ * NewsApiServlet gets Headline News from 3 news agencies on www.newsapi.org
+ * The BwsIntranet program produces a website for internal use of BWS employees
+ *
+ * @author Sue Hundt
+ * @version 1.0
+ * @since   2017-02-12
  */
 public class NewsApiServlet  extends HttpServlet {
 
     static Logger log = Logger.getLogger(NewsApiServlet.class.getName());
 
+    // Local ArrayLists to hold news returned from 3 different agencies
     List<ArticlesItem> newCNNHeadlineNews = new ArrayList<ArticlesItem>();
     List<ArticlesItem> newWSJHeadlineNews = new ArrayList<ArticlesItem>();
     List<ArticlesItem> newSportsHeadlineNews = new ArrayList<ArticlesItem>();
 
-
+    String failedMessage = "";
     /**
      *   doGet Creates call to API for Breaking news from 3 Stations, Cnn, WSJ & Fox Sports
      * @param request
@@ -61,8 +67,8 @@ public class NewsApiServlet  extends HttpServlet {
             newCNNHeadlineNews = apiMapped.getArticles();
         }
         catch (Exception ex) {
-            log.error("$$$$$$$$$" + ex + "$$$$$$$$$$$$$$$");
-
+            log.error("News failed from CNN: " + ex + " :www.newsapi.org");
+            failedMessage = "News failed from CNN - www.newsapi.org";
         }
 
         //  Create new Client(Fox Sports), use new WebTarget to get response from Client
@@ -81,8 +87,8 @@ public class NewsApiServlet  extends HttpServlet {
             newSportsHeadlineNews = apiMapped.getArticles();
         }
         catch (Exception ex) {
-            log.error("$$$$$$$$$" + ex + "$$$$$$$$$$$$$$$");
-
+            log.error("News failed from Fox Sports : " + ex + ": www.newsapi.org");
+            failedMessage = failedMessage + " News failed from Fox Sports - www.newsapi.org - ";
         }
 
         //  Create new Client(Wall Street Journal), use new WebTarget to get response from Client
@@ -102,12 +108,12 @@ public class NewsApiServlet  extends HttpServlet {
         }
         catch (Exception ex) {
             log.error("$$$$$$$$$" + ex + "$$$$$$$$$$$$$$$");
-
+            failedMessage = failedMessage + " News failed from Wall Street Journal - www.newsapi.org - ";
         }
 
         // Set Attributes to pass to JSP
         HttpSession sessionNewsApi = request.getSession();
-        sessionNewsApi.setAttribute("noNewsFoundMessage", "");
+        sessionNewsApi.setAttribute("noRecordsFoundMessage", failedMessage);
         sessionNewsApi.setAttribute("CNNNewsResult", newCNNHeadlineNews);
         sessionNewsApi.setAttribute("WSJNewsResult", newWSJHeadlineNews);
         sessionNewsApi.setAttribute("SportsNewsResult", newSportsHeadlineNews);

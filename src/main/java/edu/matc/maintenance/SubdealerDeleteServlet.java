@@ -4,6 +4,7 @@ import edu.matc.entity.CylinderOptions;
 import edu.matc.entity.Subdealers;
 import edu.matc.persistence.CylinderOptionsDao;
 import edu.matc.persistence.SubdealersDao;
+import org.apache.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -18,7 +19,14 @@ import java.util.List;
 
 
 /**
- * Created by student on 4/29/17.
+ * SubdealerDeleteServlet takes code passed from deleteSubdealersSelectJSP and attempts
+ * to delete to data base
+ *
+ * The BwsIntranet program produces a website for internal use of BWS employees
+ *
+ * @author Sue Hundt
+ * @version 1.0
+ * @since   2017-02-12
  */
 @WebServlet(
         name = "SubdealerDelete",
@@ -26,23 +34,40 @@ import java.util.List;
 )
 public class SubdealerDeleteServlet extends HttpServlet  {
 
+    static Logger log = Logger.getLogger(SubdealerDeleteServlet.class.getName());
+
+    /**
+     * doGet takes keyword passed from deleteSubdealersSelectJSP,
+     * gets record and returns data to deleteSubdealersJSP for
+     * verification of delete
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        // Local variable
+        String url = "";
+
+        // Local instances
         List<Subdealers> subAsList = new ArrayList<Subdealers>();
         Subdealers cyl = new Subdealers();
         SubdealersDao dao = new SubdealersDao();
-        String url = "";
 
-        //  Take updated Search object and store in Sessio
+        //  get session and retrieve subdealer to delete
         HttpSession sessionDelete = request.getSession();
         String paramValue = request.getParameter("customerNumber");
 
+        // get record from DB
         Subdealers sub = dao.getsubdealerByCustomerNumber(paramValue);
 
+        // if record not found, send notice to user
         if (sub == null) {
 
             sessionDelete.setAttribute("Message", "Subdealer not found: " + paramValue);
+            log.warn("Subdealer not found: " + paramValue);
 
             // Local variable to hold url of results page
             url = "/maintenanceJSPs/deleteSubdealersSelectJSP.jsp";
@@ -63,25 +88,36 @@ public class SubdealerDeleteServlet extends HttpServlet  {
 
     }
 
-
+    /**
+     * doPost takes verified keyword from deleteSubdealersJSP, attempts to delete from database
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
         public void doPost(HttpServletRequest request, HttpServletResponse response)
                 throws ServletException, IOException {
 
+            // Local variables
             String message = "Delete not Successful";
 
+            // Local instances
             Subdealers sub = new Subdealers();
             SubdealersDao dao = new SubdealersDao();
 
-            //  Take updated Search object and store in Session
+            //  Get session and keyword to delete
             HttpSession sessionDelete = request.getSession();
             String subToDelete = request.getParameter("customerNumber");
 
+            // get of id of customer
             sub = dao.getsubdealerByCustomerNumber(subToDelete);
             int subIdToDelete = sub.getSubdealerId();
 
+            // delete from database
             try {
                 dao.deleteSubdealer(subIdToDelete);
                 message="Successful delete of Subdealer : " + subToDelete;
+                log.info(message);
                 sessionDelete.setAttribute("Message", message);
                 // Local variable to hold url of results page
                 String url = "/maintenanceJSPs/deleteSubdealersSelectJSP.jsp";
@@ -92,6 +128,7 @@ public class SubdealerDeleteServlet extends HttpServlet  {
                 dispatcher.forward(request, response);
 
             } catch (Exception ex) {
+                log("Exception found trying to delete subdealer" + ex);
             }
 
         }

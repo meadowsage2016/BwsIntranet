@@ -16,7 +16,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by student on 4/29/17.
+ * SubdealerAddServlet takes code passed from newSubdealersJSP and attempts
+ * to add to data base
+ *
+ * The BwsIntranet program produces a website for internal use of BWS employees
+ *
+ * @author Sue Hundt
+ * @version 1.0
+ * @since   2017-02-12
  */
 @WebServlet(
         name = "SubdealersAdd",
@@ -26,6 +33,14 @@ public class SubdealerAddServlet extends HttpServlet {
 
     static Logger log = Logger.getLogger(SubdealerAddServlet.class.getName());
 
+    /**
+     * DoPost method takes the data returned from the newSubdealerJSP
+     * and attempts to add to data base - first checking for a duplicate record
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
         public void doPost(HttpServletRequest request, HttpServletResponse response)
                 throws ServletException, IOException {
 
@@ -44,7 +59,7 @@ public class SubdealerAddServlet extends HttpServlet {
             Subdealers duplicateSubdealer = new Subdealers();
             String paramValue;
 
-
+            // Local instances
             SubdealersDao dao = new SubdealersDao();
             List<Subdealers> results = new ArrayList<Subdealers>();
 
@@ -55,6 +70,7 @@ public class SubdealerAddServlet extends HttpServlet {
             paramValue = request.getParameter("customerNumber");
             duplicateSubdealer = dao.getsubdealerByCustomerNumber(paramValue);
 
+            // If duplicate record does not exist, add record
             if (duplicateSubdealer == null) {
 
                 sub.setCustomerName(request.getParameter("customerName"));
@@ -70,24 +86,22 @@ public class SubdealerAddServlet extends HttpServlet {
                 try {
                     id = dao.addSubdealer(sub);
                     if (id == 0) {
-
+                        log.warn("Add of new Subdealer failed: " + paramValue);
                         sessionAdd.setAttribute("Message", message);
 
                     } else {
-
                         sessionAdd.setAttribute("Message", "Successful Add of Customer Number:  " + paramValue);
-
+                        log.info("Successful Add of Customer Number:  " + paramValue);
                     }
 
                 } catch (Exception ex) {
-                    log("Exception found attempting Subdealer Add:  " + ex);
+                    sessionAdd.setAttribute("Message", "Failed to Add Customer Number:  " + paramValue);
+                    log.warn("Exception found attempting Subdealer Add:  " + ex);
                 }
-
-
 
             } else {
 
-                log("Duplicate found: " + duplicateSubdealer.getCustomerNumber());
+                log.warn("Duplicate found: " + duplicateSubdealer.getCustomerNumber());
                 sessionAdd.setAttribute("Message", "Duplicate Record found for Customer Number: " + paramValue);
 
             }
