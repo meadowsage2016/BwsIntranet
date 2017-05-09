@@ -29,9 +29,10 @@ CREATE TABLE `Employee` (
   `department` varchar(45) NOT NULL,
   `phoneExtension` int(9) NOT NULL,
   `cellPhone` varchar(10) DEFAULT NULL,
+  `emailAddress` varchar(40) DEFAULT NULL,
   PRIMARY KEY (`employeeId`),
   UNIQUE KEY `employeeId_UNIQUE` (`employeeId`)
-) ENGINE=InnoDB AUTO_INCREMENT=75 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +41,7 @@ CREATE TABLE `Employee` (
 
 LOCK TABLES `Employee` WRITE;
 /*!40000 ALTER TABLE `Employee` DISABLE KEYS */;
-INSERT INTO `Employee` VALUES (1,'Mickey','Mouse','shipping',334,'6085551212'),(4,'Mike','Johnson','office',337,'6085551215'),(5,'Bob','Wilson','delivery',338,'6085551216'),(6,'Arnie','Soommy','filling',339,'6085551217'),(7,'Linda','Aspen','hydrotest',340,'6085551218'),(8,'Maggie','Marles','shipping',341,'6085551219'),(9,'Melissa','Johnston','store',342,'6085551220'),(10,'Rhonda','Johnson','warehouse',343,'6085551221'),(11,'Rosie','Mouse','office',344,'6085551222'),(12,'Scott','Jones','delivery',345,'6085551223'),(13,'Phoenix','Smith','filling',346,'6085551224'),(14,'Mickey','Johnson','hydrotest',347,'6085551225'),(15,'Sue','Wilson','shipping',348,'6085551226'),(16,'Jane','Soommy','store',349,'6085551227'),(17,'Mike','Aspen','warehouse',350,'6085551228'),(18,'Bob','Marles','office',351,'6085551229'),(19,'Arnie','Johnston','delivery',352,'6085551230'),(22,'Melissa','Jones','shipping',355,'6085551233'),(24,'Rosie','Johnson','warehouse',357,'6085551235'),(25,'Scott','Wilson','office',358,'6085551236'),(26,'Phoenix','Soommy','delivery',359,'6085551237'),(27,'Mickey','Aspen','filling',360,'6085551238'),(29,'Jane','Johnston','shipping',362,'6085551240'),(31,'Bob','Mouse','warehouse',364,'6085551242'),(32,'Arnie','Jones','office',365,'6085551243'),(33,'Linda','Smith','delivery',366,'6085551244'),(34,'Maggie','Johnson','filling',367,'6085551245'),(35,'Melissa','Wilson','hydrotest',368,'6085551246'),(36,'Rhonda','Soommy','shipping',369,'6085551247'),(37,'Rosie','Aspen','store',370,'6085551248'),(39,'Phoenix','Johnston','office',372,'6085551250'),(43,'Phoenix','Hundt','president',998,'6085551212'),(44,'Phoenix','Hundt','president',997,'6085551212'),(45,'Phoenix','Hundt','president',997,'6085551212'),(46,'Phoenix','Hundt','president',997,'6085551212'),(47,'Phoenix','Hundt','president',997,'6085551212'),(48,'Phoenix','Hundt','president',997,'6085551212'),(49,'Phoenix','Hundt','president',997,'6085551212'),(62,'Phoenix','Hundt','president',997,'6085551212'),(63,'Phoenix','Hundt','president',997,'6085551212'),(64,'Phoenix','Johnson','president',997,'6085551212'),(65,'Phoenix','Johnson','president',997,'6085551212'),(66,'Phoenix','Hundt','president',997,'6085551212'),(67,'Phoenix','Hundt','president',997,'6085551212'),(68,'Phoenix','Hundt','president',997,'6085551212'),(71,'Phoenix','Sally','president',997,'6085551212'),(72,'Phoenix','Sally','president',997,'6085551212'),(73,'Erin','Mairs','office',134,'6089991212'),(74,'Sue','Super','queen',444,'8887776666');
+INSERT INTO `Employee` VALUES (2,'Maggie','Pecher','IT',124,'6085551112','maggie@badgerwelding.com'),(3,'Melissa','Benz','Accts Payable',136,'6085551113','melissa@badgerwelding.com'),(4,'Erin','Mairs','Office',134,'6085551114','erin@badgerwelding.com'),(5,'Linda','Strieff','Office',122,'6085551115','linda@badgerwelding.com'),(6,'Rosie','Ortiz','Office',101,'6085551116','rosie@badgerwelding.com'),(7,'Rhonda','Weidenbeck','Office',123,'6085551117','rhonda@badgerwelding.com'),(8,'Dave','Brunker','Plant',135,'6085551118','dave@badgerwelding.com'),(9,'Rick','Maiers','Sales',105,'6085551119','rick@badgerwelding.com'),(10,'Paul','Kemnitzer','Sales',137,'6085551120','paul@badgerwelding.com'),(11,'Fred','Lawingers','Sales',107,'6085551121','fred@badgerwelding.com'),(12,'Don','Ward','IT',666,'6081115555','don@badgerwelding.com'),(14,'Henry','Ford','IT',999,'6085551111','henry@madisoncollege.edu'),(15,'SEEEE','Johnson','IT',123,'6088887878','sue@madisoncollege.edu'),(16,'Erin','M','Office',135,'6085551212','erin@yahoo.com'),(17,'Jill','Amevda','Office',555,'6081112121','jill@badgerwelding.com'),(18,'Loppy','Doopy','Office',144,'6085551212','loopy@yahoo.com');
 /*!40000 ALTER TABLE `Employee` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-29 19:59:55
+-- Dump completed on 2017-05-07 20:47:22

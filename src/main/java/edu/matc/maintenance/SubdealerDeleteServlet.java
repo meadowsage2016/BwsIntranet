@@ -25,25 +25,37 @@ import java.util.List;
         urlPatterns = { "/SubdealerDelete" }
 )
 public class SubdealerDeleteServlet extends HttpServlet  {
+
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         List<Subdealers> subAsList = new ArrayList<Subdealers>();
         Subdealers cyl = new Subdealers();
         SubdealersDao dao = new SubdealersDao();
+        String url = "";
+
         //  Take updated Search object and store in Sessio
         HttpSession sessionDelete = request.getSession();
         String paramValue = request.getParameter("customerNumber");
 
         Subdealers sub = dao.getsubdealerByCustomerNumber(paramValue);
-        subAsList.add(sub);
 
-        sessionDelete.setAttribute("UpdateResult", subAsList);
-        sessionDelete.setAttribute("Message", "");
+        if (sub == null) {
 
-        // Local variable to hold url of results page
-        String url = "/maintenanceJSPs/deleteSubdealersJSP.jsp";
+            sessionDelete.setAttribute("Message", "Subdealer not found: " + paramValue);
 
+            // Local variable to hold url of results page
+            url = "/maintenanceJSPs/deleteSubdealersSelectJSP.jsp";
+
+        } else {
+            subAsList.add(sub);
+
+            sessionDelete.setAttribute("DeleteResult", subAsList);
+            sessionDelete.setAttribute("Message", "");
+
+            // Local variable to hold url of results page
+            url = "/maintenanceJSPs/deleteSubdealersJSP.jsp";
+        }
         // Forward the request header to the JSP page
         RequestDispatcher dispatcher
                 = getServletContext().getRequestDispatcher(url);
@@ -69,10 +81,10 @@ public class SubdealerDeleteServlet extends HttpServlet  {
 
             try {
                 dao.deleteSubdealer(subIdToDelete);
-                message="Successful delete.";
+                message="Successful delete of Subdealer : " + subToDelete;
                 sessionDelete.setAttribute("Message", message);
                 // Local variable to hold url of results page
-                String url = "/maintenanceJSPs/deleteSubdealersJSP.jsp";
+                String url = "/maintenanceJSPs/deleteSubdealersSelectJSP.jsp";
 
                 // Forward the request header to the JSP page
                 RequestDispatcher dispatcher

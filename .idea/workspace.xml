@@ -2,11 +2,71 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fde9b064-d912-42ad-bdff-fabd60a1d01e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/searches/UsersSearchServlet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteUsersSelectJSP.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/usersJSP.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/entity/BwsBlog.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/underconstruction/BwsBlog.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/persistence/BwsBlogDao.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/underconstruction/BwsBlogDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TimeLog.md" afterPath="$PROJECT_DIR$/TimeLog.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BwsIntranet.iml" afterPath="$PROJECT_DIR$/BwsIntranet.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Employee.sql" afterPath="$PROJECT_DIR$/Employee.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/control/CylinderOptionsMaintServlet.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/control/CylinderOptionsMaintServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/control/DeliveryMaintServlet.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/control/DeliveryMaintServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/control/EmployeeMaintServlet.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/control/EmployeeMaintServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/control/NewsApiServlet.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/control/NewsApiServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/control/SubdealersMaintServlet.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/control/SubdealersMaintServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/control/UsersMaintServlet.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/control/UsersMaintServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/control/WundergroundApiServlet.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/control/WundergroundApiServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/CylinderOptionsAddServlet.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/CylinderOptionsAddServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/CylinderOptionsDelete.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/CylinderOptionsDelete.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/CylinderOptionsUpdateServlet.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/CylinderOptionsUpdateServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/DeliveryRouteAddServlet.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/DeliveryRouteAddServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/DeliveryRoutesDeleteServlet.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/DeliveryRoutesDeleteServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/DeliveryRoutesUpdateServlet.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/DeliveryRoutesUpdateServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/EmployeeAddServlet.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/EmployeeAddServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/EmployeeDeleteServlet.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/EmployeeDeleteServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/EmployeeUpdateServlet.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/EmployeeUpdateServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/SubdealerAddServlet.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/SubdealerAddServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/SubdealerDeleteServlet.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/SubdealerDeleteServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/SubdealerUpdateServlet.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/SubdealerUpdateServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/UserAddServlet.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/UserAddServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/UserDeleteServlet.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/UserDeleteServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/UserUpdateServlet.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/maintenance/UserUpdateServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/persistence/EmployeeDao.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/persistence/EmployeeDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/persistence/SubdealersDao.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/persistence/SubdealersDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/adminJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/adminJSP.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/include-footer.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/include-footer.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteCylinderOptionsJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteCylinderOptionsJSP.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteCylinderOptionsSelectJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteCylinderOptionsSelectJSP.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteDeliveryRoutesJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteDeliveryRoutesJSP.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteDeliveryRoutesSelectJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteDeliveryRoutesSelectJSP.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteEmployeesJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteEmployeesJSP.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteEmployeesSelectJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteEmployeesSelectJSP.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteSubdealersJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteSubdealersJSP.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteSubdealersSelectJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteSubdealersSelectJSP.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteUsersJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/deleteUsersJSP.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/newCylinderOptionsJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/newCylinderOptionsJSP.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/newDeliveryRouteJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/newDeliveryRouteJSP.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/newEmployeeJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/newEmployeeJSP.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/newSubdealerJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/newSubdealerJSP.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/newUserJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/newUserJSP.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateCylinderOptionsJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateCylinderOptionsJSP.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateCylinderOptionsSelectJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateCylinderOptionsSelectJSP.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateDeliveryRoutesJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateDeliveryRoutesJSP.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateDeliveryRoutesSelectJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateDeliveryRoutesSelectJSP.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateEmployeeJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateEmployeeJSP.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateEmployeeSelectJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateEmployeeSelectJSP.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateSubdealersJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateSubdealersJSP.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateSubdealersSelectJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateSubdealersSelectJSP.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateUserJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateUserJSP.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateUserSelectJSP.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/maintenanceJSPs/updateUserSelectJSP.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/styles.css" afterPath="$PROJECT_DIR$/src/main/webapp/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/edu/matc/persistence/BwsBlogDaoTest.java" afterPath="$PROJECT_DIR$/src/test/java/edu/matc/persistence/BwsBlogDaoTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/edu/matc/persistence/SubdealersDaoTest.java" afterPath="$PROJECT_DIR$/src/test/java/edu/matc/persistence/SubdealersDaoTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/edu/matc/persistence/UsersDaoTest.java" afterPath="$PROJECT_DIR$/src/test/java/edu/matc/persistence/UsersDaoTest.java" />
     </list>
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +94,13 @@
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/webapp/adminJSP.jsp" />
+      </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -365,10 +432,6 @@
       <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
-  </component>
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -875,16 +938,15 @@
       <workItem from="1494347619659" duration="277000" />
       <workItem from="1494347934320" duration="38000" />
       <workItem from="1494348050602" duration="133000" />
-      <workItem from="1494348251330" duration="29000" />
+      <workItem from="1494348251330" duration="95000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10276000" />
+    <option name="totallyTimeSpent" value="10342000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1298" height="994" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -910,7 +972,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.02734375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4671875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />

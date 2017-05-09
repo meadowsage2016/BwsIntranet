@@ -26,24 +26,32 @@ import java.util.List;
         public void doGet(HttpServletRequest request, HttpServletResponse response)
                 throws ServletException, IOException {
 
-
-
             List<CylinderOptions> cylAsList = new ArrayList<CylinderOptions>();
             CylinderOptions cyl = new CylinderOptions();
             CylinderOptionsDao dao = new CylinderOptionsDao();
+            String url = "";
+
             //  Take updated Search object and store in Sessio
             HttpSession sessionAdd = request.getSession();
             String paramValue = request.getParameter("gasNumber");
 
             cyl = dao.getCylOptionByGasNumber(paramValue);
-            cylAsList.add(cyl);
 
-            sessionAdd.setAttribute("UpdateResult", cylAsList);
-            sessionAdd.setAttribute("Message", "");
+            if (cyl == null) {
+                sessionAdd.setAttribute("Message", "Cylinder Not Found : " + paramValue);
 
-            // Local variable to hold url of results page
-            String url = "/maintenanceJSPs/updateCylinderOptionsJSP.jsp";
+                // Local variable to hold url of results page
+                url = "/maintenanceJSPs/updateCylinderOptionsSelectJSP.jsp";
 
+            } else {
+                cylAsList.add(cyl);
+
+                sessionAdd.setAttribute("UpdateResult", cylAsList);
+                sessionAdd.setAttribute("Message", "");
+
+                // Local variable to hold url of results page
+                url = "/maintenanceJSPs/updateCylinderOptionsJSP.jsp";
+            }
             // Forward the request header to the JSP page
             RequestDispatcher dispatcher
                     = getServletContext().getRequestDispatcher(url);
@@ -87,7 +95,6 @@ import java.util.List;
             cylinderRent = Double.parseDouble(cylinderRentString);
             cylinderFiveYearLease = Double.parseDouble(cylinderFiveYearLeaseString);
             cylinderOnePPRent = Double.parseDouble(cylinderOnePPRentString);
-            cylinderPurchase = Double.parseDouble(cylinderPurchaseString);
 
             cyl = dao.getCylOptionByGasNumber(gasNumberUpdate);
 
@@ -96,13 +103,20 @@ import java.util.List;
             cyl.setCylinderRent(cylinderRent);
             cyl.setCylinderOnePPRent(cylinderOnePPRent);
             cyl.setCylinderFiveYearLease(cylinderFiveYearLease);
-            cyl.setCylinderPurchase(cylinderPurchase);
+            if (cylinderPurchaseString == null) {
+                cyl.setCylinderPurchase(null);
+            }
+            else {
+                cylinderPurchase = Double.parseDouble(cylinderPurchaseString);
+                cyl.setCylinderPurchase(cylinderPurchase);
+            }
 
             try {
                 dao.updateCylOption(cyl);
-                message = "Update Successful";
+                message = "Update Successful for gas: " + gasNumberUpdate;
                 sessionAdd.setAttribute("Message", message);
             } catch (Exception ex) {
+                log("Update has Exception: " + ex);
                 sessionAdd.setAttribute("Message", message);
             }
 

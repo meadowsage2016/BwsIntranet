@@ -30,52 +30,39 @@ public class WundergroundApiServlet  extends HttpServlet {
     static Logger log = Logger.getLogger(WundergroundApiServlet.class.getName());
     CurrentObservation newForecast = new CurrentObservation();
 
-        public void doGet(HttpServletRequest request, HttpServletResponse response)
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
 
-            Client client = ClientBuilder.newClient();
-            WebTarget target =
-                    client.target("http://api.wunderground.com/api/3f37ec3c7578e618/conditions/q/WI/Madison.json");
-            String apiResponse = target.request(MediaType.APPLICATION_JSON).get(String.class);
-            log.info("************************" + apiResponse + "********************************");
+        Client client = ClientBuilder.newClient();
+        WebTarget target =
+                client.target("http://api.wunderground.com/api/3f37ec3c7578e618/conditions/q/WI/Madison.json");
+        String apiResponse = target.request(MediaType.APPLICATION_JSON).get(String.class);
+        log.info("************************" + apiResponse + "********************************");
 
-            ObjectMapper mapper = new ObjectMapper();
+        ObjectMapper mapper = new ObjectMapper();
 
-            try {
+        try {
 
-                Response apiMapped = mapper.readValue(apiResponse, Response.class);
-                newForecast = apiMapped.getCurrentObservation();
+            Response apiMapped = mapper.readValue(apiResponse, Response.class);
+            newForecast = apiMapped.getCurrentObservation();
 
-                String a = newForecast.getNowcast();
-                double b = newForecast.getTempC();
-                String c = newForecast.getObservationEpoch();
-                double d = newForecast.getWindMph();
-                double e = newForecast.getWindDegrees();
-                String f = newForecast.getTemperatureString();
-                String g = newForecast.getWeather();
-                String h = newForecast.getFeelslikeString();
-                String i = newForecast.getPrecip1hrString();
-                System.out.println("**" + a + b + c + e + f + g + h + i + "***");
-
-            }
-            catch (Exception ex) {
+        }
+           catch (Exception ex) {
                 log.error("$$$$$$$$$" + ex + "$$$$$$$$$$$$$$$");
-
-            }
-
-            //  Take updated Search object and store in Sessio
-            HttpSession sessionWunderApi = request.getSession();
-            sessionWunderApi.setAttribute("noForecastFoundMessage", "");
-            sessionWunderApi.setAttribute("ForecastResult", newForecast);
-
-            // Local variable to hold url of results page
-            String url =  "/displayWundergroundApi.jsp";
-
-            // Forward the request header to the JSP page
-            RequestDispatcher dispatcher
-                    = getServletContext().getRequestDispatcher(url);
-            dispatcher.forward(request, response);
         }
 
+         //  Get session, set attributes, message and forecast object
+        HttpSession sessionWunderApi = request.getSession();
+        sessionWunderApi.setAttribute("noForecastFoundMessage", "");
+        sessionWunderApi.setAttribute("ForecastResult", newForecast);
+
+        // Local variable to hold url of results page
+        String url =  "/displayWundergroundApi.jsp";
+
+        // Forward the request header to the JSP page
+        RequestDispatcher dispatcher
+                 = getServletContext().getRequestDispatcher(url);
+        dispatcher.forward(request, response);
+    }
 
 }

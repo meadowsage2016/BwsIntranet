@@ -23,7 +23,7 @@
     </div><!--close strapline-->
 </header>
 <c:forEach items="${UpdateResult}" var="route">
-    <form id="updatCylOpts" action="/DeliveryRoutesUpdate" method="POST">
+    <form class="myforms" id="updatCylOpts" action="/DeliveryRoutesUpdate" method="POST">
         <div class="form-group">
             <input class="form-control" name="cityId" id="cityId" type="hidden" value="${route.deliveryRouteId}" />
         </div>
@@ -42,7 +42,9 @@
         <input type="submit" value="Submit">
     </form>
 </c:forEach>
-<h3><c:out value="${Message}" /></h3>
+    <div class="maintenanceMessage">
+        <c:out value="${Message}"/>
+    </div>
 </div>
 </body>
 </html>

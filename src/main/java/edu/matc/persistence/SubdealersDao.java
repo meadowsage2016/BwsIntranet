@@ -56,9 +56,9 @@ public class SubdealersDao {
         return subdealer;
     }
 
-    /** Return a list of all employees
+    /** Return a list of all Subdealers
      *
-     * @return All employees
+     * @return All Subdealers
      */
     public List<Subdealers> getAllSubdealers() {
         List<Subdealers> subdealers = new ArrayList<Subdealers>();
@@ -74,61 +74,61 @@ public class SubdealersDao {
         return subdealers;
     }
 
-
-
     /** save or update user
      * @param subdealer
      * @return id of the inserted employee
      */
 
     public int addSubdealer(Subdealers subdealer) throws Exception {
+
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         int id = 0;
+
         try {
-        session.beginTransaction();
-        id = (Integer) session.save(subdealer);
-        session.getTransaction().commit();
+            session.beginTransaction();
+            id = (Integer) session.save(subdealer);
+            session.getTransaction().commit();
         } catch (HibernateException hibernateException) {
-        log.error("Hibernate Exception", hibernateException);
+            log.error("Hibernate Exception", hibernateException);
         } finally {
-        session.close();
+            session.close();
         }
-
-        return id;
-
+            log.info("Id of new Subdealer: " + id);
+            return id;
     }
 
     /**
-     * delete a user by id
-     * @param id the user's id
+     * delete a Subdealer by id
+     * @param id the Subdealers's id
      */
     public void deleteSubdealer(int id) throws Exception {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
 
         try{
-        Subdealers subdealer = (Subdealers) session.get(Subdealers.class, id);
-        session.beginTransaction();
-        session.delete(subdealer);
-        session.getTransaction().commit();
+            Subdealers subdealer = (Subdealers) session.get(Subdealers.class, id);
+            session.beginTransaction();
+            session.delete(subdealer);
+            session.getTransaction().commit();
         } catch (HibernateException hibernateException) {
-        log.error("Hibernate Exception", hibernateException);
+                log.error("Hibernate Exception", hibernateException);
         } finally {
         session.close();
         }
-
     }
+
     public void updateSubdealer(Subdealers subdealer) throws Exception {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
 
         try{
-        session.beginTransaction();
 
-        session.update(subdealer);
-        session.getTransaction().commit();
-        } catch (HibernateException hibernateException) {
-        log.error("Hibernate Exception", hibernateException);
+            session.beginTransaction();
+            session.update(subdealer);
+            session.getTransaction().commit();
+
+            } catch (HibernateException hibernateException) {
+                   log.error("Hibernate Exception", hibernateException);
         } finally {
         session.close();
         }

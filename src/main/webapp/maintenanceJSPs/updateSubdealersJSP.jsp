@@ -1,4 +1,4 @@
-%--
+<%--
 Created by IntelliJ IDEA.
 User: student
 Date: 3/17/17
@@ -24,10 +24,13 @@ To change this template use File | Settings | File Templates.
 </header>
 
 <c:forEach items="${UpdateResult}" var="sub">
-    <form id="updatCylOpts" action="/SubdealersUpdate" method="POST">
+    <form class="myforms" id="updatCylOpts" action="/SubdealersUpdate" method="POST">
+        <div class="form-group">
+            <input class="form-control" name="subdealerId" id="subdealerId" type="hidden" value="${sub.subdealerId}" >
+        </div>
         <div class="form-group">
                     <label for="customerNumber"><b>Customer Number</b></label><br />
-                    <input class="form-control" name="customerNumber" id="customerNumber" type="text" value="${sub.customerNumber}" required />
+                    <input class="form-control" name="customerNumber" id="customerNumber" type="text" value="${sub.customerNumber}" readonly />
         </div>
         <div class="form-group">
                     <label for="customerName"><b>Customer Name</b></label><br />
@@ -39,7 +42,7 @@ To change this template use File | Settings | File Templates.
         </div>
         <div class="form-group">
                     <label for="sdAddress2"><b>Address 2</b></label><br />
-                    <input class="form-control" name="sdAddress2" id="sdAddress2" type="text" value="${sub.sdAddress2}" required />
+                    <input class="form-control" name="sdAddress2" id="sdAddress2" type="text" value="${sub.sdAddress2}" />
         </div>
         <div class="form-group">
                     <label for="city"><b>Cityt</b></label><br />
@@ -59,12 +62,14 @@ To change this template use File | Settings | File Templates.
         </div>
         <div class="form-group">
                 <label for="notes"><b>Notes</b></label><br />
-                <input class="form-control" name="notes"  id="notes" type="text" value="${sub.subdealerNotes}" required />
+                <input class="form-control" name="notes"  id="notes" type="text" value="${sub.subdealerNotes}" />
         </div>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit Update">
     </form>
 </c:forEach>
-<h3><c:out value="${Message}" /></h3>
+    <div class="maintenanceMessage">
+        <c:out value="${Message}"/>
+    </div>
 </div>
 </body>
 </html>

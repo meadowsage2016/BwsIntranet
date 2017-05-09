@@ -23,7 +23,7 @@
     </div><!--close strapline-->
 </header>
 <c:forEach items="${UpdateResult}" var="emp">
-    <form id="updatCylOpts" action="EmployeeUpdate" method="POST">
+    <form class="myforms" id="updatCylOpts" action="EmployeeUpdate" method="POST">
         <div class="form-group">
             <input type="hidden" name="employeeId" value="${emp.employeeId}">
         </div>

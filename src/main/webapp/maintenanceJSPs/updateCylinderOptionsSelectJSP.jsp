@@ -14,7 +14,7 @@
 </head>
 <body>
 <div class="container">
-<form id="updateCylOptForm" action="/CylinderOptionsUpdate" method="GET">
+<form class="myforms" id="updateCylOptForm" action="/CylinderOptionsUpdate" method="GET">
     <fieldset>
         <legend>Update Cylinder Option</legend>
         <div class="form-group">
@@ -24,7 +24,9 @@
             <input type="submit" id="update" value="Submit">
     </fieldset>
 </form>
-<c:out value="${Message}"/>
+    <div class="maintenanceMessage">
+        <c:out value="${Message}"/>
+    </div>
 </div>
 </body>
 </html>

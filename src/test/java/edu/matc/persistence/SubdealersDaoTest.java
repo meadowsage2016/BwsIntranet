@@ -44,7 +44,7 @@ public class SubdealersDaoTest extends SubdealersDao {
     public void testAddSubdealer() throws Exception {
 
         int before = dao.getAllSubdealers().size();
-        Subdealers newSubdealer = new Subdealers("99995", "Mr Transfer", "101 South Dickinson", "PO Box 3379", "Madison", "WI", "53704", "Dane", "Delete me");
+        Subdealers newSubdealer = new Subdealers("88889", "Mr Transfer", "101 South Dickinson", "PO Box 3379", "Madison", "WI", "53704", "Dane", "Delete me");
         dao.addSubdealer(newSubdealer);
         int after = dao.getAllSubdealers().size();
         assertEquals("Subdealer not added correctly", before + 1, after);

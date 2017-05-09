@@ -14,7 +14,7 @@
 </head>
 <body>
 <div class="container">
-<form id="deleteDeliverRouteForm" action="/DeliveryRoutesDelete" method="GET" >
+<form class="myforms" id="deleteDeliverRouteForm" action="/DeliveryRoutesDelete" method="GET" >
     <fieldset>
         <legend>Delete Delivery Route</legend>
         <div class="form-group">
@@ -24,7 +24,9 @@
         <input type="submit" id="deleteBtn" value="Submit">
     </fieldset>
 </form>
-<c:out value="${Message}"/>
+    <div class="maintenanceMessage">
+        <c:out value="${Message}"/>
+    </div>
 </div>
 </body>
 </html>

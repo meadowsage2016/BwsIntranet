@@ -14,19 +14,18 @@
 </head>
 <body>
 <div class="container">
-    <form class="myforms" id="deleteCylOptForm" action="/CylinderOptionsDelete" method="GET">
+    <form class="myforms" id="deleteUsersForm" action="/UserDelete" method="GET">
         <fieldset>
-            <legend>Delete Cylinder Option</legend>
+            <legend>User to Delete</legend>
             <div class="form-group">
-                <label for="gasNumber">Gas Number to Delete</label>
-                <input class="form-control" id="gasNumber" name="gasNumber" id="gasNumber" minlength="2" type="text" required>
+                <label for="userName">User to Delete</label>
+                <input class="form-control" id="userName" name="userName" id="userName" minlength="2" type="text" required>
             </div>
-            <input type="submit" id="delete" value="Submit">
+            <input type="submit" id="update" value="Submit">
         </fieldset>
     </form>
     <div class="maintenanceMessage">
-    <c:out value="${Message}"/>
+        <c:out value="${Message}"/>
     </div>
 </div>
 </body>
-</html>

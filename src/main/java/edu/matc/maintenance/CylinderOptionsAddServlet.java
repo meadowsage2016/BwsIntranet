@@ -37,47 +37,60 @@ public class CylinderOptionsAddServlet  extends HttpServlet{
 
         List<CylinderOptions> results = new ArrayList<CylinderOptions>();
 
+
+        // local variables used to check for duplicate record by gas number
+        String paramValue;
+        CylinderOptions dupCyl = new CylinderOptions();
+
+
         //  Take updated Search object and store in Sessio
         HttpSession sessionAdd = request.getSession();
-        String paramValue = request.getParameter("maintType");
 
-        String daily = request.getParameter("cylinderRent");
-        String lease = request.getParameter("cylinderFiveYearLease");
-        String rent = request.getParameter("cylinderOnePPRent");
-        String purchase = request.getParameter("cylinderPurchase");
+        paramValue =  request.getParameter("gasNumber");
 
-        double ddaily = Double.parseDouble(daily);
-        double dlease = Double.parseDouble(lease);
-        double drent = Double.parseDouble(rent);
+        dupCyl = dao.getCylOptionByGasNumber(paramValue);
 
-        if (purchase.length()>0) {
-            dpurchase = Double.parseDouble(purchase);
-            cyl.setCylinderPurchase(dpurchase);
-        }
+        if (dupCyl == null) {
 
+            String daily = request.getParameter("cylinderRent");
+            String lease = request.getParameter("cylinderFiveYearLease");
+            String rent = request.getParameter("cylinderOnePPRent");
+            String purchase = request.getParameter("cylinderPurchase");
 
-        cyl.setCylinderCode(request.getParameter("cylinderCode"));
-        cyl.setCylinderFiveYearLease(dlease);
-        cyl.setCylinderOnePPRent(drent);
-        cyl.setGasDescription(request.getParameter("gasDescription"));
-        cyl.setGasNumber(request.getParameter("gasNumber"));
-        cyl.setCylinderRent(ddaily);
+            double ddaily = Double.parseDouble(daily);
+            double dlease = Double.parseDouble(lease);
+            double drent = Double.parseDouble(rent);
 
-        try{
-            id = dao.addCylOptions(cyl);
-        } catch (Exception ex) {
+            if (purchase.length() > 0) {
+                dpurchase = Double.parseDouble(purchase);
+                cyl.setCylinderPurchase(dpurchase);
+            }
 
-        }
+            cyl.setGasNumber(request.getParameter("gasNumber"));
+            cyl.setCylinderCode(request.getParameter("cylinderCode"));
+            cyl.setCylinderFiveYearLease(dlease);
+            cyl.setCylinderOnePPRent(drent);
+            cyl.setGasDescription(request.getParameter("gasDescription"));
+            cyl.setCylinderRent(ddaily);
 
-        if (id == 0) {
-            sessionAdd.setAttribute("Message", message);
+            try {
+                id = dao.addCylOptions(cyl);
+            } catch (Exception ex) {
+                log("Exception found trying to add new Cylinder Option :" + ex);
+            }
+
+            if (id == 0) {
+                sessionAdd.setAttribute("Message", message);
+            } else {
+                newCyl = dao.getCylOptionById(id);
+                message = "Successful Add of Cylinder: " + paramValue;
+                results.add(newCyl);
+
+                sessionAdd.setAttribute("Message", message);
+            }
         } else {
-            newCyl = dao.getCylOptionById(id);
-            message = "Successful Add ";
-            results.add(newCyl );
 
-            sessionAdd.setAttribute("MaintResult", results);
-            sessionAdd.setAttribute("Message", message);
+            sessionAdd.setAttribute("Message", "Duplicate record found for gas number: " + paramValue);
         }
 
         // Local variable to hold url of results page

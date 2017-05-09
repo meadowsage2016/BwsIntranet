@@ -17,7 +17,7 @@
 </head>
 <body>
 <div class="container">
-<form class="cmxform" id="newEmpForm" method="POST" action="EmployeeAdd">
+<form class="myforms" id="newEmpForm" method="POST" action="EmployeeAdd">
     <fieldset>
         <legend>New Employee</legend>
         <div class="form-group">
@@ -38,11 +38,11 @@
         </div>
         <div class="form-group">
             <label for="cellPhone">Cell Phone</label>
-            <input class="form-control" id="cellPhone" type="text" minlength="7" maxlength="10" PLACEHOLDER="6085551212" name="cellPhone" >
+            <input class="form-control" id="cellPhone" type="text" minlength="7" maxlength="10" PLACEHOLDER="6085551212" name="cellPhone" required >
         </div>
         <div class="form-group">
             <label for="emailAddress">Email Address</label>
-            <input class="form-control" id="emailAddress" type="text" minlength="2" maxlength="40"  name="emailAddress" >
+            <input class="form-control" id="emailAddress" type="email"  name="emailAddress" required>
         </div>
         <div class="form-group">
             <input class="form-control" type="hidden" name="maintType" value="1">
@@ -50,7 +50,9 @@
             <input class="submit" type="submit" value="Submit">
     </fieldset>
 </form>
-<c:out value="${MaintResult}"/>
+    <div class="maintenanceMessage">
+        <c:out value="${Message}"/>
+    </div>
 
 </c>
 </c>

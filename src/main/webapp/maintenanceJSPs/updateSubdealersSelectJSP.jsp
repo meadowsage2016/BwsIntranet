@@ -14,17 +14,19 @@
 </head>
 <body>
 <div class="container">
-<form id="updateSubdealersForm" action="/SubdealersUpdate" method="GET">
+<form class="myforms" id="updateSubdealersForm" action="/SubdealersUpdate" method="GET">
     <fieldset>
         <legend>Customer Number of Subdealer to Update</legend>
         <div class="form-group">
             <label for="customerNumber">Customer Number of Subdealer to Update</label>
-            <input class="form-control" id="customerNumber" name="customerNumber" id="customerNumber" minlength="2" type="text" required>
+            <input class="form-control" id="customerNumber" name="customerNumber" id="customerNumber" length="5" type="text" required>
         </div>
             <input type="submit" id="update" value="Submit">
     </fieldset>
 </form>
-<c:out value="${Message}"/>
+    <div class="maintenanceMessage">
+        <c:out value="${Message}"/>
+    </div>
 </div>
 </body>
 </html>

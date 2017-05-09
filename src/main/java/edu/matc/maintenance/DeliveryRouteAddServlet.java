@@ -30,6 +30,7 @@ public class DeliveryRouteAddServlet extends HttpServlet {
 
         DeliveryRoute route = new DeliveryRoute();
         DeliveryRoute newRoute = new DeliveryRoute();
+        DeliveryRoute duplicateRoute = new DeliveryRoute();
 
         DeliveryRouteDao dao = new DeliveryRouteDao();
 
@@ -37,34 +38,42 @@ public class DeliveryRouteAddServlet extends HttpServlet {
 
         //  Take updated Search object and store in Sessio
         HttpSession sessionAdd = request.getSession();
-        String paramValue = request.getParameter("maintType");
 
-        route.setDeliveryCityOrBusiness(request.getParameter("city"));
-        route.setDeliveryDay(request.getParameter("day"));
-        route.setDeliveryFrequency(request.getParameter("frequency"));
+        String newCityOrBusiness = request.getParameter("city");
 
+        duplicateRoute =  dao.getDeliveryRouteByCityOrBusiness(newCityOrBusiness);
 
-        id = dao.addDeliveryRoute(route);
+        if (duplicateRoute == null) {
 
-        System.out.println("Route id returned: " + id );
+            route.setDeliveryCityOrBusiness(request.getParameter("city"));
+            route.setDeliveryDay(request.getParameter("day"));
+            route.setDeliveryFrequency(request.getParameter("frequency"));
 
-        if (id == 0) {
-            sessionAdd.setAttribute("Message", message);
+            try {
+                id = dao.addDeliveryRoute(route);
+            } catch (Exception ex) {
+                log("Exception found trying to add new Route :" + ex);
+            }
+
+            if (id == 0) {
+                sessionAdd.setAttribute("Message", message);
+            } else {
+                newRoute = dao.getDeliveryRouteById(id);
+                message = "Successful Add: " + newCityOrBusiness;
+                results.add(newRoute);
+
+                sessionAdd.setAttribute("MaintResult", results);
+                sessionAdd.setAttribute("Message", message);
+            }
         } else {
-            newRoute = dao.getDeliveryRouteById(id);
-            message = "Successful Add: ";
-            results.add(newRoute);
-
-            sessionAdd.setAttribute("MaintResult", results);
+            message = "City or Business already exists for: " + duplicateRoute.getDeliveryCityOrBusiness();
             sessionAdd.setAttribute("Message", message);
         }
-
-
 
         // Local variable to hold url of results page
         String url = "/maintenanceJSPs/newDeliveryRouteJSP.jsp";
 
-// Forward the request header to the JSP page
+        // Forward the request header to the JSP page
         RequestDispatcher dispatcher
                 = getServletContext().getRequestDispatcher(url);
         dispatcher.forward(request, response);

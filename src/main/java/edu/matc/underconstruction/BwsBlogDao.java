@@ -1,6 +1,7 @@
-package edu.matc.persistence;
+package edu.matc.underconstruction;
 
-import edu.matc.entity.BwsBlog;
+import edu.matc.persistence.SessionFactoryProvider;
+import edu.matc.underconstruction.BwsBlog;
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.Session;

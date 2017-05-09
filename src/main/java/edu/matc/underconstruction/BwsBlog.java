@@ -1,4 +1,4 @@
-package edu.matc.entity;
+package edu.matc.underconstruction;
 
 import org.hibernate.annotations.GenericGenerator;
 

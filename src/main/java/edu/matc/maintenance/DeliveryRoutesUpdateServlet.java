@@ -29,20 +29,30 @@ import java.util.List;
             List<DeliveryRoute> routeAsList = new ArrayList<DeliveryRoute>();
             DeliveryRoute route = new DeliveryRoute();
             DeliveryRouteDao dao = new DeliveryRouteDao();
+            String url = "";
 
             //  Take updated Search object and store in Sessio
             HttpSession sessionAdd = request.getSession();
             String paramValue = request.getParameter("city");
 
             route = dao.getDeliveryRouteByCityOrBusiness(paramValue);
-            routeAsList.add(route);
 
-            sessionAdd.setAttribute("UpdateResult", routeAsList);
-            sessionAdd.setAttribute("Message", "");
+            if (route == null) {
 
-            // Local variable to hold url of results page
-            String url = "/maintenanceJSPs/updateDeliveryRoutesJSP.jsp";
+                sessionAdd.setAttribute("Message", "Delivery Route Not Found : " + paramValue);
 
+                // Local variable to hold url of results page
+                url = "/maintenanceJSPs/updateDeliveryRoutesSelectJSP.jsp";
+
+            } else {
+                routeAsList.add(route);
+
+                sessionAdd.setAttribute("UpdateResult", routeAsList);
+                sessionAdd.setAttribute("Message", "");
+
+                // Local variable to hold url of results page
+                url = "/maintenanceJSPs/updateDeliveryRoutesJSP.jsp";
+            }
             // Forward the request header to the JSP page
             RequestDispatcher dispatcher
                     = getServletContext().getRequestDispatcher(url);
@@ -71,7 +81,7 @@ import java.util.List;
             deliveryFrequencyUpdate = request.getParameter("frequency");
             deliveryDayUpdate = request.getParameter("day");
 
-            int routeId = Integer.parseInt("deliveryRouteIdUpdate");
+            int routeId = Integer.parseInt(deliveryRouteIdUpdate);
 
             route = dao.getDeliveryRouteById(routeId);
 
@@ -80,7 +90,7 @@ import java.util.List;
 
             try {
                 dao.updateDeliveryRoute(route);
-                message = "Update Successful";
+                message = "Update Successful for: " + deliveryCityOrBusinessUpdate;
                 sessionAdd.setAttribute("Message", message);
             } catch (Exception ex) {
                 sessionAdd.setAttribute("Message", message);

@@ -51,13 +51,15 @@
         <input class="form-control" name="cylinderFiveYearLease"  id="cylinderFiveYearLease" type="text" value="${cylinder.cylinderFiveYearLease}" required/>
     </div>
     <div class="form-group">
-        <label for="cylinderPurchase"><b>Cylinder Purchase Price (not Required)</b></label><br />
-        <input class="form-control" name="cylinderPurchase" id="cylinderPurchase" type="text" value="${cylinder.cylinderPurchase}" />
+        <label for="cylinderPurchase"><b>Cylinder Purchase Price (enter .00 if not able to purchase)</b></label><br />
+        <input class="form-control" name="cylinderPurchase" id="cylinderPurchase" type="text" value="${cylinder.cylinderPurchase}" required/>
         </div>
         <input type="submit" value="Submit">
     </form>
 </c:forEach>
-<h3><c:out value="${Message}" /></h3>
+<div class="maintenanceMessage">
+    <c:out value="${Message}"/>
+</div>
 </div>
 </body>
 </html>

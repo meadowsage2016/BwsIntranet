@@ -31,20 +31,29 @@ public class UserUpdateServlet extends HttpServlet {
         List<Users> users = new ArrayList<Users>();
         Users user = new Users();
         UsersDao dao = new UsersDao();
+        String url = "";
 
         //  Take updated Search object and store in Sessio
         HttpSession sessionAdd = request.getSession();
         String paramValue = request.getParameter("userName");
 
         user = dao.getUserByUserName(paramValue);
-        users.add(user);
 
-        sessionAdd.setAttribute("UpdateResult", users);
-        sessionAdd.setAttribute("Message", "");
+        if (user == null) {
+            sessionAdd.setAttribute("Message", "User does not exist: " + paramValue);
 
-        // Local variable to hold url of results page
-        String url = "/maintenanceJSPs/updateUserJSP.jsp";
+            // Local variable to hold url of results page
+            url = "/maintenanceJSPs/updateUserSelectJSP.jsp";
 
+        } else {
+            users.add(user);
+
+            sessionAdd.setAttribute("UpdateResult", users);
+            sessionAdd.setAttribute("Message", "");
+
+            // Local variable to hold url of results page
+            url = "/maintenanceJSPs/updateUserJSP.jsp";
+        }
         // Forward the request header to the JSP page
         RequestDispatcher dispatcher
                 = getServletContext().getRequestDispatcher(url);
@@ -78,7 +87,7 @@ public class UserUpdateServlet extends HttpServlet {
 
         try {
             dao.updateUser(user);
-            message = "Update Successful";
+            message = "Update Successful for user: " + userNameUpdate;
             sessionAdd.setAttribute("Message", message);
         } catch (Exception ex) {
             sessionAdd.setAttribute("Message", message);

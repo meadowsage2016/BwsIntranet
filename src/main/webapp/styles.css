@@ -47,3 +47,18 @@ footer {
 .radio-inline {
     padding-right: 5px;
 }
+input:invalid {
+    background-color: red;
+    color: white;
+    font-size: 3em;
+
+}
+
+input:valid {
+    border: 2px solid black;
+}
+
+.maintenanceMessage {
+
+
+}

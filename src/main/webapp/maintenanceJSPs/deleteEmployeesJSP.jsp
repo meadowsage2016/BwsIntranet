@@ -23,7 +23,7 @@
         </div><!--close strapline-->
     </header>
     <c:forEach items="${DeleteResult}" var="emp">
-        <form id="deleteEmployeeTable" action="EmployeeDelete" method="POST">
+        <form class="myforms" id="deleteEmployeeTable" action="EmployeeDelete" method="POST">
             <div class="form-group">
                 <input type="hidden" name="employeeId" value="${emp.employeeId}">
             </div>
@@ -51,10 +51,12 @@
                 <label for="emailAddress"><b>Email Address</b></label><br />
                 <input class="form-control" name="emailAddress" id="emailAddress" type="text" value="${emp.emailAddress}" readonly/>
             </div>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Verify Delete">
         </form>
     </c:forEach>
-    <h3><c:out value="${Message}" /></h3>
+    <div class="maintenanceMessage">
+        <c:out value="${Message}"/>
+    </div>
 </div>
 </body>
 </html>

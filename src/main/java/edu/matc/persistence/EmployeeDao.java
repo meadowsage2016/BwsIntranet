@@ -103,20 +103,24 @@ public class EmployeeDao {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = null;
+        Employee newEmployee = new Employee();
+        String emailAddress;
         int id = 0;
 
         try {
                 transaction = session.beginTransaction();
                 session.save(employee);
                 transaction.commit();
-                id=1;
+                emailAddress = employee.getEmailAddress();
+                newEmployee = (this).getEmployeeByEmailAddress(emailAddress);
+
             } catch (HibernateException hibernateException) {
                 if (transaction != null) transaction.rollback();
                 log.error("Hibernate Exception", hibernateException);
             } finally {
                 session.close();
             }
-            return id;
+            return id = newEmployee.getEmployeeId();
         }
 
 
