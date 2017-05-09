@@ -2,6 +2,7 @@ package edu.matc.maintenance;
 
 import edu.matc.entity.Employee;
 import edu.matc.persistence.EmployeeDao;
+import org.apache.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,31 +16,52 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by student on 4/29/17.
+ * EmployeeAddServlet takes code passed from newEmployeeJSP and attempts
+ * to add to data base
+ *
+ * The BwsIntranet program produces a website for internal use of BWS employees
+ *
+ * @author Sue Hundt
+ * @version 1.0
+ * @since   2017-02-12
  */
 @WebServlet(
         name = "employeeAdd",
         urlPatterns = { "/EmployeeAdd" }
 )
 public class EmployeeAddServlet extends HttpServlet {
+
+    static Logger log = Logger.getLogger(EmployeeAddServlet.class.getName());
+
+    /**
+     * doPost method takes incoming data, checks for duplicate keyword,
+     * if unique it is added to the Employee table in BWS DB
+     *
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        // Local variables used to add new record
         int id = 0;
+        String message = "Successful Add";
 
+        // Local instances to add new record
         Employee emp = new Employee();
         Employee duplicateEmployee = new Employee();
         EmployeeDao dao = new EmployeeDao();
 
-        String message = "Successful Add";
-
-        //  Take updated Search object and store in Sessio
+        //  Get session and keyword parameter value
         HttpSession sessionAdd = request.getSession();
-
         String newEmployeeEmailAddress = request.getParameter("emailAddress");
 
+        // Try to retrieve record - duplicate if found
         duplicateEmployee = dao.getEmployeeByEmailAddress(newEmployeeEmailAddress);
 
+        // If not duplicate, get the rest of the parameters and setup new employee instance
         if (duplicateEmployee == null) {
 
             emp.setFirstName(request.getParameter("firstName"));
@@ -60,6 +82,7 @@ public class EmployeeAddServlet extends HttpServlet {
 
             } else {
                 message = "Unsuccessful Add, See Log Data";
+                log("Exception found trying to add new Employee");
             }
 
         } else {

@@ -42,6 +42,7 @@ public class SubdealersMaintServlet extends HttpServlet{
         session.removeAttribute("Message");
         String paramValue = request.getParameter("maint");
 
+        // Maintenance options are:  1 = Add,  2 = Update,  3 = Delete, 0 = View All
         if (paramValue.matches("1")) {
 
             // url of Add
@@ -74,9 +75,6 @@ public class SubdealersMaintServlet extends HttpServlet{
                     = getServletContext().getRequestDispatcher(url);
             dispatcher.forward(request, response);
         }
-
     }
-
-
 }
 

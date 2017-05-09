@@ -4,6 +4,7 @@ import edu.matc.entity.CylinderOptions;
 import edu.matc.entity.Subdealers;
 import edu.matc.persistence.CylinderOptionsDao;
 import edu.matc.persistence.SubdealersDao;
+import org.apache.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -17,7 +18,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by student on 4/29/17.
+ * SubdealerUpdateServlet takes code passed from newSubdealersJSP and attempts
+ * to update the data base
+ *
+ * The BwsIntranet program produces a website for internal use of BWS employees
+ *
+ * @author Sue Hundt
+ * @version 1.0
+ * @since   2017-02-12
  */
 @WebServlet(
         name = "SubdealersUpdate",
@@ -26,22 +34,39 @@ import java.util.List;
 
 public class SubdealerUpdateServlet extends HttpServlet {
 
+    static Logger log = Logger.getLogger(SubdealerUpdateServlet.class.getName());
+
+    /**
+     * doGet takes keyword passed from updateSubdealerSelectJSP and tries to return
+     * the record data to be updated
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
         public void doGet(HttpServletRequest request, HttpServletResponse response)
                 throws ServletException, IOException {
 
+            // Local variable
+            String url = "";
+
+            // Local instances
             List<Subdealers> subAsList = new ArrayList<Subdealers>();
             Subdealers cyl = new Subdealers();
             SubdealersDao dao = new SubdealersDao();
-            String url = "";
-            //  Take updated Search object and store in Sessio
+
+            //  Get session and keyword value from parameter
             HttpSession sessionAdd = request.getSession();
             String paramValue = request.getParameter("customerNumber");
 
+            // try to return record for update
             Subdealers sub = dao.getsubdealerByCustomerNumber(paramValue);
 
+            // If record isn't found, nofity user
             if (sub == null) {
-                sessionAdd.setAttribute("Message", "Subdealer Not Found: " + paramValue);
 
+                sessionAdd.setAttribute("Message", "Subdealer Not Found: " + paramValue);
+                log.warn("Subdealer Not Found: " + paramValue);
                 // Local variable to hold url of results page
                 url = "/maintenanceJSPs/updateSubdealersSelectJSP.jsp";
 
@@ -61,9 +86,18 @@ public class SubdealerUpdateServlet extends HttpServlet {
 
         }
 
+    /**
+     * doPost gets updated data from updateSubdealersJSP and attempts to update
+     * DB
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
         public void doPost(HttpServletRequest request, HttpServletResponse response)
                 throws ServletException, IOException {
 
+            // local variables
             String subdealerIdString;
             int subdealerId;
             String customerNumberUpdate;
@@ -75,13 +109,13 @@ public class SubdealerUpdateServlet extends HttpServlet {
             String sdZipCodeUpdate;
             String sdCountyUpdate;
             String subdealerNotesUpdate;
-
             String message = "Update NOT Successful, see log file";
-            Subdealers sub;
 
+            //local instances
+            Subdealers sub;
             SubdealersDao dao = new SubdealersDao();
 
-            //  Take updated Search object and store in Sessio
+            //  get session and parameter values
             HttpSession sessionAdd = request.getSession();
 
             subdealerIdString = request.getParameter("subdealerId");
@@ -95,9 +129,11 @@ public class SubdealerUpdateServlet extends HttpServlet {
             sdCountyUpdate = request.getParameter("county");
             subdealerNotesUpdate = request.getParameter("subdealerNotes");
 
+            // convert string id to integer
             subdealerId = Integer.parseInt(subdealerIdString);
             sub = dao.getSubdealerById(subdealerId);
 
+            // set fields to updated values
             sub.setCustomerNumber(customerNumberUpdate);
             sub.setCustomerName(customerNameUpdate);
             sub.setSdAddress1(sdAddress1Update);
@@ -108,12 +144,15 @@ public class SubdealerUpdateServlet extends HttpServlet {
             sub.setSdCounty(sdCountyUpdate);
             sub.setSubdealerNotes(subdealerNotesUpdate);
 
+            // update database table
             try {
                 dao.updateSubdealer(sub);
                 message = "Update Successful for Customer Number : " + customerNumberUpdate;
                 sessionAdd.setAttribute("Message", message);
+                log.info(message);
             } catch (Exception ex) {
                 sessionAdd.setAttribute("Message", message);
+                log.warn("Exception thrown attempting to update record:" + ex);
             }
 
             // Local variable to hold url of results page

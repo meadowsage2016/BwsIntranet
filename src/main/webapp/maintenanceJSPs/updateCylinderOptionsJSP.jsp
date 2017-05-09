@@ -26,6 +26,9 @@
 <c:forEach items="${UpdateResult}" var="cylinder">
 <form class="myforms" id="updatCylOpts" action="/CylinderOptionsUpdate" method="POST">
     <legend>Update Cylinder Options by Gas Number</legend>
+    <div>
+        <input class="form-control" name="cylinderOptionsId" id="cylinderOptionsId" type="hidden" value="${cylinder.cylinderOptionId}"  required/>
+    </div>
     <div class="form-group">
         <label for="gasNumber"><b>Gas Number</b></label><br />
         <input class="form-control" name="gasNumber" id="gasNumber" type="text" value="${cylinder.gasNumber}"  required/>

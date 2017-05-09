@@ -49,17 +49,17 @@
 |	3/04/2017	|	Saturday	|		|		|
 |	3/05/2017	|	Sunday	|2 - 11		|Week 7 Activities		|
 |	30/6/2017	|	Monday	|		|		|
-|	3/07/2017	|	Tuesday	|		|		|
+|	3/07/2017	|	Tuesday	|2 hrs		|crud		|
 |	3/08/2017	|	Wednesday	|		|		|
 |	3/09/2017	|	Thursday	|		|		|
-|	3/10/2017	|	Friday	|		|		|
+|	3/10/2017	|	Friday	|2 hrs		|wunderground weather api		|
 |	3/11/2017	|	Saturday	|		|		|
 |	3/12/2017	|	Sunday	|		|		|
-|	3/13/2017	|	Monday	|		|		|
+|	3/13/2017	|	Monday	|4 hrs		|jquery tables css		|
 |	3/14/2017	|	Tuesday	|		|		|
 |	3/15/2017	|	Wednesday	|		|		|
-|	3/16/2017	|	Thursday	|		|		|
-|	3/17/2017	|	Friday	|		|		|
+|	3/16/2017	|	Thursday	|8 hrs		|city by zip DB file % entities, dao, etc		|
+|	3/17/2017	|	Friday	|8 hrs		|jsps for crud		|
 |	3/18/2017	|	Saturday	|		|		|
 |	3/19/2017	|	Sunday	|		|		|
 |	3/20/2017	|	Monday	|		|		|
@@ -68,56 +68,49 @@
 |	3/23/2017	|	Thursday	|		|		|
 |	3/24/2017	|	Friday	|		|		|
 |	3/25/2017	|	Saturday	|		|		|
-|	3/26/2017	|	Sunday	|		|		|
-|	3/27/2017	|	Monday	|		|		|
+|	3/26/2017	|	Sunday	|6 hrs		|crud & taglibrary		|
+|	3/27/2017	|	Monday	|3 hrs		|master plan update		|
 |	3/28/2017	|	Tuesday	|		|		|
 |	3/29/2017	|	Wednesday	|		|		|
 |	3/30/2017	|	Thursday	|		|		|
 |	3/31/2017	|	Friday	|		|		|
-|	4/01/2017	|	Saturday	|		|		|
+|	4/01/2017	|	Saturday	|2 hrs		|api formatting		|
 |	4/02/2017	|	Sunday	|		|		|
 |	4/03/2017	|	Monday	|		|		|
 |	4/04/2017	|	Tuesday	|		|		|
 |	4/05/2017	|	Wednesday	|		|		|
 |	4/06/2017	|	Thursday	|		|		|
 |	4/07/2017	|	Friday	|		|		|
-|	4/08/2017	|	Saturday	|		|		|
+|	4/08/2017	|	Saturday	|3 hrs		|crud		|
 |	4/09/2017	|	Sunday	|		|		|
 |	4/10/2017	|	Monday	|		|		|
 |	4/11/2017	|	Tuesday	|		|		|
 |	4/12/2017	|	Wednesday	|		|		|
 |	4/13/2017	|	Thursday	|		|		|
 |	4/14/2017	|	Friday	|		|		|
-|	4/15/2017	|	Saturday	|		|		|
+|	4/15/2017	|	Saturday	|3 hrs		|jsps for crud|
 |	4/16/2017	|	Sunday	|		|		|
 |	4/17/2017	|	Monday	|		|		|
 |	4/18/2017	|	Tuesday	|		|		|
 |	4/19/2017	|	Wednesday	|		|		|
 |	4/20/2017	|	Thursday	|		|		|
 |	4/21/2017	|	Friday	|		|		|
-|	4/22/2017	|	Saturday	|		|		|
-|	4/23/2017	|	Sunday	|		|		|
-|	4/24/2017	|	Monday	|		|		|
-|	4/25/2017	|	Tuesday	|		|		|
-|	4/26/2017	|	Wednesday	|		|		|
+|	4/22/2017	|	Saturday	|6 hrs		|apis for news as tabs		|
+|	4/23/2017	|	Sunday	|8 hrs		|jquery tables-crud		|
+|	4/24/2017	|	Monday	|2 hrs		|Subdealers sdAddress1 nightmare		|
+|	4/25/2017	|	Tuesday	|2 hrs		|clean up entities		|
+|	4/26/2017	|	Wednesday	|4 hrs		|javascript on admin jsp		|
 |	4/27/2017	|	Thursday	|		|		|
 |	4/28/2017	|	Friday	|		|		|
-|	4/29/2017	|	Saturday	|		|		|
-|	4/30/2017	|	Sunday	|		|		|
-|	5/01/2017	|	Monday	|		|		|
-|	5/02/2017	|	Tuesday	|		|		|
+|	4/29/2017	|	Saturday	|8 hrs		|sql backup, crud-adds, jsps		|
+|	4/30/2017	|	Sunday	|8 hrs		|crud-update, deletes		|
+|	5/01/2017	|	Monday	|6 hrs		|css, crud-updates		|
+|	5/02/2017	|	Tuesday	|6 hrs		|torchure-set backs		|
 |	5/03/2017	|	Wednesday	|		|		|
-|	5/04/2017	|	Thursday	|		|		|
-|	5/05/2017	|	Friday	|		|		|
-|	5/06/2017	|	Saturday	|		|		|
-|	5/07/2017	|	Sunday	|		|		|
+|	5/04/2017	|	Thursday	|3 hrs		|crud jsps		|
+|	5/05/2017	|	Friday	|2 hrs		|crud-deletes		|
+|	5/06/2017	|	Saturday	|6 hrs		|crud - form validation		|
+|	5/07/2017	|	Sunday	|8 hrs		|AWS, security, crud		|
 |	5/08/2017	|	Monday	|		|		|
 |	5/09/2017	|	Tuesday	|		|		|
-|	5/10/2017	|	Wednesday	|		|		|
-|	5/11/2017	|	Thursday	|		|		|
-|	5/12/2017	|	Friday	|		|		|
-|	5/13/2017	|	Saturday	|		|		|
-|	5/14/2017	|	Sunday	|		|		|
-|	5/15/2017	|	Monday	|		|		|
-|	5/16/2017	|	Tuesday	|		|		|
-|	5/17/2017	|	Wednesday	|		|		|
+|	
