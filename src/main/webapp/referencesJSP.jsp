@@ -26,7 +26,6 @@
         <li><a target="_blank" href="images/cylinders/argon-co275-25.jpg">Argon-Co2 75-25</a></li>
         <li><a target="_blank" href="images/cylinders/co2.jpg">Carbon Dioxide</a></li>
         <li><a target="_blank" href="images/cylinders/compressedair.jpg">Compress Air</a></li>
-        <li><a target="_blank" href="images/HELIUMCYLS.BMP">Helium</a></li>
         <li><a target="_blank" href="images/cylinders/medicalox.jpg">Medical Oxygen</a></li>
         <li><a target="_blank" href="images/cylinders/ni100.jpg">Nitrogen 100 cf</a></li>
         <li><a target="_blank" href="images/cylinders/ni200.jpg">Nitrogen 200 cf</a></li>
